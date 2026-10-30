@@ -1,0 +1,12 @@
+# dependencies & local output
+node_modules/
+temporary screenshots/
+.DS_Store
+.env
+
+# private client documents (repo is public)
+Договір_13-10.docx.txt
+Pflegedienst бриф.txt
+
+# third-party design reference (large, not ours)
+homeinstead.de_.png

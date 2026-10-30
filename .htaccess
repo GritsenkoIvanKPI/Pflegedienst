@@ -1,0 +1,21 @@
+# Pflegedienst Funk – Weiterleitungen alte WordPress-Seite → neue Struktur
+RewriteEngine On
+
+# HTTPS + ohne www
+RewriteCond %{HTTPS} off [OR]
+RewriteCond %{HTTP_HOST} ^www\. [NC]
+RewriteRule ^ https://pflegedienst-funk.de%{REQUEST_URI} [L,R=301]
+
+# Alte Seiten
+RewriteRule ^pflegedienst-funk/?$ /ueber-uns/ [L,R=301]
+RewriteRule ^under-construction/?$ / [L,R=301]
+
+# Alte Sitemaps (Yoast)
+RewriteRule ^(sitemap_index|page-sitemap|wp-sitemap)\.xml$ /sitemap.xml [L,R=301]
+
+# Demo-Inhalte des alten Themes: dauerhaft entfernt
+RewriteRule ^(recipe|recipe-category|fusion_tb_category|element_category)(/.*)?$ - [G,L]
+RewriteRule ^(recipe|recipe-category|fusion_tb_category|element_category)-sitemap\.xml$ - [G,L]
+
+# Saubere URLs: /leistungen/grundpflege/ → leistungen/grundpflege/index.php
+DirectoryIndex index.php index.html

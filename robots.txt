@@ -1,0 +1,5 @@
+User-agent: *
+Disallow: /admin/
+Disallow: /kontakt/senden.php
+
+Sitemap: https://pflegedienst-funk.de/sitemap.xml

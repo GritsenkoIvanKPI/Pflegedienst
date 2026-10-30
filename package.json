@@ -1,0 +1,13 @@
+{
+  "name": "pflegedienst-funk",
+  "version": "1.0.0",
+  "private": true,
+  "description": "Ambulanter Pflegedienst Funk GmbH – neue Website (Startseite, Konzept).",
+  "scripts": {
+    "start": "node serve.mjs",
+    "screenshot": "node screenshot.mjs http://localhost:3040"
+  },
+  "devDependencies": {
+    "puppeteer": "^25.2.1"
+  }
+}
