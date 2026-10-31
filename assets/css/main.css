@@ -284,10 +284,26 @@ strong { font-weight: 700; color: var(--ink); }
   line-height: 1.2;
   text-decoration: none;
   text-align: center;
-  transition: transform 0.2s var(--ease-out), var(--t-colors);
+  color: var(--white);
+  transition: transform 0.2s var(--ease-out), background-color 0.6s var(--ease-out);
+  isolation: isolate;
+  overflow: hidden;
 }
-/* Hover: Button bleibt stehen, nur die Fläche wechselt ruhig die Farbe;
+/* Hover: eine hellere Fläche wächst weich aus der Mitte rundum bis zum Rand;
    der Pfeil gleitet einmal rechts hinaus und von links wieder herein */
+.btn::before {
+  content: "";
+  position: absolute;
+  inset: -2px;
+  z-index: -1;
+  border-radius: inherit;
+  background: var(--btn-hover);
+  opacity: 0;
+  transform: scale(0.6, 0.2);
+  transition: transform 0.6s var(--ease-out), opacity 0.45s var(--ease-out);
+}
+.btn:hover::before { opacity: 1; transform: scale(1); }
+.btn:hover { background-color: var(--btn-hover); }
 .btn:hover .icon:last-child:not(:first-child) { animation: btnArrow 0.55s var(--ease-out); }
 @keyframes btnArrow {
   0%   { transform: translateX(0); opacity: 1; }
@@ -300,40 +316,29 @@ strong { font-weight: 700; color: var(--ink); }
 .btn--sm { min-height: 48px; padding: 0.6rem 1.3rem; font-size: 1rem; }
 .btn--block { width: 100%; }
 
-.btn--gold { background: var(--gold); color: var(--navy-950); }
-.btn--gold:hover { background: var(--gold-600); }
+/* Hauptbutton: Navy; auf dunklen Flächen ein helleres Blau */
+.btn--primary { --btn-hover: #3E5B85; background-color: var(--navy); }
+.consult .btn--primary, .career__card .btn--primary, .areas .btn--primary { --btn-hover: #5174A6; background-color: var(--navy-600); }
+.consult .btn--primary:hover, .career__card .btn--primary:hover, .areas .btn--primary:hover { background-color: var(--btn-hover); }
 
-.btn--navy { background: var(--navy); color: var(--white); }
-.btn--navy:hover { background: var(--navy-800); }
-
-.btn--outline { border-color: var(--navy); color: var(--navy); background: transparent; }
-.btn--outline:hover { background: var(--navy); color: var(--white); }
-
-.btn--ghost-light { border-color: rgba(255, 255, 255, 0.55); color: var(--white); }
-.btn--ghost-light:hover { border-color: var(--white); background: var(--white); color: var(--navy-950); }
+/* Zweitbutton: Bronze (dunkles Gold, damit weiße Schrift lesbar bleibt) */
+.btn--secondary { --btn-hover: #A67C00; background-color: #8F6B00; }
 
 .btn--call {
   justify-content: flex-start;
   gap: 0.85rem;
   padding-left: 0.6rem;
-  background: var(--white);
-  border-color: var(--navy-100);
-  color: var(--navy-900);
   font-size: 1.25rem;
 }
-.btn--call:hover { border-color: var(--navy-300); }
 .btn--call > .icon {
   width: 44px;
   height: 44px;
   padding: 11px;
   border-radius: 50%;
-  background: var(--navy);
-  color: var(--white);
-  transition: var(--t-colors);
+  background: rgba(255, 255, 255, 0.18);
 }
-.btn--call:hover > .icon { background: var(--gold); color: var(--navy-950); }
 .btn--call span { display: flex; flex-direction: column; text-align: left; }
-.btn--call small { font-size: 0.8rem; font-weight: 600; color: var(--muted); letter-spacing: 0.02em; }
+.btn--call small { font-size: 0.8rem; font-weight: 600; color: rgba(255, 255, 255, 0.85); letter-spacing: 0.02em; }
 
 /* ---------- Topbar ---------- */
 .topbar {
