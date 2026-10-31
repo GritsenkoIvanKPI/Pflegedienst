@@ -279,7 +279,7 @@ strong { font-weight: 700; color: var(--ink); }
   border: 2px solid transparent;
   border-radius: var(--radius-pill);
   font-family: var(--font-body);
-  font-size: 1.05rem;
+  font-size: 1.17rem;
   font-weight: 700;
   line-height: 1.2;
   text-decoration: none;
@@ -312,7 +312,7 @@ strong { font-weight: 700; color: var(--ink); }
   100% { transform: translateX(0); opacity: 1; }
 }
 .btn:active { transform: scale(0.98); }
-.btn--lg { min-height: 64px; padding: 1rem 2rem; font-size: 1.125rem; }
+.btn--lg { min-height: 64px; padding: 1rem 2rem; font-size: 1.2rem; }
 .btn--sm { min-height: 48px; padding: 0.6rem 1.3rem; font-size: 1rem; }
 .btn--block { width: 100%; }
 
@@ -321,8 +321,9 @@ strong { font-weight: 700; color: var(--ink); }
 .consult .btn--primary, .career__card .btn--primary, .areas .btn--primary { --btn-hover: #5174A6; background-color: var(--navy-600); }
 .consult .btn--primary:hover, .career__card .btn--primary:hover, .areas .btn--primary:hover { background-color: var(--btn-hover); }
 
-/* Zweitbutton: Bronze (dunkles Gold, damit weiße Schrift lesbar bleibt) */
-.btn--secondary { --btn-hover: #A67C00; background-color: #8F6B00; }
+/* Akzentbutton: warmes Bernstein-Gelb – das hellste Gelb, auf dem weiße Schrift
+   (groß + fett) noch lesbar bleibt: 3,3:1, beim Hover 3,0:1 */
+.btn--secondary { --btn-hover: #CC8600; background-color: #C47F00; }
 
 .btn--call {
   justify-content: flex-start;
@@ -1300,7 +1301,7 @@ body.menu-open { overflow: hidden; }
 
 /* ---------- FAQ ---------- */
 .faq { padding-top: var(--sp-6); }
-.faq__grid { display: grid; gap: var(--sp-4); }
+.faq__grid { display: grid; grid-template-columns: minmax(0, 1fr); gap: var(--sp-4); }
 .faq__head { margin-bottom: 0; }
 .faq__contact {
   margin-top: var(--sp-4);
@@ -1668,7 +1669,7 @@ body.menu-open { overflow: hidden; }
 /* ---------- Small phones: give long German words enough room ---------- */
 @media (max-width: 399px) {
   .btn { padding-inline: 1rem; }
-  .btn--lg { padding-inline: 1.25rem; font-size: 1.05rem; }
+  .btn--lg { padding-inline: 1.25rem; font-size: 1.17rem; }
   .btn:not(.btn--call) > .icon:last-child { display: none; }
   .town__name { font-size: 1.15rem; }
   .town__arrow { display: none; }
