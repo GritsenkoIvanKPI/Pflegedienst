@@ -316,14 +316,14 @@ strong { font-weight: 700; color: var(--ink); }
 .btn--sm { min-height: 48px; padding: 0.6rem 1.3rem; font-size: 1rem; }
 .btn--block { width: 100%; }
 
-/* Hauptbutton: Navy; auf dunklen Flächen ein helleres Blau */
-.btn--primary { --btn-hover: #3E5B85; background-color: var(--navy); }
-.consult .btn--primary, .career__card .btn--primary, .areas .btn--primary { --btn-hover: #5174A6; background-color: var(--navy-600); }
-.consult .btn--primary:hover, .career__card .btn--primary:hover, .areas .btn--primary:hover { background-color: var(--btn-hover); }
-
-/* Akzentbutton: warmes Bernstein-Gelb – das hellste Gelb, auf dem weiße Schrift
+/* Hauptbutton: warmes Bernstein-Gelb – das hellste Gelb, auf dem weiße Schrift
    (groß + fett) noch lesbar bleibt: 3,3:1, beim Hover 3,0:1 */
-.btn--secondary { --btn-hover: #CC8600; background-color: #C47F00; }
+.btn--primary { --btn-hover: #CC8600; background-color: #C47F00; }
+
+/* Zweitbutton: Navy; auf dunklen Flächen ein helleres Blau */
+.btn--secondary { --btn-hover: #3E5B85; background-color: var(--navy); }
+.consult .btn--secondary, .career__card .btn--secondary, .areas .btn--secondary { --btn-hover: #5174A6; background-color: var(--navy-600); }
+.consult .btn--secondary:hover, .career__card .btn--secondary:hover, .areas .btn--secondary:hover { background-color: var(--btn-hover); }
 
 .btn--call {
   justify-content: flex-start;
