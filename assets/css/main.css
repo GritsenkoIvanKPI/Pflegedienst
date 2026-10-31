@@ -353,7 +353,7 @@ strong { font-weight: 700; color: var(--ink); }
   color: var(--white);
 }
 .btn--call span { display: flex; flex-direction: column; text-align: left; }
-.btn--call small { font-size: 0.8rem; font-weight: 600; color: var(--muted); letter-spacing: 0.02em; }
+.btn--call small { font-size: 0.875rem; font-weight: 600; color: var(--muted); letter-spacing: 0.02em; }
 
 /* ---------- Topbar ---------- */
 .topbar {
@@ -393,7 +393,7 @@ strong { font-weight: 700; color: var(--ink); }
   display: inline-flex;
   align-items: center;
   gap: 0.5rem;
-  min-height: 40px;
+  min-height: 44px;
   padding: 0.25rem 0.85rem;
   border: 1px solid rgba(255, 255, 255, 0.28);
   border-radius: var(--radius-pill);
@@ -708,6 +708,7 @@ body.menu-open { overflow: hidden; }
 .hero__grid {
   position: relative;
   display: grid;
+  grid-template-columns: minmax(0, 1fr);
   gap: var(--sp-5);
   align-items: center;
 }
@@ -864,6 +865,7 @@ body.menu-open { overflow: hidden; }
   box-shadow: inset 0 0 0 2px var(--gold-100);
 }
 .trust__badge .icon { width: 28px; height: 28px; }
+.trust__item > :last-child { min-width: 0; }
 @media (min-width: 640px) { .trust__list { grid-template-columns: 1fr 1fr; } }
 @media (min-width: 1140px) {
   .trust__list { grid-template-columns: repeat(5, 1fr); gap: var(--sp-1); }
@@ -1254,17 +1256,20 @@ body.menu-open { overflow: hidden; }
   .map__town text { font-size: 30px; }
   .map__town--hq text { font-size: 36px; }
 }
+/* schmale Handys: Karte etwas breiter und Ortsnamen größer (mind. ca. 14px) */
+@media (max-width: 419px) {
+  .map { padding: var(--sp-1); }
+  .map__town text { font-size: 34px; }
+  .map__town--hq text { font-size: 40px; }
+}
 .map__caption {
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  gap: 0.5rem;
+  display: block;
   margin-top: var(--sp-1);
   font-size: 0.98rem;
   color: var(--on-dark-muted);
   text-align: center;
 }
-.map__caption .icon { color: var(--gold); }
+.map__caption .icon { display: inline-block; color: var(--gold); margin-right: 0.4rem; vertical-align: -0.2em; }
 
 .towns { display: grid; gap: var(--sp-1); }
 .town {
@@ -1327,6 +1332,7 @@ body.menu-open { overflow: hidden; }
 .faq__phone {
   display: inline-flex;
   align-items: center;
+  min-height: 44px;
   gap: 0.6rem;
   margin: 0.25rem 0;
   font-family: var(--font-body);
@@ -1429,7 +1435,7 @@ body.menu-open { overflow: hidden; }
   overflow: hidden;
   background: var(--navy-900);
 }
-.career__media { min-height: 280px; aspect-ratio: 5 / 4; }
+.career__media { aspect-ratio: 5 / 4; }
 .career__media img { object-position: 35% 40%; }
 .career__text { padding: var(--sp-4) var(--sp-3); color: var(--on-dark); }
 .career h2 { margin-bottom: var(--sp-3); color: var(--white); font-size: clamp(1.65rem, 1.2rem + 2vw, 2.8rem); }
@@ -1441,13 +1447,13 @@ body.menu-open { overflow: hidden; }
 @media (min-width: 1200px) { .career__list { grid-template-columns: 1fr 1fr; } }
 @media (min-width: 1024px) {
   .career__card { grid-template-columns: minmax(0, 5fr) minmax(0, 7fr); }
-  .career__media { aspect-ratio: auto; }
+  .career__media { aspect-ratio: auto; min-height: 280px; }
   .career__text { padding: var(--sp-5); }
 }
 
 /* ---------- Kontakt ---------- */
 .contact { background: var(--white); }
-.contact__grid { display: grid; gap: var(--sp-5); }
+.contact__grid { display: grid; grid-template-columns: minmax(0, 1fr); gap: var(--sp-5); }
 .contact__list { display: grid; gap: var(--sp-3); }
 .contact__list li { display: flex; gap: var(--sp-2); align-items: flex-start; line-height: 1.5; }
 .contact__icon {
@@ -1592,7 +1598,7 @@ body.menu-open { overflow: hidden; }
   text-transform: uppercase;
   color: var(--gold);
 }
-.footer__nav li a { display: inline-flex; align-items: center; min-height: 40px; }
+.footer__nav li a { display: inline-flex; align-items: center; min-height: 44px; }
 .footer__contact p, .footer__contact address { margin-bottom: var(--sp-2); }
 .footer__bottom {
   display: flex;
@@ -1604,7 +1610,7 @@ body.menu-open { overflow: hidden; }
   font-size: 0.95rem;
 }
 .footer__bottom ul { display: flex; gap: var(--sp-3); }
-.footer__bottom a { display: inline-flex; min-height: 40px; align-items: center; }
+.footer__bottom a { display: inline-flex; min-height: 44px; align-items: center; }
 @media (min-width: 640px) { .footer__top { grid-template-columns: 1fr 1fr; } }
 @media (min-width: 1140px) { .footer__top { grid-template-columns: 1.5fr 1fr 1fr 0.8fr 1.1fr; gap: var(--sp-4); } }
 
@@ -1699,4 +1705,29 @@ body.menu-open { overflow: hidden; }
 }
 @media (max-width: 479px) {
   .faq__answer { font-size: 1.05rem; }
+}
+
+/* ---------- Sehr schmale Handys (unter 360px), v. a. mit großer Schrift ---------- */
+@media (max-width: 359px) {
+  .trust__item { padding-inline: 0; }
+  .trust__badge { width: 52px; height: 52px; }
+  .faq__phone { font-size: 1.5rem; }
+  .contact__big { font-size: 1.5rem; }
+  /* „Menü“ nur als Symbol, Name bleibt für Screenreader erhalten */
+  .topbar__label { display: none; }
+  .topbar__info li { white-space: nowrap; }
+  html.is-large .menu-btn span {
+    position: absolute;
+    width: 1px;
+    height: 1px;
+    overflow: hidden;
+    clip: rect(0 0 0 0);
+    white-space: nowrap;
+  }
+}
+
+/* Handys: Button-Paare untereinander und gleich breit – wirkt ruhiger */
+@media (max-width: 479px) {
+  .hero__actions .btn, .steps__cta .btn, .career__actions .btn { flex: 1 1 100%; justify-content: center; }
+  .steps__cta { flex-direction: column; align-items: stretch; }
 }

@@ -17,6 +17,7 @@
     const on = !doc.classList.contains('is-large');
     applySize(on);
     try { localStorage.setItem('funk-textsize', on ? 'large' : 'normal'); } catch (e) { /* ignorieren */ }
+    window.dispatchEvent(new Event('funk:textsize'));
   });
 
   /* ---------- Header-Schatten beim Scrollen + mobile Schnellleiste ---------- */
@@ -220,6 +221,8 @@
   (document.fonts ? document.fonts.ready : Promise.resolve()).then(runTypeset);
   let typesetTimer;
   window.addEventListener('resize', () => { clearTimeout(typesetTimer); typesetTimer = setTimeout(runTypeset, 200); });
+  // andere Schriftgröße → Zeilenumbrüche neu berechnen
+  window.addEventListener('funk:textsize', () => { typesetWidth = 0; runTypeset(); });
   // FAQ-Antworten werden erst beim Öffnen sichtbar
   document.addEventListener('toggle', (e) => { if (e.target.open) fixAll(e.target); }, true);
 
