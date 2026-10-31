@@ -286,4 +286,13 @@
       form.querySelector('button[type="submit"]').disabled = true;
     });
   }
+
+  /* FAQ: immer nur eine Frage offen (Fallback für Browser ohne <details name>) */
+  const faqItems = document.querySelectorAll('.faq__item');
+  faqItems.forEach((item) => {
+    item.addEventListener('toggle', () => {
+      if (!item.open) return;
+      faqItems.forEach((other) => { if (other !== item && other.open) other.open = false; });
+    });
+  });
 })();
