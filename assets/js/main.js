@@ -298,4 +298,22 @@
       faqItems.forEach((other) => { if (other !== item && other.open) other.open = false; });
     });
   });
+
+  /* ---------- Google Maps erst nach Klick laden (DSGVO), Wahl wird gemerkt ---------- */
+  const gmap = document.querySelector('[data-gmap]');
+  const loadMap = () => {
+    if (!gmap) return;
+    const frame = document.createElement('iframe');
+    frame.className = 'map__frame';
+    frame.title = 'Google Maps: Ambulanter Pflegedienst Funk, Bahnhofstraße 33, 48477 Hörstel';
+    frame.src = 'https://maps.google.com/maps?q=' + encodeURIComponent('Ambulanter Pflegedienst Funk, Bahnhofstraße 33, 48477 Hörstel') + '&z=11&hl=de&output=embed';
+    frame.referrerPolicy = 'no-referrer-when-downgrade';
+    frame.allowFullscreen = true;
+    gmap.replaceChildren(frame);
+  };
+  try { if (localStorage.getItem('funk-gmaps') === 'yes') loadMap(); } catch (e) { /* Speicher nicht verfügbar */ }
+  gmap?.querySelector('[data-gmap-load]')?.addEventListener('click', () => {
+    try { localStorage.setItem('funk-gmaps', 'yes'); } catch (e) { /* ignorieren */ }
+    loadMap();
+  });
 })();

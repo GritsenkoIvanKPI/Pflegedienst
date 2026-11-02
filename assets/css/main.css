@@ -1262,6 +1262,44 @@ body.menu-open { overflow: hidden; }
   .map__town text { font-size: 34px; }
   .map__town--hq text { font-size: 40px; }
 }
+/* Google Maps: wird erst nach Klick geladen (DSGVO) */
+.map__view { position: relative; }
+.map__consent {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: center;
+  gap: var(--sp-1) var(--sp-2);
+  margin-top: var(--sp-1);
+  text-align: center;
+}
+.map__note { flex: 1 1 100%; max-width: 30rem; font-size: 0.9rem; line-height: 1.5; color: var(--on-dark-muted); }
+.map__note a { color: var(--on-dark); text-underline-offset: 3px; }
+.map__note a:hover { color: var(--gold); }
+.map__frame {
+  display: block;
+  width: 100%;
+  aspect-ratio: 4 / 3;
+  border: 0;
+  border-radius: var(--radius);
+  background: var(--navy-800);
+}
+@media (min-width: 640px) { .map__frame { aspect-ratio: 600 / 380; } }
+.map__route {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.4rem;
+  min-height: 44px;
+  margin-left: var(--sp-1);
+  font-weight: 700;
+  color: var(--gold);
+  text-decoration: underline;
+  text-decoration-color: transparent;
+  text-underline-offset: 4px;
+}
+.map__route:hover { text-decoration-color: currentColor; }
+.map__caption .map__route .icon { margin: 0; vertical-align: 0; transition: transform 0.4s var(--ease-out); }
+.map__route:hover .icon { transform: translateX(3px); }
 .map__caption {
   display: block;
   margin-top: var(--sp-1);

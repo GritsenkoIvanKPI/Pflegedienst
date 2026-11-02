@@ -580,6 +580,7 @@
 
           <div class="areas__grid">
             <figure class="map" data-reveal>
+              <div class="map__view" data-gmap>
               <svg class="map__svg" viewBox="0 0 600 380" role="img" aria-labelledby="map-title">
                 <title id="map-title">Karte der Einsatzgebiete: Rheine, Hörstel, Recke, Mettingen und Ibbenbüren</title>
                 <defs>
@@ -606,7 +607,15 @@
                   </g>
                 </g>
               </svg>
-              <figcaption class="map__caption"><svg class="icon"><use href="#i-pin"/></svg> Unser Büro: Bahnhofstraße 33, 48477 Hörstel</figcaption>
+              <div class="map__consent">
+                <button class="btn btn--gold btn--sm" type="button" data-gmap-load><svg class="icon"><use href="#i-pin"/></svg> Google Maps anzeigen</button>
+                <p class="map__note">Erst nach Klick wird die Karte geladen. Dabei werden Daten an Google übertragen (<a href="/datenschutz/">Datenschutz</a>).</p>
+              </div>
+              </div>
+              <figcaption class="map__caption">
+                <span><svg class="icon"><use href="#i-pin"/></svg> Unser Büro: Bahnhofstraße&nbsp;33, 48477&nbsp;Hörstel</span>
+                <a class="map__route" href="https://www.google.com/maps/dir/?api=1&amp;destination=Bahnhofstra%C3%9Fe%2033%2C%2048477%20H%C3%B6rstel" target="_blank" rel="noopener">Route planen <svg class="icon"><use href="#i-arrow"/></svg></a>
+              </figcaption>
             </figure>
 
             <ul class="towns" role="list">
