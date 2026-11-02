@@ -1469,6 +1469,7 @@ body.menu-open { overflow: hidden; }
 .career { background: var(--cream); padding-top: var(--sp-5); padding-bottom: calc(var(--section-y) + 3rem); }
 .career__card {
   display: grid;
+  grid-template-columns: minmax(0, 1fr);
   border-radius: var(--radius-l);
   overflow: hidden;
   background: var(--navy-900);
@@ -1730,7 +1731,7 @@ body.menu-open { overflow: hidden; }
 @media (max-width: 399px) {
   .btn { padding-inline: 1rem; }
   .btn--lg { padding-inline: 1.25rem; font-size: 1.17rem; }
-  .btn:not(.btn--call) > .icon:last-child { display: none; }
+  .btn:not(.btn--call) > .icon:last-child:not(:first-child) { display: none; }
   .town__name { font-size: 1.15rem; }
   .town__arrow { display: none; }
   .form__title { font-size: 1.3rem; }
@@ -1751,21 +1752,21 @@ body.menu-open { overflow: hidden; }
   .trust__badge { width: 52px; height: 52px; }
   .faq__phone { font-size: 1.5rem; }
   .contact__big { font-size: 1.5rem; }
-  /* „Menü“ nur als Symbol, Name bleibt für Screenreader erhalten */
+  /* Bürozeiten ohne Wort „Bürozeiten:“ – die Uhr sagt es, so bleibt es einzeilig */
   .topbar__label { display: none; }
   .topbar__info li { white-space: nowrap; }
-  html.is-large .menu-btn span {
-    position: absolute;
-    width: 1px;
-    height: 1px;
-    overflow: hidden;
-    clip: rect(0 0 0 0);
-    white-space: nowrap;
-  }
+  .career__text { padding-inline: var(--sp-2); }
+  .btn, .btn--lg { padding-inline: 0.75rem; }
+  html.is-large .logo img { width: 108px; }
 }
 
-/* Handys: Button-Paare untereinander und gleich breit – wirkt ruhiger */
-@media (max-width: 479px) {
-  .hero__actions .btn, .steps__cta .btn, .career__actions .btn { flex: 1 1 100%; justify-content: center; }
+/* Handys: alle Buttons volle Breite innerhalb des Rasters (Seitenabstand bleibt) */
+@media (max-width: 599px) {
+  .btn { display: flex; width: 100%; justify-content: center; }
+  .hero__actions .btn, .steps__cta .btn, .career__actions .btn { flex: 1 1 100%; }
   .steps__cta { flex-direction: column; align-items: stretch; }
 }
+
+/* Große Schrift: Kopfzeilen-Buttons bleiben normal groß, damit alles in eine Zeile passt */
+html.is-large .header__mobile .menu-btn { font-size: 16px; padding-inline: 16px; }
+@media (max-width: 389px) { html.is-large .header__mobile .menu-btn { padding-inline: 12px; } }
