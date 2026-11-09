@@ -308,11 +308,34 @@ export const section = ({ id, eyebrow, title, lead, center = false, cream = fals
 };
 
 /* Text links, Bild rechts (reverse: Bild links) */
-export const split = ({ text: t, image, alt, reverse = false, tall = false, top = false, mediaCls = '', aside }) => `
+/* Einleitung mit Kennzahlen: links Überschrift + Einstieg, rechts der weitere Text,
+   darunter die Fakten als dunkles Band über die volle Breite */
+export const intro = ({ text: t, facts: factsHtml, extra = '' }) => {
+  const head = t.match(/^\s*(?:<p class="eyebrow">[\s\S]*?<\/p>\s*)?<h2>[\s\S]*?<\/h2>\s*(?:<p[^>]*>[\s\S]*?<\/p>)?/);
+  const headHtml = head ? head[0] : '';
+  const rest = t.slice(headHtml.length).trim();
+  const n = (factsHtml.match(/class="fact"/g) || []).length;
+  return `
+        <div class="intro${rest ? '' : ' intro--single'}">
+          <div class="intro__head prose" data-reveal>${headHtml}${extra}</div>
+          ${rest ? `<div class="intro__body prose" data-reveal>${rest}</div>` : ''}
+          <div class="intro__band" data-reveal>${factsHtml.replace('<ul class="facts" role="list" data-reveal>', `<ul class="facts facts--band facts--${n}" role="list">`)}</div>
+        </div>`;
+};
+
+export const split = ({ text: t, image, alt, reverse = false, tall = false, top = false, mediaCls = '', aside }) => {
+  // Text + Faktenkasten → neues Einleitungs-Layout (kein leerer Raum rechts)
+  if (aside && aside.includes('<ul class="facts"')) {
+    const f = aside.match(/<ul class="facts"[\s\S]*?<\/ul>/)[0];
+    const extra = aside.replace(f, '').replace(/<\/?aside[^>]*>/g, '').trim();
+    return intro({ text: t, facts: f, extra });
+  }
+  return `
         <div class="split${reverse ? ' split--reverse' : ''}${top ? ' split--top' : ''}">
           <div class="split__text prose" data-reveal>${t}</div>
           ${aside ?? `<figure class="split__media media${tall ? ' split__media--tall' : ''}${mediaCls ? ` ${mediaCls}` : ''}" data-reveal>${img(image, alt, { sizes: '(min-width: 1024px) 45vw, 100vw' })}</figure>`}
         </div>`;
+};
 
 export const cards = (items, cols = 3) => `
         <ul class="cards cards--${cols}" role="list">

@@ -2272,3 +2272,89 @@ a.card:active { transform: scale(0.99); }
 }
 .article__layout > * { min-width: 0; }
 .toc a, .aside-cta, .callout div { overflow-wrap: anywhere; }
+
+/* ---------- Einleitung mit Kennzahlen-Band (Leistungs-, Orts- und Unternehmensseiten) ---------- */
+.intro { display: grid; grid-template-columns: minmax(0, 1fr); gap: var(--sp-3) var(--sp-6); }
+.intro .prose { max-width: none; }
+.intro__head h2 { margin-bottom: var(--sp-3); }
+.intro__head .lead, .intro__head > p:not(.eyebrow) {
+  position: relative;
+  padding-left: var(--sp-3);
+  font-size: 1.15em;
+  line-height: 1.6;
+  color: var(--ink);
+}
+.intro__head .lead::before, .intro__head > p:not(.eyebrow)::before {
+  content: "";
+  position: absolute;
+  left: 0;
+  top: 0.35em;
+  bottom: 0.35em;
+  width: 4px;
+  border-radius: 4px;
+  background: var(--accent);
+}
+.intro__head .callout { margin-top: var(--sp-4); }
+.intro__body { color: var(--text); }
+.intro__body > p:first-child::first-line { color: var(--ink); }
+@media (min-width: 1024px) {
+  .intro { grid-template-columns: minmax(0, 5fr) minmax(0, 6fr); align-items: start; }
+  .intro__head { position: sticky; top: calc(var(--header-h) + 2rem); }
+  .intro__body { padding-top: 2.6rem; }
+  .intro--single .intro__head { grid-column: 1 / -1; max-width: 50rem; position: static; }
+}
+.intro__band { grid-column: 1 / -1; margin-top: var(--sp-3); }
+
+/* Fakten als dunkles Band */
+.facts--band {
+  display: grid;
+  grid-template-columns: minmax(0, 1fr);
+  gap: 0;
+  padding: var(--sp-1) var(--sp-3);
+  border-radius: var(--radius-l);
+  background: var(--navy-900);
+  isolation: isolate;
+  overflow: hidden;
+}
+.facts--band .fact {
+  gap: var(--sp-2);
+  padding: var(--sp-3) 0;
+  border: 0;
+  border-radius: 0;
+  background: none;
+}
+.facts--band .fact + .fact { border-top: 1px solid rgba(254, 254, 254, 0.12); }
+.facts--band .fact__icon { width: 3.25rem; height: 3.25rem; background: var(--accent); color: var(--white); }
+.facts--band .fact__icon .icon { width: 1.6rem; height: 1.6rem; stroke-width: 1.7; }
+.facts--band .fact strong { font-size: 1.12rem; color: var(--white); }
+.facts--band .fact span { font-size: 1rem; color: var(--on-dark-muted); }
+@media (min-width: 640px) {
+  .facts--band { grid-template-columns: repeat(2, minmax(0, 1fr)); column-gap: var(--sp-4); }
+  .facts--band .fact + .fact { border-top: 0; }
+  .facts--band .fact:nth-child(n + 3) { border-top: 1px solid rgba(254, 254, 254, 0.12); }
+}
+@media (min-width: 1140px) {
+  .facts--band { padding: var(--sp-2) var(--sp-4); column-gap: 0; }
+  .facts--band .fact { padding: var(--sp-3) var(--sp-3); }
+  .facts--band .fact:nth-child(n) { border-top: 0; }
+  .facts--4 { grid-template-columns: repeat(4, minmax(0, 1fr)); }
+  .facts--3, .facts--6 { grid-template-columns: repeat(3, minmax(0, 1fr)); }
+  .facts--band .fact { border-left: 1px solid rgba(254, 254, 254, 0.12); }
+  .facts--4 .fact:nth-child(4n + 1), .facts--3 .fact:nth-child(3n + 1), .facts--6 .fact:nth-child(3n + 1) { border-left: 0; }
+  .facts--6 .fact:nth-child(n + 4) { border-top: 1px solid rgba(254, 254, 254, 0.12); }
+  .facts--band .fact:first-child, .facts--band .fact:nth-child(4n + 1) { padding-left: 0; }
+  .facts--3 .fact:nth-child(3n + 1), .facts--6 .fact:nth-child(3n + 1) { padding-left: 0; }
+  .facts--4 .fact:nth-child(4n), .facts--3 .fact:nth-child(3n), .facts--6 .fact:nth-child(3n) { padding-right: 0; }
+}
+.section--cream .facts--band .fact { border-color: rgba(254, 254, 254, 0.12); }
+.facts--band .fact > div { min-width: 0; }
+@media (max-width: 419px) {
+  .facts--band { padding: var(--sp-1) var(--sp-2); }
+  .facts--band .fact { gap: 0.85rem; }
+  .facts--band .fact__icon { width: 2.75rem; height: 2.75rem; }
+  .facts--band .fact__icon .icon { width: 1.35rem; height: 1.35rem; }
+  .facts--band .fact strong, .facts--band .fact span { -webkit-hyphens: auto; hyphens: auto; overflow-wrap: anywhere; }
+}
+@media (max-width: 419px) {
+  .intro__head .lead, .intro__head > p:not(.eyebrow) { padding-left: var(--sp-2); -webkit-hyphens: auto; hyphens: auto; }
+}

@@ -1,6 +1,6 @@
 /* Lokale Landingpages: Pflegedienst in Hörstel, Mettingen, Recke, Ibbenbüren und Rheine.
    Gemeinsam sind nur die Bausteine – jeder Text ist pro Ort einzeln geschrieben. */
-import { pageHero, section, split, cards, facts, callout, steps, ticks, faq, cityBand, ctaBand, AREAS, ORG_REF, SITE, SERVICES, city } from '../lib.mjs';
+import { intro, pageHero, section, split, cards, facts, callout, steps, ticks, faq, cityBand, ctaBand, AREAS, ORG_REF, SITE, SERVICES, city } from '../lib.mjs';
 
 /* Alle Leistungen als verlinkte Karten mit Ortsbezug ("Grundpflege in Rheine") */
 /* "Kompressionsversorgung in Ibbenbüren" passt bei 4 Spalten (1140–1250 px) nicht in die Karte – daher kürzer */
@@ -349,24 +349,21 @@ ${section({
 ${section({
     id: 'warum',
     cream: true,
-    body: `<div class="split split--top">
-          <div class="prose" data-reveal>
+    body: intro({
+      text: `
             <p class="eyebrow">Darauf können Sie sich verlassen</p>
             <h2>Was Sie von uns <em>erwarten können.</em></h2>
             <p>Pflege ist Vertrauenssache. Seit 2011 arbeiten wir als ambulanter Pflegedienst im Kreis Steinfurt und wissen, worauf es Familien ankommt: dass jemand pünktlich kommt, zuhört und mitdenkt.</p>
-            <p>Mehr über unser Team und unsere Arbeitsweise lesen Sie auf der Seite <a href="/ueber-uns/">Über uns</a>.</p>
-          </div>
-          <div class="split__aside" data-reveal>
-            ${facts([
+            <p>Mehr über unser Team und unsere Arbeitsweise lesen Sie auf der Seite <a href="/ueber-uns/">Über uns</a>.</p>`,
+      facts: facts([
     ['users', 'Feste Bezugspflege', 'vertraute Gesichter statt Wechsel'],
     ['calendar', 'Wochenende &amp; Feiertage', 'wir sind auch dann für Sie da'],
     ['shield', 'Alle Kassen', 'direkte Abrechnung ohne Papierkram'],
     ['award', 'Mitglied im DBfK', 'Berufsverband für Pflegeberufe'],
     ['pill', 'Besorgungen', 'Medikamente und Hilfsmittel'],
     ['phone', 'Hausnotruf', 'wir vermitteln Notruf und Hilfsdienste'],
-  ])}
-          </div>
-        </div>`,
+  ]),
+    }),
   })}
 
 ${ctaBand({ title: 'Pflegedienst in Recke gesucht? <em>Rufen Sie uns an.</em>', text: 'Wir besprechen Ihre Situation in Ruhe und sagen Ihnen offen, wie und ab wann wir Sie unterstützen können.' })}
