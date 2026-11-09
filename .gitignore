@@ -14,3 +14,6 @@ homeinstead.de_.png
 # local test scripts
 _*.mjs
 _sheet.py
+
+# Vercel-Ausgabe (wird beim Deploy erzeugt)
+public/
