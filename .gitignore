@@ -10,3 +10,7 @@ Pflegedienst бриф.txt
 
 # third-party design reference (large, not ours)
 homeinstead.de_.png
+
+# local test scripts
+_*.mjs
+_sheet.py

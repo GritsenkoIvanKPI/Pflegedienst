@@ -1,6 +1,6 @@
 # Pflegedienst Funk — site structure, navigation & SEO plan
 
-Status: home page implemented (concept for approval). All other pages are planned; their links already point to the final URLs but show "Diese Seite ist in Vorbereitung" when clicked.
+Status (09.11.2026): all pages are built. The home page is `index.html`; every other page is generated from `build/pages/*.mjs` with `npm run build`, which reuses the header, menus, contact form and footer from `index.html` and rewrites `sitemap.xml`. Job ads live in `build/data/jobs.mjs`.
 
 ## 1. Navigation logic
 
@@ -93,6 +93,8 @@ Old URLs found in the sitemaps (Yoast) on 30.10.2026:
 | `/karriere/`, `/kontakt/`, `/impressum/`, `/datenschutz/` | keep (same URL) |
 | `/pflegedienst-funk/` (already redirects to `/`) | 301 → `/ueber-uns/` |
 | `/under-construction/` | 301 → `/` |
+| `/author/*` | 301 → `/ueber-uns/` |
+| `/pflegedienst-funk/#pflegeleitbild` | lands on `/ueber-uns/#pflegeleitbild` (anchor kept) |
 | `/recipe/*`, `/recipe-category/*` (theme demo content) | 410 Gone |
 | `/fusion_tb_category/*`, `/element_category/*` (theme internals) | 410 Gone |
 | `/wp-content/uploads/*` images | 301 → new images where an equivalent exists, otherwise leave to 404 |
@@ -104,7 +106,7 @@ Launch checklist: copy metadata → upload `sitemap.xml` → submit in Search Co
 
 ## 6. Technical decisions on the home page
 
-- **No external requests** (fonts self-hosted, no Tailwind CDN, no Google Maps embed) → nothing needs cookie consent, which helps both DSGVO and page speed.
+- **No external requests by default** (fonts self-hosted, no Tailwind CDN). Google Maps loads only after a click ("Google Maps anzeigen"); the choice is remembered in localStorage → no cookie banner needed.
 - Structured data: `MedicalBusiness` (address, phone, opening hours, all served places, service catalogue), `WebSite`, `FAQPage`.
 - Images: WebP in 640/1200 px with `srcset`, lazy-loaded below the fold, hero preloaded.
 - Contact form: honeypot + timestamp for spam protection (checked server-side in `kontakt/senden.php`, to be built in PHP).

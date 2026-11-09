@@ -9,6 +9,8 @@ RewriteRule ^ https://pflegedienst-funk.de%{REQUEST_URI} [L,R=301]
 # Alte Seiten
 RewriteRule ^pflegedienst-funk/?$ /ueber-uns/ [L,R=301]
 RewriteRule ^under-construction/?$ / [L,R=301]
+RewriteRule ^author/.*$ /ueber-uns/ [L,R=301]
+RewriteRule ^(category|tag)/.*$ /ratgeber/ [L,R=301]
 
 # Alte Sitemaps (Yoast)
 RewriteRule ^(sitemap_index|page-sitemap|wp-sitemap)\.xml$ /sitemap.xml [L,R=301]

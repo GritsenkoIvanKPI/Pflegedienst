@@ -91,28 +91,6 @@
   menuBtn?.addEventListener('click', openMenu);
   menu?.querySelectorAll('[data-menu-close]').forEach((el) => el.addEventListener('click', closeMenu));
 
-  /* ---------- Unterseiten noch nicht verfügbar (Konzeptphase) ---------- */
-  const toast = document.querySelector('[data-toast]');
-  let toastTimer;
-  const showToast = (text) => {
-    toast.textContent = text;
-    toast.hidden = false;
-    requestAnimationFrame(() => toast.classList.add('is-visible'));
-    clearTimeout(toastTimer);
-    toastTimer = setTimeout(() => {
-      toast.classList.remove('is-visible');
-      setTimeout(() => { toast.hidden = true; }, 350);
-    }, 2600);
-  };
-  document.addEventListener('click', (e) => {
-    const link = e.target.closest('a[href^="/"]');
-    if (!link) return;
-    const href = link.getAttribute('href');
-    if (href === '/' || href.startsWith('/#')) return;
-    e.preventDefault();
-    showToast('Diese Seite ist in Vorbereitung.');
-  });
-
   /* ---------- Zeilenumbrüche: keine Einzelwörter, keine kurzen Wörter am Zeilenende ----------
      Verbindet Wörter mit geschütztem Leerzeichen – nur dort, wo das Ergebnis in die Zeile passt.
      Läuft nach dem Laden der Schriften und erneut bei geänderter Fensterbreite. */
