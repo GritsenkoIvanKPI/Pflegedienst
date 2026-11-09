@@ -2603,3 +2603,58 @@ a.card:active { transform: scale(0.99); }
 @media (min-width: 1140px) { .career-strip { grid-template-columns: auto minmax(0, 1fr) auto; align-items: center; gap: var(--sp-4); padding: var(--sp-5); } }
 .reach .form { color: var(--text); }
 @media (max-width: 419px) { .career-strip { padding: var(--sp-3) var(--sp-2); } }
+
+/* =====================================================================
+   UNTERSEITEN – mehr Abwechslung im Seitenrhythmus
+   ===================================================================== */
+
+/* Info-Listen (ohne Link) – keine Kästen, sondern offene Liste mit Linien */
+.features { display: grid; grid-template-columns: minmax(0, 1fr); gap: 0 var(--sp-5); }
+@media (min-width: 768px) { .features { grid-template-columns: repeat(2, minmax(0, 1fr)); } }
+@media (min-width: 1140px) { .features--3 { grid-template-columns: repeat(3, minmax(0, 1fr)); } }
+.feature { display: grid; grid-template-columns: auto minmax(0, 1fr); gap: var(--sp-2); padding-block: var(--sp-3); border-top: 1px solid var(--line-strong); }
+.section--cream .feature { border-color: var(--navy-100); }
+.feature__icon { display: grid; place-items: center; width: 52px; height: 52px; border-radius: 50%; background: var(--navy); color: var(--white); }
+.feature__icon .icon { width: 24px; height: 24px; }
+.feature:nth-child(3n + 2) .feature__icon { background: var(--accent); }
+.feature h3 { margin: 0.4rem 0 0.35rem; font-size: 1.2rem; }
+.feature p { font-size: 1.02rem; line-height: 1.6; color: var(--muted); }
+.feature a { color: var(--navy-600); font-weight: 600; text-decoration-color: var(--accent); text-underline-offset: 3px; }
+
+/* Verlinkte Karten: kräftiger, mit farbigem Kopf beim Darüberfahren */
+a.card { border-top: 4px solid var(--navy); }
+li:nth-child(4n + 2) > a.card { border-top-color: var(--accent); }
+li:nth-child(4n + 3) > a.card { border-top-color: var(--navy-600); }
+li:nth-child(4n + 4) > a.card { border-top-color: var(--navy-300); }
+
+/* Text + Bild: Bild läuft bis an den Bildschirmrand */
+@media (min-width: 1024px) {
+  .page .split:not(.intro) .split__media {
+    align-self: stretch;
+    aspect-ratio: auto;
+    min-height: 460px;
+    margin-right: calc(-1 * (max(100vw - 1280px, 0px) / 2 + var(--gutter)));
+    border-radius: 160px 0 0 160px;
+  }
+  .page .split--reverse:not(.intro) .split__media {
+    margin-right: 0;
+    margin-left: calc(-1 * (max(100vw - 1280px, 0px) / 2 + var(--gutter)));
+    border-radius: 0 160px 160px 0;
+  }
+  .page .split:not(.intro) .split__media--tall { min-height: 560px; }
+}
+
+/* Kosten: eigene Fläche statt weißem Abschnitt */
+.page .split:has(.callout):not(:has(.facts)):not(:has(.split__media)) {
+  padding: clamp(1.75rem, 4vw, 3.5rem);
+  border-radius: var(--radius-l);
+  background: var(--accent-100);
+}
+.page .split:has(.callout):not(:has(.facts)):not(:has(.split__media)) .callout { background: var(--white); }
+
+/* Ratgeber-Hinweis auf eigener Fläche */
+.page section#ratgeber { background: var(--navy-50); }
+.page section#ratgeber .post { border: 0; }
+
+/* Ablauf auf hellem Grund: Ziffern auf Weiß */
+.process .timeline__num { background: var(--white); }

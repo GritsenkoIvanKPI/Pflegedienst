@@ -341,7 +341,8 @@ const CURVE_BOTTOM = '<svg class="curve curve--bottom curve--white" viewBox="0 0
 /* Abschnitt mit optionalem Kopf (eyebrow, h2, lead). cream=true: heller Hintergrund mit geschwungenen Kanten */
 export const section = ({ id, eyebrow, title, lead, center = false, cream = false, cls = '', body }) => {
   const hid = id ? `${id}-title` : undefined;
-  if (/\bsteps\b/.test(cls)) { cls = cls.replace(/\bsteps\b/, 'process'); center = false; }
+  if (/\bsteps\b/.test(cls)) { cls = cls.replace(/\bsteps\b/, 'process'); center = false; cream = true; }
+  if (title && /class="(features|cards)/.test(body) && !/class="split/.test(body)) center = true;
   return `
     <section class="section${cream ? ' section--cream' : ''}${cls ? ` ${cls}` : ''}"${id ? ` id="${id}"` : ''}${hid && title ? ` aria-labelledby="${hid}"` : ''}>
       ${cream ? CURVE_TOP : ''}
@@ -387,12 +388,17 @@ export const split = ({ text: t, image, alt, reverse = false, tall = false, top 
         </div>`;
 };
 
-export const cards = (items, cols = 3) => `
+export const cards = (items, cols = 3) => (items.every((i) => !i[3])
+  ? `
+        <ul class="features features--${items.length % 3 === 0 && cols !== 2 ? 3 : 2}" role="list">
+          ${items.map(([ic, title, body]) => `<li class="feature" data-reveal><span class="feature__icon">${icon(ic)}</span><div><h3>${title}</h3><p>${body}</p></div></li>`).join('\n          ')}
+        </ul>`
+  : `
         <ul class="cards cards--${cols}" role="list">
           ${items.map(([ic, title, body, href]) => (href
     ? `<li data-reveal><a class="card" href="${href}"><span class="card__icon">${icon(ic)}</span><h3>${title}</h3><p>${body}</p><span class="link-arrow">Mehr erfahren ${icon('arrow')}</span></a></li>`
     : `<li class="card" data-reveal><span class="card__icon">${icon(ic)}</span><h3>${title}</h3><p>${body}</p></li>`)).join('\n          ')}
-        </ul>`;
+        </ul>`);
 
 export const facts = (items) => `<ul class="facts" role="list" data-reveal>${items.map(([ic, strong, small]) => `<li class="fact"><span class="fact__icon" aria-hidden="true">${icon(ic)}</span><div><strong>${strong}</strong><span>${small}</span></div></li>`).join('')}</ul>`;
 
