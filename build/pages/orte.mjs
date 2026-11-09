@@ -1,6 +1,6 @@
 /* Lokale Landingpages: Pflegedienst in Hörstel, Mettingen, Recke, Ibbenbüren und Rheine.
    Gemeinsam sind nur die Bausteine – jeder Text ist pro Ort einzeln geschrieben. */
-import { intro, pageHero, section, split, cards, facts, callout, steps, ticks, faq, cityBand, ctaBand, AREAS, ORG_REF, SITE, SERVICES, city } from '../lib.mjs';
+import { intro, pageHero, section, split, cards, facts, callout, steps, ticks, faq, cityBand, ctaBand, office, ORG_REF, SITE, SERVICES, city } from '../lib.mjs';
 
 /* Alle Leistungen als verlinkte Karten mit Ortsbezug ("Grundpflege in Rheine") */
 /* "Kompressionsversorgung in Ibbenbüren" passt bei 4 Spalten (1140–1250 px) nicht in die Karte – daher kürzer */
@@ -105,7 +105,7 @@ ${section({
     ]),
   })}
 
-${AREAS}
+${office({ eyebrow: 'Unser Standort', title: 'Ihr Pflegedienst <em>vor Ort in Hörstel.</em>', text: 'Von hier aus planen wir alle Touren. Sie möchten uns kennenlernen oder Unterlagen vorbeibringen? Besuchen Sie uns gern&nbsp;– am besten nach kurzer telefonischer Absprache.' })}
 
 ${section({
     id: 'warum',

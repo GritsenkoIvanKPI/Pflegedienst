@@ -1,4 +1,4 @@
-import { pageHero, section, CONTACT, AREAS, icon, TEL, PHONE, ORG_REF, SITE } from '../lib.mjs';
+import { pageHero, section, contactFor, office, icon, TEL, PHONE, ORG_REF, SITE } from '../lib.mjs';
 
 const MAIL = 'info@pflegedienst-funk.de';
 
@@ -30,9 +30,7 @@ export default {
           </ul>`,
   })}
 
-${CONTACT.replace('class="section contact"', 'class="section contact contact--page"').replace('<h2 id="contact-title">Wir sind <em>für Sie da.</em></h2>', '<h2 id="contact-title">Schreiben Sie <em>uns.</em></h2>')
-    .replace('<p class="section-head__lead">Rufen Sie uns an oder schreiben Sie uns. Wir melden uns schnellstmöglich bei Ihnen zurück&nbsp;– auch wenn Sie außerhalb der Bürozeiten schreiben.</p>',
-      '<p class="section-head__lead">Unsere Bürozeiten sind Montag bis Freitag von 8 bis 14&nbsp;Uhr. Sie können uns aber jederzeit eine Nachricht schicken&nbsp;– wir melden uns schnellstmöglich bei Ihnen zurück. Telefax: 05459&nbsp;5869826.</p>')}
+${contactFor({ formTitle: 'Rückruf oder Beratung anfragen', contactTitle: 'Schreiben Sie <em>uns.</em>' })}
 
 ${section({
     id: 'ansprechpartner',
@@ -48,8 +46,6 @@ ${section({
         </ul>`,
   })}
 
-${AREAS.replace('<h2 id="areas-title">Ambulante Pflege in <em>Ihrer Region.</em></h2>', '<h2 id="areas-title">So finden <em>Sie uns.</em></h2>')
-    .replace('<p class="section-head__lead">Von unserem Büro in Hörstel aus versorgen wir Menschen in fünf Städten und Gemeinden im Kreis Steinfurt&nbsp;– mit kurzen Wegen und Pflegekräften, die sich vor Ort auskennen.</p>',
-      '<p class="section-head__lead">Unser Büro liegt in der Bahnhofstraße&nbsp;33 in Hörstel. Für ein persönliches Gespräch besuchen Sie uns gern&nbsp;– am besten nach kurzer telefonischer Absprache. Von hier aus versorgen wir Menschen in fünf Städten und Gemeinden.</p>')}
+${office({ eyebrow: 'Anfahrt', title: 'So finden <em>Sie uns.</em>', text: 'Unser Büro liegt in der Bahnhofstraße&nbsp;33 in Hörstel. Für ein persönliches Gespräch besuchen Sie uns gern&nbsp;– am besten nach kurzer telefonischer Absprache. Telefax: 05459&nbsp;5869826.' })}
 `,
 };

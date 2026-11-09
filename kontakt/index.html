@@ -302,35 +302,22 @@
       <svg class="curve curve--bottom" viewBox="0 0 1440 90" preserveAspectRatio="none" aria-hidden="true"><path d="M0 90V62C380 18 900 0 1440 22V90Z"/></svg>
     </section>
 
-<section class="section contact contact--page" id="kontakt" aria-labelledby="contact-title">
-      <svg class="curve curve--top curve--white" viewBox="0 0 1440 90" preserveAspectRatio="none" aria-hidden="true"><path d="M0 90V62C380 18 900 0 1440 22V90Z"/></svg>
-      <div class="container contact__grid">
-        <div class="contact__info">
-          <header class="section-head" data-reveal>
-            <p class="eyebrow">Kontakt</p>
-            <h2 id="contact-title">Schreiben Sie <em>uns.</em></h2>
-            <p class="section-head__lead">Unsere Bürozeiten sind Montag bis Freitag von 8 bis 14&nbsp;Uhr. Sie können uns aber jederzeit eine Nachricht schicken&nbsp;– wir melden uns schnellstmöglich bei Ihnen zurück. Telefax: 05459&nbsp;5869826.</p>
-          </header>
-          <ul class="contact__list" role="list" data-reveal>
-            <li>
-              <span class="contact__icon"><svg class="icon"><use href="#i-phone"/></svg></span>
-              <div><span class="contact__label">Telefon</span><a class="contact__big" href="tel:+4954595869825">05459&nbsp;5869825</a></div>
-            </li>
-            <li>
-              <span class="contact__icon"><svg class="icon"><use href="#i-mail"/></svg></span>
-              <div><span class="contact__label">E-Mail</span><a href="mailto:info@pflegedienst-funk.de">info@pflegedienst-funk.de</a></div>
-            </li>
-            <li>
-              <span class="contact__icon"><svg class="icon"><use href="#i-pin"/></svg></span>
-              <div><span class="contact__label">Adresse</span><address>Ambulanter Pflegedienst Funk GmbH<br>Bahnhofstraße 33, 48477 Hörstel</address></div>
-            </li>
-            <li>
-              <span class="contact__icon"><svg class="icon"><use href="#i-clock"/></svg></span>
-              <div><span class="contact__label">Bürozeiten</span>Montag bis Freitag, 8–14&nbsp;Uhr</div>
-            </li>
-          </ul>
-        </div>
 
+    <section class="section reach" id="kontakt" aria-labelledby="contact-title">
+      <div class="container reach__grid">
+        <div class="reach__info" data-reveal>
+          <p class="eyebrow eyebrow--light">Kontakt</p>
+          <h2 id="contact-title">Schreiben Sie <em>uns.</em></h2>
+          <ol class="reach__steps" role="list">
+            <li><span class="reach__num" aria-hidden="true">1</span><div><strong>Sie senden die Anfrage</strong><p>Name und Telefonnummer genügen. Alles andere besprechen wir persönlich.</p></div></li>
+            <li><span class="reach__num" aria-hidden="true">2</span><div><strong>Wir rufen zurück</strong><p>Schnellstmöglich während unserer Bürozeiten&nbsp;– auch wenn Sie abends oder am Wochenende schreiben.</p></div></li>
+            <li><span class="reach__num" aria-hidden="true">3</span><div><strong>Beratung bei Ihnen</strong><p>Auf Wunsch kommen wir zu Ihnen nach Hause&nbsp;– kostenlos und unverbindlich.</p></div></li>
+          </ol>
+          <div class="reach__direct">
+            <a class="reach__phone" href="tel:+4954595869825"><svg class="icon"><use href="#i-phone"/></svg> 05459&nbsp;5869825</a>
+            <p>Mo–Fr 8–14&nbsp;Uhr · <a href="mailto:info@pflegedienst-funk.de">info@pflegedienst-funk.de</a></p>
+          </div>
+        </div>
         <form class="form" action="/kontakt/senden.php" method="post" novalidate data-form data-reveal>
           <h3 class="form__title">Rückruf oder Beratung anfragen</h3>
           <fieldset class="form__topics">
@@ -410,69 +397,29 @@
       <svg class="curve curve--bottom curve--white" viewBox="0 0 1440 90" preserveAspectRatio="none" aria-hidden="true"><path d="M0 90V30C460 80 1000 86 1440 50V90Z"/></svg>
     </section>
 
-<section class="areas" id="einsatzgebiete" aria-labelledby="areas-title">
-      <svg class="curve curve--top curve--navy" viewBox="0 0 1440 90" preserveAspectRatio="none" aria-hidden="true"><path d="M0 90V20C520 70 1040 74 1440 34V90Z"/></svg>
-      <div class="areas__inner">
-        <div class="container">
-          <header class="section-head section-head--light" data-reveal>
-            <p class="eyebrow eyebrow--light">Einsatzgebiete</p>
-            <h2 id="areas-title">So finden <em>Sie uns.</em></h2>
-            <p class="section-head__lead">Unser Büro liegt in der Bahnhofstraße&nbsp;33 in Hörstel. Für ein persönliches Gespräch besuchen Sie uns gern&nbsp;– am besten nach kurzer telefonischer Absprache. Von hier aus versorgen wir Menschen in fünf Städten und Gemeinden.</p>
-          </header>
 
-          <div class="areas__grid">
-            <figure class="map" data-reveal>
-              <div class="map__view" data-gmap>
-              <svg class="map__svg" viewBox="0 0 600 380" role="img" aria-labelledby="map-title">
-                <title id="map-title">Karte der Einsatzgebiete: Rheine, Hörstel, Recke, Mettingen und Ibbenbüren</title>
-                <defs>
-                  <pattern id="mapDots" width="14" height="14" patternUnits="userSpaceOnUse">
-                    <circle cx="2" cy="2" r="1.1" fill="#FFFFFF" fill-opacity=".09"/>
-                  </pattern>
-                </defs>
-                <rect width="600" height="380" fill="url(#mapDots)"/>
-                <path class="map__region" d="M60 268C70 220 140 196 200 200C240 170 300 120 360 84C410 56 470 70 492 120C520 170 560 190 548 236C536 290 470 320 400 316C330 330 260 312 200 300C140 312 52 316 60 268Z"/>
-                <g class="map__routes">
-                  <path d="M270 243 L91 278"/>
-                  <path d="M270 243 L429 283"/>
-                  <path d="M270 243 L505 206"/>
-                  <path d="M270 243 L435 99"/>
-                </g>
-                <g class="map__towns">
-                  <g class="map__town"><circle cx="91" cy="278" r="7"/><text x="91" y="308" text-anchor="middle">Rheine</text></g>
-                  <g class="map__town"><circle cx="429" cy="283" r="7"/><text x="429" y="313" text-anchor="middle">Ibbenbüren</text></g>
-                  <g class="map__town"><circle cx="505" cy="206" r="7"/><text x="505" y="186" text-anchor="middle">Mettingen</text></g>
-                  <g class="map__town"><circle cx="435" cy="99" r="7"/><text x="435" y="79" text-anchor="middle">Recke</text></g>
-                  <g class="map__town map__town--hq">
-                    <circle cx="270" cy="243" r="11"/>
-                    <text x="270" y="205" text-anchor="middle">Hörstel</text>
-                  </g>
-                </g>
-              </svg>
-              <div class="map__consent">
-                <button class="btn btn--accent btn--sm" type="button" data-gmap-load><svg class="icon"><use href="#i-pin"/></svg> Google Maps anzeigen</button>
-                <p class="map__note">Erst nach Klick wird die Karte geladen. Dabei werden Daten an Google übertragen (<a href="/datenschutz/">Datenschutz</a>).</p>
-              </div>
-              </div>
-              <figcaption class="map__caption">
-                <span><svg class="icon"><use href="#i-pin"/></svg> Unser Büro: Bahnhofstraße&nbsp;33, 48477&nbsp;Hörstel</span>
-                <a class="map__route" href="https://www.google.com/maps/dir/?api=1&amp;destination=Bahnhofstra%C3%9Fe%2033%2C%2048477%20H%C3%B6rstel" target="_blank" rel="noopener">Route planen <svg class="icon"><use href="#i-arrow"/></svg></a>
-              </figcaption>
-            </figure>
-
-            <ul class="towns" role="list">
-              <li data-reveal><a class="town" href="/pflegedienst-hoerstel/"><span class="town__name">Pflegedienst Hörstel</span><span class="town__sub">mit Bevergern, Riesenbeck und Dreierwalde</span><svg class="icon town__arrow"><use href="#i-arrow"/></svg></a></li>
-              <li data-reveal><a class="town" href="/pflegedienst-mettingen/"><span class="town__name">Pflegedienst Mettingen</span><span class="town__sub">mit Schlickelde und Espel</span><svg class="icon town__arrow"><use href="#i-arrow"/></svg></a></li>
-              <li data-reveal><a class="town" href="/pflegedienst-recke/"><span class="town__name">Pflegedienst Recke</span><span class="town__sub">mit Steinbeck, Obersteinbeck und Uffeln</span><svg class="icon town__arrow"><use href="#i-arrow"/></svg></a></li>
-              <li data-reveal><a class="town" href="/pflegedienst-ibbenbueren/"><span class="town__name">Pflegedienst Ibbenbüren</span><span class="town__sub">mit Bockraden, Dickenberg und Püsselbüren</span><svg class="icon town__arrow"><use href="#i-arrow"/></svg></a></li>
-              <li data-reveal><a class="town" href="/pflegedienst-rheine/"><span class="town__name">Pflegedienst Rheine</span><span class="town__sub">mit Rodde und Altenrheine</span><svg class="icon town__arrow"><use href="#i-arrow"/></svg></a></li>
-            </ul>
+    <section class="section office" aria-labelledby="office-title">
+      <div class="container office__grid">
+        <div class="office__card" data-reveal>
+          <p class="eyebrow">Anfahrt</p>
+          <h2 id="office-title">So finden <em>Sie uns.</em></h2>
+          <p>Unser Büro liegt in der Bahnhofstraße&nbsp;33 in Hörstel. Für ein persönliches Gespräch besuchen Sie uns gern&nbsp;– am besten nach kurzer telefonischer Absprache. Telefax: 05459&nbsp;5869826.</p>
+          <dl class="office__list">
+            <div><dt><svg class="icon"><use href="#i-pin"/></svg> Adresse</dt><dd>Ambulanter Pflegedienst Funk GmbH<br>Bahnhofstraße&nbsp;33, 48477 Hörstel</dd></div>
+            <div><dt><svg class="icon"><use href="#i-clock"/></svg> Bürozeiten</dt><dd>Montag bis Freitag, 8–14&nbsp;Uhr</dd></div>
+            <div><dt><svg class="icon"><use href="#i-phone"/></svg> Telefon</dt><dd><a href="tel:+4954595869825">05459&nbsp;5869825</a></dd></div>
+          </dl>
+          <a class="btn btn--navy" href="https://www.google.com/maps/dir/?api=1&amp;destination=Bahnhofstra%C3%9Fe%2033%2C%2048477%20H%C3%B6rstel" target="_blank" rel="noopener">Route planen <svg class="icon"><use href="#i-arrow"/></svg></a>
+        </div>
+        <div class="office__map" data-gmap data-reveal>
+          <div class="office__placeholder">
+            <span class="office__pin"><svg class="icon"><use href="#i-pin"/></svg></span>
+            <p><strong>Bahnhofstraße&nbsp;33</strong><br>48477 Hörstel</p>
+            <button class="btn btn--accent btn--sm" type="button" data-gmap-load><svg class="icon"><use href="#i-pin"/></svg> Google Maps anzeigen</button>
+            <p class="office__note">Erst nach Klick wird die Karte geladen. Dabei werden Daten an Google übertragen (<a href="/datenschutz/">Datenschutz</a>).</p>
           </div>
-
-          <p class="areas__note" data-reveal>Ihr Ort ist nicht dabei? <a href="tel:+4954595869825">Rufen Sie uns&nbsp;an</a>&nbsp;– wir prüfen gern, ob wir Sie versorgen können.</p>
         </div>
       </div>
-      <svg class="curve curve--bottom curve--white" viewBox="0 0 1440 90" preserveAspectRatio="none" aria-hidden="true"><path d="M0 90V54C420 6 1000 0 1440 40V90Z"/></svg>
     </section>
 
 

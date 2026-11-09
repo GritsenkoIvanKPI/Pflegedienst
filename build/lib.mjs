@@ -111,20 +111,21 @@ export const breadcrumbNav = (crumbs) => `<nav class="breadcrumb" aria-label="Br
     : `<li><span aria-current="page">${label}</span></li>`)).join('')}
           </ol></nav>`;
 
-/* Verwandte Leistungen als Karten */
+/* Verwandte Leistungen als Link-Index (bewusst anders als die Kacheln der Startseite) */
 export const related = (slugs, title = 'Passende <em>Leistungen.</em>', eyebrow = 'Das könnte Sie auch interessieren') => `
     <section class="section related" aria-labelledby="related-title">
-      <div class="container">
+      <div class="container related__grid">
         <header class="section-head" data-reveal>
           <p class="eyebrow">${eyebrow}</p>
           <h2 id="related-title">${title}</h2>
+          <a class="link-arrow" href="/leistungen/">Alle Leistungen ${icon('arrow')}</a>
         </header>
-        <ul class="services__more related__list${slugs.length === 3 ? ' related__list--3' : ''}" role="list">
+        <ul class="link-index" role="list">
           ${slugs.map((slug) => { const s = service(slug); return `<li data-reveal>
-            <a class="svc-mini" href="/leistungen/${s.slug}/">
-              <span class="svc-mini__icon">${icon(s.icon)}</span>
-              <span class="svc-mini__text"><strong>${s.name}</strong> ${s.short}</span>
-              ${icon('arrow', 'svc-mini__arrow')}
+            <a class="link-index__item" href="/leistungen/${s.slug}/">
+              <span class="link-index__icon">${icon(s.icon)}</span>
+              <span class="link-index__text"><strong>${s.name}</strong><small>${s.short}</small></span>
+              <span class="link-index__arrow">${icon('arrow')}</span>
             </a>
           </li>`; }).join('\n          ')}
         </ul>
@@ -142,24 +143,24 @@ export const cityBand = (lead = 'Wir sind für Sie da in') => `
       </div>
     </section>`;
 
-/* FAQ im Stil der Startseite */
+/* FAQ für Unterseiten: Überschrift oben, nummerierte Fragen als Liste (ohne Karten) */
 export const faq = (items, { title = 'Häufige <em>Fragen.</em>', lead = 'Kurze Antworten auf das, was Familien uns am häufigsten fragen.', eyebrow = 'Häufige Fragen' } = {}) => `
-    <section class="section faq" aria-labelledby="faq-title">
-      <div class="container faq__grid">
-        <header class="section-head faq__head" data-reveal>
-          <p class="eyebrow">${eyebrow}</p>
-          <h2 id="faq-title">${title}</h2>
-          <p class="section-head__lead">${lead}</p>
-          <div class="faq__contact">
-            <p>Ihre Frage ist nicht dabei?</p>
-            <a class="faq__phone" href="${TEL}">${icon('phone')} ${PHONE}</a>
-            <p class="faq__hours">Mo–Fr von 8 bis 14&nbsp;Uhr</p>
+    <section class="section qa" aria-labelledby="faq-title">
+      <div class="container">
+        <header class="qa__head" data-reveal>
+          <div>
+            <p class="eyebrow">${eyebrow}</p>
+            <h2 id="faq-title">${title}</h2>
+          </div>
+          <div class="qa__aside">
+            <p>${lead}</p>
+            <a class="qa__phone" href="${TEL}">${icon('phone')} <span>Ihre Frage ist nicht dabei? <strong>${PHONE}</strong></span></a>
           </div>
         </header>
-        <div class="faq__list">
-          ${items.map(([q, a]) => `<details class="faq__item" name="faq" data-reveal>
-            <summary><h3>${q}</h3><span class="faq__toggle" aria-hidden="true">${icon('plus')}</span></summary>
-            <div class="faq__answer">${a.startsWith('<') ? a : `<p>${a}</p>`}</div>
+        <div class="qa__list">
+          ${items.map(([q, a], i) => `<details class="qa__item" name="faq" data-reveal>
+            <summary><span class="qa__num" aria-hidden="true">${String(i + 1).padStart(2, '0')}</span><h3>${q}</h3><span class="qa__toggle" aria-hidden="true">${icon('plus')}</span></summary>
+            <div class="qa__answer">${a.startsWith('<') ? a : `<p>${a}</p>`}</div>
           </details>`).join('\n          ')}
         </div>
       </div>
@@ -181,6 +182,32 @@ export const ctaBand = ({ title = 'Wir beraten Sie <em>kostenlos.</em>', text: t
           <div class="cta-band__actions">
             ${ctaBtn(button)}
             ${callBtn('Oder direkt anrufen')}
+          </div>
+        </div>
+      </div>
+    </section>`;
+
+/* Büro & Anfahrt mit Google Maps per Klick (anders als die Einsatzgebiets-Karte der Startseite) */
+export const office = ({ eyebrow = 'Anfahrt', title = 'Unser Büro <em>in Hörstel.</em>', text: t = 'Für ein persönliches Gespräch besuchen Sie uns gern&nbsp;– am besten nach kurzer telefonischer Absprache.' } = {}) => `
+    <section class="section office" aria-labelledby="office-title">
+      <div class="container office__grid">
+        <div class="office__card" data-reveal>
+          <p class="eyebrow">${eyebrow}</p>
+          <h2 id="office-title">${title}</h2>
+          <p>${t}</p>
+          <dl class="office__list">
+            <div><dt>${icon('pin')} Adresse</dt><dd>Ambulanter Pflegedienst Funk GmbH<br>Bahnhofstraße&nbsp;33, 48477 Hörstel</dd></div>
+            <div><dt>${icon('clock')} Bürozeiten</dt><dd>Montag bis Freitag, 8–14&nbsp;Uhr</dd></div>
+            <div><dt>${icon('phone')} Telefon</dt><dd><a href="${TEL}">${PHONE}</a></dd></div>
+          </dl>
+          <a class="btn btn--navy" href="https://www.google.com/maps/dir/?api=1&amp;destination=Bahnhofstra%C3%9Fe%2033%2C%2048477%20H%C3%B6rstel" target="_blank" rel="noopener">Route planen ${icon('arrow')}</a>
+        </div>
+        <div class="office__map" data-gmap data-reveal>
+          <div class="office__placeholder">
+            <span class="office__pin">${icon('pin')}</span>
+            <p><strong>Bahnhofstraße&nbsp;33</strong><br>48477 Hörstel</p>
+            <button class="btn btn--accent btn--sm" type="button" data-gmap-load>${icon('pin')} Google Maps anzeigen</button>
+            <p class="office__note">Erst nach Klick wird die Karte geladen. Dabei werden Daten an Google übertragen (<a href="/datenschutz/">Datenschutz</a>).</p>
           </div>
         </div>
       </div>
@@ -211,9 +238,31 @@ const breadcrumbSchema = (crumbs, url) => ({
 });
 
 /* Kontaktformular – optional mit vorausgewähltem Anliegen (z. B. Karriere) */
-export const contactFor = (p) => (p.formTopic
-  ? CONTACT.replace('value="Pflegeanfrage" checked', 'value="Pflegeanfrage"').replace(`value="${p.formTopic}"`, `value="${p.formTopic}" checked`)
-  : CONTACT);
+const FORM = CONTACT.slice(CONTACT.indexOf('<form'), CONTACT.indexOf('</form>') + 7);
+export const contactFor = (p) => {
+  let form = FORM.replace('<h3 class="form__title">Rückruf oder Beratung anfragen</h3>', `<h3 class="form__title">${p.formTitle ?? 'Ihre Anfrage'}</h3>`);
+  if (p.formTopic) form = form.replace('value="Pflegeanfrage" checked', 'value="Pflegeanfrage"').replace(`value="${p.formTopic}"`, `value="${p.formTopic}" checked`);
+  const next = p.formTopic === 'Karriere / Bewerbung'
+    ? [['Sie schreiben uns', 'Ein paar Zeilen genügen&nbsp;– Lebenslauf und Zeugnisse können Sie später nachreichen.'], ['Wir melden uns', 'Zeitnah&nbsp;– mit einem Vorschlag für ein persönliches Kennenlernen.'], ['Kennenlernen', 'In unserem Büro in Hörstel&nbsp;– ganz in Ruhe und ohne Prüfungsstress.']]
+    : [['Sie senden die Anfrage', 'Name und Telefonnummer genügen. Alles andere besprechen wir persönlich.'], ['Wir rufen zurück', 'Schnellstmöglich während unserer Bürozeiten&nbsp;– auch wenn Sie abends oder am Wochenende schreiben.'], ['Beratung bei Ihnen', 'Auf Wunsch kommen wir zu Ihnen nach Hause&nbsp;– kostenlos und unverbindlich.']];
+  return `
+    <section class="section reach" id="kontakt" aria-labelledby="contact-title">
+      <div class="container reach__grid">
+        <div class="reach__info" data-reveal>
+          <p class="eyebrow eyebrow--light">Kontakt</p>
+          <h2 id="contact-title">${p.contactTitle ?? 'Sprechen Sie <em>mit uns.</em>'}</h2>
+          <ol class="reach__steps" role="list">
+            ${next.map(([t, d], i) => `<li><span class="reach__num" aria-hidden="true">${i + 1}</span><div><strong>${t}</strong><p>${d}</p></div></li>`).join('\n            ')}
+          </ol>
+          <div class="reach__direct">
+            <a class="reach__phone" href="${TEL}">${icon('phone')} ${PHONE}</a>
+            <p>Mo–Fr 8–14&nbsp;Uhr · <a href="mailto:info@pflegedienst-funk.de">info@pflegedienst-funk.de</a></p>
+          </div>
+        </div>
+        ${form.replace('data-form data-reveal', 'data-form data-reveal')}
+      </div>
+    </section>`;
+};
 
 /* ---------- Ganze Seite ---------- */
 export const renderPage = (p) => {
@@ -292,10 +341,11 @@ const CURVE_BOTTOM = '<svg class="curve curve--bottom curve--white" viewBox="0 0
 /* Abschnitt mit optionalem Kopf (eyebrow, h2, lead). cream=true: heller Hintergrund mit geschwungenen Kanten */
 export const section = ({ id, eyebrow, title, lead, center = false, cream = false, cls = '', body }) => {
   const hid = id ? `${id}-title` : undefined;
+  if (/\bsteps\b/.test(cls)) { cls = cls.replace(/\bsteps\b/, 'process'); center = false; }
   return `
     <section class="section${cream ? ' section--cream' : ''}${cls ? ` ${cls}` : ''}"${id ? ` id="${id}"` : ''}${hid && title ? ` aria-labelledby="${hid}"` : ''}>
       ${cream ? CURVE_TOP : ''}
-      <div class="container">
+      <div class="container${/\bprocess\b/.test(cls) ? ' process__grid' : ''}">
         ${title ? `<header class="section-head${center ? ' section-head--center' : ''}" data-reveal>
           ${eyebrow ? `<p class="eyebrow">${eyebrow}</p>` : ''}
           <h2${hid ? ` id="${hid}"` : ''}>${title}</h2>
@@ -349,11 +399,10 @@ export const facts = (items) => `<ul class="facts" role="list" data-reveal>${ite
 export const callout = (title, body, ic = 'shield') => `<div class="callout" data-reveal>${icon(ic)}<div><strong>${title}</strong><p>${body}</p></div></div>`;
 
 export const steps = (items) => `
-        <ol class="steps__list" role="list">
-          ${items.map(([title, body], i) => `<li class="step" data-reveal>
-            <span class="step__num" aria-hidden="true">${i + 1}</span>
-            <h3>${title}</h3>
-            <p>${body}</p>
+        <ol class="timeline" role="list">
+          ${items.map(([title, body], i) => `<li class="timeline__item" data-reveal>
+            <span class="timeline__num" aria-hidden="true">${String(i + 1).padStart(2, '0')}</span>
+            <div class="timeline__body"><h3>${title}</h3><p>${body}</p></div>
           </li>`).join('\n          ')}
         </ol>`;
 
@@ -363,9 +412,9 @@ export const ARTICLES = [
   { slug: 'beratungseinsatz-37-3-sgb-xi', tag: 'Beratung', title: 'Beratungseinsatz nach §&nbsp;37.3&nbsp;SGB&nbsp;XI&nbsp;– was Pflegebedürftige wissen sollten', short: 'Wer den Beratungsbesuch braucht, wie oft er stattfindet und warum er sich für Sie lohnt.', img: 'ratgeber-beratung', alt: 'Pflegekraft notiert im Gespräch mit einem Senior dessen Anliegen' },
   { slug: 'professionelle-wundversorgung-zu-hause', tag: 'Wundversorgung', title: 'Professionelle Wundversorgung zu Hause&nbsp;– wann ist ein Wundexperte sinnvoll?', short: 'Warum chronische Wunden fachkundige Hilfe brauchen und wie Wundmanagement zu Hause funktioniert.', img: 'ratgeber-wunde', alt: 'Wundexperte bereitet sterile Verbandsmaterialien vor' },
 ];
-export const postCard = (slug, wide = false) => {
+export const postCard = (slug, wide = false, row = false) => {
   const a = ARTICLES.find((x) => x.slug === slug);
-  return `<article class="post${wide ? ' post--wide' : ''}">
+  return `<article class="post${wide ? ' post--wide' : ''}${row ? ' post--row' : ''}">
               <figure class="post__media media">${img(a.img, a.alt, { sizes: '(min-width: 1024px) 30vw, 100vw' })}</figure>
               <div class="post__body">
                 <p class="post__tag">${a.tag}</p>
@@ -377,5 +426,5 @@ export const postCard = (slug, wide = false) => {
 };
 export const articleTeaser = (slug, title = 'Mehr dazu im <em>Ratgeber.</em>') => section({
   id: 'ratgeber', eyebrow: 'Ratgeber', title, cls: 'section--tight',
-  body: `<div class="blog__grid blog__grid--single"><div data-reveal>${postCard(slug, true)}</div></div>`,
+  body: `<div class="article-teaser" data-reveal>${postCard(slug, true)}</div>`,
 });

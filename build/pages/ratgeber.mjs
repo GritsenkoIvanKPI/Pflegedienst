@@ -93,8 +93,8 @@ ${section({
       cls: 'section--tight',
       eyebrow: 'Ratgeber',
       title: 'Weitere <em>Artikel.</em>',
-      body: `<ul class="cards cards--2" role="list">
-          ${others.map((s) => `<li data-reveal>${postCard(s)}</li>`).join('\n          ')}
+      body: `<ul class="post-rows" role="list">
+          ${others.map((s) => `<li data-reveal>${postCard(s, false, true)}</li>`).join('\n          ')}
         </ul>`,
     })}
 
@@ -510,12 +510,14 @@ const index = {
 
 ${section({
     id: 'artikel',
-    cls: 'blog blog--page',
     eyebrow: 'Alle Beiträge',
     title: 'Wissen, das im <em>Alltag hilft.</em>',
-    body: `<ul class="blog__grid" role="list">
-          ${ARTICLES.map((a) => `<li data-reveal>${postCard(a.slug)}</li>`).join('\n          ')}
-        </ul>`,
+    body: `<div class="post-feature">
+          <div class="post-feature__main" data-reveal>${postCard(ARTICLES[0].slug, true)}</div>
+          <ul class="post-rows" role="list">
+            ${ARTICLES.slice(1).map((a) => `<li data-reveal>${postCard(a.slug, false, true)}</li>`).join('\n            ')}
+          </ul>
+        </div>`,
   })}
 
 ${section({

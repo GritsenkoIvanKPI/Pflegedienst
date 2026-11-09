@@ -8,47 +8,46 @@ const FAQ = [
   ['In welchen Orten sind Sie im Einsatz?', 'Wir versorgen Menschen in Hörstel mit Bevergern, Riesenbeck und Dreierwalde sowie in Mettingen, Recke, Ibbenbüren und Rheine mit ihren Ortsteilen. Fragen Sie gern nach, wenn Sie in der Nähe wohnen.'],
 ];
 
-const BIG = [
-  ['grundpflege', 'navy', 'Körperpflege, Hilfe beim An- und Auskleiden, Mobilisation und Unterstützung beim Essen.', 'Pflegekraft des Pflegedienstes Funk hilft einem älteren Herrn beim Anziehen'],
-  ['behandlungspflege', 'deep', 'Medizinische Pflege nach ärztlicher Verordnung: Injektionen, Blutzucker, Blutdruck und Verbände.', 'Pflegefachkraft des Pflegedienstes Funk misst den Blutzucker eines älteren Mannes'],
-  ['wundversorgung', 'accent', 'Professionelles Wundmanagement für akute und chronische Wunden, direkt bei Ihnen zu Hause.', 'Pflegefachkraft des Pflegedienstes Funk legt einer älteren Dame einen sterilen Wundverband an'],
-  ['hauswirtschaft', 'sand', 'Einkaufen, Kochen, Wäsche und Ordnung&nbsp;– damit der Alltag zu Hause leichter wird.', 'Mitarbeiterin des Pflegedienstes Funk bereitet mit einer Seniorin Gemüse in der Küche zu'],
-];
-const MINI = [
-  ['pflegeberatung-37-3', 'Pflegeberatung §&nbsp;37.3&nbsp;SGB&nbsp;XI', 'Beratungseinsatz für <span class="nowrap">Pflegegeld-Empfänger</span>'],
-  ['verhinderungspflege', 'Verhinderungspflege', 'Vertretung, wenn Angehörige eine Pause brauchen'],
-  ['medikamentengabe', 'Medikamentengabe', 'Sicher, pünktlich und dokumentiert'],
-  ['kompressionsversorgung', 'Kompressionsversorgung', 'Strümpfe und Verbände fachgerecht angelegt'],
+/* Leistungskatalog – nach Bereichen gruppiert, mit Kostenträger (eigenes Layout, nicht die Kacheln der Startseite) */
+const GROUPS = [
+  ['Pflege &amp; Medizin', 'Körperpflege und medizinische Versorgung durch unsere Pflegefachkräfte.', [
+    ['grundpflege', 'Körperpflege, Hilfe beim An- und Auskleiden, Mobilisation und Unterstützung beim Essen.', 'Pflegekasse'],
+    ['behandlungspflege', 'Medizinische Pflege nach ärztlicher Verordnung: Injektionen, Blutzucker, Blutdruck und Verbände.', 'Krankenkasse'],
+    ['wundversorgung', 'Professionelles Wundmanagement für akute und chronische Wunden, direkt bei Ihnen zu Hause.', 'Krankenkasse'],
+    ['medikamentengabe', 'Medikamente richten, verabreichen und kontrollieren&nbsp;– sicher, pünktlich und dokumentiert.', 'Krankenkasse'],
+    ['kompressionsversorgung', 'Kompressionsstrümpfe an- und ausziehen, Kompressionsverbände fachgerecht anlegen.', 'Krankenkasse'],
+  ]],
+  ['Entlastung &amp; Beratung', 'Hilfe im Alltag und Unterstützung für pflegende Angehörige.', [
+    ['hauswirtschaft', 'Einkaufen, Kochen, Wäsche und Ordnung&nbsp;– damit der Alltag zu Hause leichter wird.', 'Pflegekasse'],
+    ['verhinderungspflege', 'Wir springen ein, wenn pflegende Angehörige Urlaub machen, krank sind oder eine Pause brauchen.', 'Pflegekasse'],
+    ['pflegeberatung-37-3', 'Der Beratungseinsatz für Pflegegeld-Empfänger&nbsp;– kostenlos bei Ihnen zu Hause.', 'Pflegekasse'],
+  ]],
 ];
 const byslug = (slug) => SERVICES.find((s) => s.slug === slug);
+const PHOTO = new Set(['grundpflege', 'behandlungspflege', 'wundversorgung', 'hauswirtschaft']);
 
 const servicesGrid = `
-        <ul class="services__grid" role="list">
-          ${BIG.map(([slug, tone, text, alt]) => `<li class="svc svc--${tone}" data-reveal>
-            <a class="svc__link" href="/leistungen/${slug}/">
-              <figure class="svc__media media">${img(slug, alt, { sizes: '(min-width: 1024px) 25vw, (min-width: 640px) 50vw, 100vw' })}</figure>
-              <div class="svc__body">
-                <h3>${byslug(slug).name}</h3>
-                <p>${text}</p>
-                <span class="svc__more">Mehr erfahren ${icon('arrow')}</span>
-              </div>
-            </a>
-          </li>`).join('\n          ')}
-        </ul>
-
-        <ul class="services__more" role="list">
-          ${MINI.map(([slug, name, text]) => `<li data-reveal>
-            <a class="svc-mini" href="/leistungen/${slug}/">
-              <span class="svc-mini__icon">${icon(byslug(slug).icon)}</span>
-              <span class="svc-mini__text"><strong>${name}</strong> ${text}</span>
-              ${icon('arrow', 'svc-mini__arrow')}
-            </a>
-          </li>`).join('\n          ')}
-        </ul>
-
-        <p class="services__note" data-reveal>
-          Nicht sicher, welche Hilfe Sie brauchen? <a href="#kontakt">Wir beraten Sie kostenlos</a> oder rufen Sie uns an: <a class="nowrap" href="${TEL}">${PHONE}</a>
-        </p>`;
+        <div class="catalog">
+          ${GROUPS.map(([name, lead, items], gi) => `<div class="catalog__group" data-reveal>
+            <header class="catalog__head">
+              <span class="catalog__count">${String(gi + 1).padStart(2, '0')}</span>
+              <div><h3>${name}</h3><p>${lead}</p></div>
+            </header>
+            <ul class="catalog__list" role="list">
+              ${items.map(([slug, text, payer]) => `<li>
+                <a class="catalog__item" href="/leistungen/${slug}/">
+                  ${PHOTO.has(slug)
+    ? `<span class="catalog__thumb media">${img(slug, '', { sizes: '120px' })}</span>`
+    : `<span class="catalog__thumb catalog__thumb--icon">${icon(byslug(slug).icon)}</span>`}
+                  <span class="catalog__text"><strong>${byslug(slug).name}</strong><small>${text}</small></span>
+                  <span class="tag catalog__payer">${payer}</span>
+                  <span class="catalog__arrow">${icon('arrow')}</span>
+                </a>
+              </li>`).join('\n              ')}
+            </ul>
+          </div>`).join('\n          ')}
+        </div>
+        <p class="catalog__note" data-reveal>Nicht sicher, welche Hilfe Sie brauchen? <a href="#kontakt">Wir beraten Sie kostenlos</a> oder rufen Sie uns an: <a class="nowrap" href="${TEL}">${PHONE}</a></p>`;
 
 const crumbs = [['Leistungen']];
 
@@ -108,12 +107,10 @@ ${section({
 
 ${section({
     id: 'alle-leistungen',
-    cls: 'services',
     cream: true,
-    center: true,
-    eyebrow: 'Alle Leistungen',
-    title: 'Ambulante Pflege&nbsp;– <em>alles aus einer Hand.</em>',
-    lead: 'Wählen Sie eine Leistung, um mehr über Inhalte, Kosten und Ablauf zu erfahren.',
+    eyebrow: 'Leistungskatalog',
+    title: 'Alle Leistungen <em>im Überblick.</em>',
+    lead: 'Acht Leistungen in zwei Bereichen. Bei jeder Leistung sehen Sie auf einen Blick, welche Kasse in der Regel die Kosten trägt.',
     body: servicesGrid,
   })}
 

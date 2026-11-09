@@ -450,16 +450,16 @@
       
       <div class="container">
         
-        <div class="career__card" data-reveal>
-          <figure class="career__media media media--navy"><img src="/assets/img/karriere-1000.webp" srcset="/assets/img/karriere-640.webp 640w, /assets/img/karriere-1000.webp 1000w, /assets/img/karriere-1400.webp 1400w" sizes="(min-width: 1024px) 42vw, 100vw" width="1400" height="1400" loading="lazy" alt="Zwei Pflegekräfte des Pflegedienstes Funk auf dem Weg zum Dienstwagen"></figure>
-          <div class="career__text">
-            <p class="eyebrow eyebrow--light">Karriere</p>
+        <div class="career-strip" data-reveal>
+          <span class="career-strip__icon"><svg class="icon"><use href="#i-users"/></svg></span>
+          <div class="career-strip__text">
+            <p class="eyebrow">Karriere</p>
             <h2>Teil unseres Teams <em>werden?</em></h2>
             <p>Wir suchen Menschen, die Pflege mit Herz und Verstand leben&nbsp;– examinierte Pflegefachkräfte ebenso wie Pflegehelferinnen und -helfer.</p>
-            <div class="career__actions">
-              <a class="btn btn--accent" href="/karriere/">Zu den Stellenangeboten <svg class="icon"><use href="#i-arrow"/></svg></a>
-              <a class="btn btn--ghost-light" href="/karriere/#initiativbewerbung">Initiativ bewerben</a>
-            </div>
+          </div>
+          <div class="career-strip__actions">
+            <a class="btn btn--accent" href="/karriere/">Zu den Stellenangeboten <svg class="icon"><use href="#i-arrow"/></svg></a>
+            <a class="btn btn--outline" href="/karriere/#initiativbewerbung">Initiativ bewerben</a>
           </div>
         </div>
       </div>
@@ -480,37 +480,24 @@
       </div>
     </section>
 
-<section class="section contact" id="kontakt" aria-labelledby="contact-title">
-      <svg class="curve curve--top curve--white" viewBox="0 0 1440 90" preserveAspectRatio="none" aria-hidden="true"><path d="M0 90V62C380 18 900 0 1440 22V90Z"/></svg>
-      <div class="container contact__grid">
-        <div class="contact__info">
-          <header class="section-head" data-reveal>
-            <p class="eyebrow">Kontakt</p>
-            <h2 id="contact-title">Wir sind <em>für Sie da.</em></h2>
-            <p class="section-head__lead">Rufen Sie uns an oder schreiben Sie uns. Wir melden uns schnellstmöglich bei Ihnen zurück&nbsp;– auch wenn Sie außerhalb der Bürozeiten schreiben.</p>
-          </header>
-          <ul class="contact__list" role="list" data-reveal>
-            <li>
-              <span class="contact__icon"><svg class="icon"><use href="#i-phone"/></svg></span>
-              <div><span class="contact__label">Telefon</span><a class="contact__big" href="tel:+4954595869825">05459&nbsp;5869825</a></div>
-            </li>
-            <li>
-              <span class="contact__icon"><svg class="icon"><use href="#i-mail"/></svg></span>
-              <div><span class="contact__label">E-Mail</span><a href="mailto:info@pflegedienst-funk.de">info@pflegedienst-funk.de</a></div>
-            </li>
-            <li>
-              <span class="contact__icon"><svg class="icon"><use href="#i-pin"/></svg></span>
-              <div><span class="contact__label">Adresse</span><address>Ambulanter Pflegedienst Funk GmbH<br>Bahnhofstraße 33, 48477 Hörstel</address></div>
-            </li>
-            <li>
-              <span class="contact__icon"><svg class="icon"><use href="#i-clock"/></svg></span>
-              <div><span class="contact__label">Bürozeiten</span>Montag bis Freitag, 8–14&nbsp;Uhr</div>
-            </li>
-          </ul>
-        </div>
 
+    <section class="section reach" id="kontakt" aria-labelledby="contact-title">
+      <div class="container reach__grid">
+        <div class="reach__info" data-reveal>
+          <p class="eyebrow eyebrow--light">Kontakt</p>
+          <h2 id="contact-title">Sprechen Sie <em>mit uns.</em></h2>
+          <ol class="reach__steps" role="list">
+            <li><span class="reach__num" aria-hidden="true">1</span><div><strong>Sie senden die Anfrage</strong><p>Name und Telefonnummer genügen. Alles andere besprechen wir persönlich.</p></div></li>
+            <li><span class="reach__num" aria-hidden="true">2</span><div><strong>Wir rufen zurück</strong><p>Schnellstmöglich während unserer Bürozeiten&nbsp;– auch wenn Sie abends oder am Wochenende schreiben.</p></div></li>
+            <li><span class="reach__num" aria-hidden="true">3</span><div><strong>Beratung bei Ihnen</strong><p>Auf Wunsch kommen wir zu Ihnen nach Hause&nbsp;– kostenlos und unverbindlich.</p></div></li>
+          </ol>
+          <div class="reach__direct">
+            <a class="reach__phone" href="tel:+4954595869825"><svg class="icon"><use href="#i-phone"/></svg> 05459&nbsp;5869825</a>
+            <p>Mo–Fr 8–14&nbsp;Uhr · <a href="mailto:info@pflegedienst-funk.de">info@pflegedienst-funk.de</a></p>
+          </div>
+        </div>
         <form class="form" action="/kontakt/senden.php" method="post" novalidate data-form data-reveal>
-          <h3 class="form__title">Rückruf oder Beratung anfragen</h3>
+          <h3 class="form__title">Ihre Anfrage</h3>
           <fieldset class="form__topics">
             <legend>Worum geht es?</legend>
             <label class="pill"><input type="radio" name="anliegen" value="Pflegeanfrage" checked><span>Pflegeanfrage</span></label>

@@ -158,16 +158,16 @@ ${ctaBand({ title: 'Lernen Sie uns <em>persönlich kennen.</em>', text: 'Ob Sie 
 ${section({
     id: 'karriere-teaser',
     cls: 'section--tight',
-    body: `<div class="career__card" data-reveal>
-          <figure class="career__media media media--navy"><img src="/assets/img/karriere-1000.webp" srcset="/assets/img/karriere-640.webp 640w, /assets/img/karriere-1000.webp 1000w, /assets/img/karriere-1400.webp 1400w" sizes="(min-width: 1024px) 42vw, 100vw" width="1400" height="1400" loading="lazy" alt="Zwei Pflegekräfte des Pflegedienstes Funk auf dem Weg zum Dienstwagen"></figure>
-          <div class="career__text">
-            <p class="eyebrow eyebrow--light">Karriere</p>
+    body: `<div class="career-strip" data-reveal>
+          <span class="career-strip__icon">${icon('users')}</span>
+          <div class="career-strip__text">
+            <p class="eyebrow">Karriere</p>
             <h2>Teil unseres Teams <em>werden?</em></h2>
             <p>Wir suchen Menschen, die Pflege mit Herz und Verstand leben&nbsp;– examinierte Pflegefachkräfte ebenso wie Pflegehelferinnen und -helfer.</p>
-            <div class="career__actions">
-              <a class="btn btn--accent" href="/karriere/">Zu den Stellenangeboten ${icon('arrow')}</a>
-              <a class="btn btn--ghost-light" href="/karriere/#initiativbewerbung">Initiativ bewerben</a>
-            </div>
+          </div>
+          <div class="career-strip__actions">
+            <a class="btn btn--accent" href="/karriere/">Zu den Stellenangeboten ${icon('arrow')}</a>
+            <a class="btn btn--outline" href="/karriere/#initiativbewerbung">Initiativ bewerben</a>
           </div>
         </div>`,
   })}

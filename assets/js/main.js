@@ -269,7 +269,7 @@
   }
 
   /* FAQ: immer nur eine Frage offen (Fallback für Browser ohne <details name>) */
-  const faqItems = document.querySelectorAll('.faq__item');
+  const faqItems = document.querySelectorAll('.faq__item, .qa__item');
   faqItems.forEach((item) => {
     item.addEventListener('toggle', () => {
       if (!item.open) return;
