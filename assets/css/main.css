@@ -2299,7 +2299,7 @@ a.card:active { transform: scale(0.99); }
 .intro__body > p:first-child::first-line { color: var(--ink); }
 @media (min-width: 1024px) {
   .intro { grid-template-columns: minmax(0, 5fr) minmax(0, 6fr); align-items: start; }
-  .intro__head { position: sticky; top: calc(var(--header-h) + 2rem); }
+  .intro__head { position: static; }
   .intro__body { padding-top: 2.6rem; }
   .intro--single .intro__head { grid-column: 1 / -1; max-width: 50rem; position: static; }
 }
