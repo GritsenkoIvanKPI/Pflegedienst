@@ -23,7 +23,8 @@
   <link rel="icon" type="image/png" href="/assets/img/favicon-72.png">
   <link rel="preload" href="/assets/fonts/figtree-latin.woff2" as="font" type="font/woff2" crossorigin>
   <link rel="preload" href="/assets/fonts/fraunces-latin.woff2" as="font" type="font/woff2" crossorigin>
-  <link rel="preload" as="image" href="/assets/img/hero-960.webp" imagesrcset="/assets/img/hero-640.webp 640w, /assets/img/hero-960.webp 960w, /assets/img/hero-1400.webp 1400w" imagesizes="(min-width: 1200px) 45vw, 100vw">
+  <link rel="preload" as="image" href="/assets/img/hero-bg-1600.webp" imagesrcset="/assets/img/hero-bg-960.webp 960w, /assets/img/hero-bg-1600.webp 1600w, /assets/img/hero-bg-2400.webp 2400w" imagesizes="100vw" media="(min-width: 900px)">
+  <link rel="preload" as="image" href="/assets/img/hero-bg-m-1000.webp" imagesrcset="/assets/img/hero-bg-m-640.webp 640w, /assets/img/hero-bg-m-1000.webp 1000w" imagesizes="100vw" media="(max-width: 899px)">
   <link rel="stylesheet" href="/assets/css/main.css">
   <script>document.documentElement.classList.add('js');</script>
 
@@ -274,11 +275,14 @@
   <main id="inhalt">
 
     <!-- ============ HERO ============ -->
-    <section class="hero" aria-labelledby="hero-title">
-      <div class="hero__bg" aria-hidden="true"></div>
+    <section class="hero hero--full" aria-labelledby="hero-title">
+      <picture class="hero__photo">
+        <source media="(min-width: 900px)" srcset="/assets/img/hero-bg-960.webp 960w, /assets/img/hero-bg-1600.webp 1600w, /assets/img/hero-bg-2400.webp 2400w" sizes="100vw" width="2752" height="1536">
+        <img src="/assets/img/hero-bg-m-1000.webp" srcset="/assets/img/hero-bg-m-640.webp 640w, /assets/img/hero-bg-m-1000.webp 1000w" sizes="100vw" width="1856" height="2304" alt="Gründer Sergej Petrenko und eine Pflegefachkraft des Pflegedienstes Funk vor dem Büro in der Bahnhofstraße in Hörstel" fetchpriority="high">
+      </picture>
       <div class="container hero__grid">
         <div class="hero__text">
-          <p class="eyebrow" data-reveal>Seit 2011 · Ambulante Pflege im Tecklenburger Land</p>
+          <p class="eyebrow eyebrow--light" data-reveal>Seit 2011 · Ambulante Pflege im Tecklenburger Land</p>
           <h1 class="hero__title" id="hero-title" data-reveal>
             Ambulanter Pflegedienst
             <span class="hero__title-accent">in <span class="swash">Hörstel<svg viewBox="0 0 220 18" preserveAspectRatio="none" aria-hidden="true"><path d="M3 13C50 5 120 3 217 9"/></svg></span> und Umgebung.</span>
@@ -297,13 +301,7 @@
             <li><svg class="icon"><use href="#i-check"/></svg> Vertragspartner aller Kranken- und Pflegekassen</li>
             <li><svg class="icon"><use href="#i-check"/></svg> Kostenlose Erstberatung bei Ihnen zu Hause</li>
           </ul>
-        </div>
-
-        <div class="hero__media" data-reveal>
-          <figure class="hero__figure media">
-            <img src="/assets/img/hero-960.webp" srcset="/assets/img/hero-640.webp 640w, /assets/img/hero-960.webp 960w, /assets/img/hero-1400.webp 1400w" sizes="(min-width: 1200px) 45vw, 100vw" width="1400" height="1875" alt="Pflegefachkraft des Pflegedienstes Funk mit Pflegetasche vor dem Dienstwagen in einer Wohnstraße in Hörstel" fetchpriority="high">
-          </figure>
-          <div class="hero__card">
+          <div class="hero__near" data-reveal>
             <p class="hero__card-title">Wir sind ganz in Ihrer Nähe.</p>
             <p class="hero__card-sub">Wählen Sie Ihren Ort:</p>
             <ul class="chips" role="list">

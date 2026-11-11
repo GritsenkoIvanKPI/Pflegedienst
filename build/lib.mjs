@@ -66,6 +66,7 @@ const IMAGES = {
   karriere: { sizes: [640, 1000, 1400], w: 1400, h: 1400 },
   buero: { sizes: [640, 1200], w: 1200, h: 896 },
   team: { sizes: [640, 1200], w: 1200, h: 896 },
+  gruender: { sizes: [640, 1000], w: 1000, h: 1241 },
 };
 export const img = (name, alt, { sizes = '(min-width: 1024px) 45vw, 100vw', lazy = true, cls = '', priority = false } = {}) => {
   const m = IMAGES[name];

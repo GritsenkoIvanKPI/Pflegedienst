@@ -2660,3 +2660,63 @@ li:nth-child(4n + 4) > a.card { border-top-color: var(--navy-300); }
 .process .timeline__num { background: var(--white); }
 .office__photo { aspect-ratio: 4 / 3; margin-bottom: var(--sp-3); border-radius: var(--radius); }
 .office__photo::after { display: none; }
+
+/* =====================================================================
+   STARTSEITE – Hero mit Vollbild-Foto (Gründer + Team vor dem Büro)
+   ===================================================================== */
+.hero--full { padding-top: 0; background: var(--navy-900); color: var(--on-dark); isolation: isolate; }
+.hero--full .hero__photo { position: relative; display: block; height: min(78vh, 720px); min-height: 360px; }
+.hero--full .hero__photo img { width: 100%; height: 100%; object-fit: cover; object-position: 50% 28%; }
+.hero--full .hero__photo::after {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(to top, var(--navy-900) 0%, rgba(8, 36, 63, 0.55) 22%, rgba(8, 36, 63, 0) 45%);
+  pointer-events: none;
+}
+.hero--full .hero__grid { position: relative; z-index: 1; margin-top: -5rem; }
+.hero--full .hero__title { color: var(--white); }
+.hero--full .hero__title-accent { color: var(--accent); }
+.hero--full .swash svg { stroke: var(--white); opacity: 0.85; }
+.hero--full .hero__lead { color: var(--on-dark); }
+.hero--full .hero__checks { color: var(--on-dark); }
+.hero--full .hero__checks .icon { background: var(--accent); color: var(--white); }
+.hero--full .btn--call { border-color: transparent; }
+.hero__near { margin-top: var(--sp-4); padding-top: var(--sp-3); border-top: 1px solid rgba(254, 254, 254, 0.18); }
+.hero__near .hero__card-title { font-size: 1.3rem; }
+
+@media (min-width: 1360px) {
+  .hero--full {
+    display: flex;
+    align-items: center;
+    min-height: clamp(680px, 88vh, 900px);
+    padding-block: var(--sp-6) clamp(7rem, 9vw, 9rem);
+  }
+  .hero--full .hero__photo { position: absolute; inset: 0; z-index: -1; height: auto; min-height: 0; }
+  .hero--full .hero__photo img { object-position: 70% 30%; }
+  .hero--full .hero__photo::after {
+    background:
+      linear-gradient(90deg, rgba(6, 26, 46, 0.94) 0%, rgba(6, 26, 46, 0.86) 28%, rgba(6, 26, 46, 0.35) 46%, rgba(6, 26, 46, 0) 60%),
+      linear-gradient(to top, rgba(6, 26, 46, 0.55) 0%, rgba(6, 26, 46, 0) 30%);
+  }
+  .hero--full .hero__grid { width: 100%; margin-top: 0; grid-template-columns: minmax(0, 1fr); }
+  .hero--full .hero__text { max-width: min(36rem, 42vw); }
+  .hero--full .hero__title { font-size: clamp(2.8rem, 3.4vw, 3.9rem); }
+  .hero__near { display: grid; grid-template-columns: auto minmax(0, 1fr); align-items: center; gap: 0.25rem var(--sp-3); }
+  .hero__near .hero__card-title { grid-column: 1 / -1; }
+  .hero__near .hero__card-sub { display: none; }
+  .hero__near .chips { grid-column: 1 / -1; margin-bottom: 0.25rem; }
+  .hero__near .chip { min-height: 44px; padding-inline: 1rem; font-size: 1rem; background: rgba(6, 26, 46, 0.35); }
+}
+@media (min-width: 900px) and (max-width: 1359px) { .hero--full .hero__photo img { object-position: 72% 30%; } }
+@media (min-width: 1360px) {
+  .hero--full .hero__photo img { object-position: 30% 30%; }
+  .hero--full .hero__text { max-width: 35rem; }
+  .hero--full .hero__actions { flex-wrap: nowrap; }
+  .hero--full .hero__actions .btn--lg { padding-inline: 1.4rem; }
+}
+@media (min-width: 1360px) {
+  .hero--full .hero__text { max-width: 37rem; }
+  .hero--full .hero__title { font-size: clamp(2.8rem, 3.4vw, 3.2rem); }
+  .hero--full .hero__actions .btn { flex: none; white-space: nowrap; }
+}

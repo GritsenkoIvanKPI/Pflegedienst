@@ -45,6 +45,28 @@ export default {
   })}
 
 ${section({
+    id: 'gruender',
+    body: split({
+      reverse: true,
+      tall: true,
+      mediaCls: 'pos-top',
+      image: 'gruender',
+      alt: 'Sergej Petrenko, Gründer des Ambulanten Pflegedienstes Funk, vor dem Büro in Hörstel',
+      text: `
+            <p class="eyebrow">Der Gründer</p>
+            <h2>Sergej Petrenko&nbsp;– <em>Pflege aus eigener Erfahrung.</em></h2>
+            <p class="lead">Hinter dem Pflegedienst Funk steht ein Mensch, der Pflege nicht nur organisiert, sondern selbst gelernt und gelebt hat.</p>
+            <p>Sergej Petrenko hat den Pflegedienst Funk gegründet und aufgebaut. Als Krankenpfleger mit Schwerpunkt Wundmanagement kennt er den Alltag der ambulanten Pflege aus erster Hand&nbsp;– die Touren, die Gespräche mit Angehörigen und die Verantwortung, die jeder Hausbesuch mit sich bringt.</p>
+            <p>Diese Erfahrung prägt bis heute, wie wir arbeiten: mit festen Bezugspflegekräften, kurzen Wegen und einem offenen Ohr für Pflegebedürftige und ihre Familien in Hörstel und der Region.</p>
+            ${ticks([
+    'Gründer des Pflegedienstes Funk',
+    'Krankenpfleger mit Schwerpunkt Wundmanagement',
+    'Persönlich ansprechbar für Familien und Mitarbeitende',
+  ])}`,
+    }),
+  })}
+
+${section({
     id: 'wer-wir-sind',
     body: split({
       top: true,
