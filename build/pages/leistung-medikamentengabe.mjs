@@ -34,7 +34,7 @@ export default {
     lead: 'Die richtige Tablette zur richtigen Zeit&nbsp;– das klingt einfach und ist es oft nicht. Unsere Pflegefachkräfte richten, verabreichen und kontrollieren Ihre Medikamente zuverlässig bei Ihnen zu Hause.',
     image: 'hero',
     mediaClass: 'pos-top',
-    imageAlt: 'Pflegefachkraft des Pflegedienstes Funk misst einer älteren Dame zu Hause auf dem Sofa den Blutdruck',
+    imageAlt: 'Pflegefachkraft des Pflegedienstes Funk mit Pflegetasche vor dem Dienstwagen in einer Wohnstraße in Hörstel',
     checks: ['Auf ärztliche Verordnung&nbsp;– die Krankenkasse zahlt', 'Pünktlich, sorgfältig und lückenlos dokumentiert'],
   })}
 

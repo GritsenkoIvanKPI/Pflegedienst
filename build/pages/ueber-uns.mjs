@@ -30,17 +30,16 @@ export default {
   description: 'Seit 2011 ambulante Pflege mit Herz und Verstand: Lernen Sie den Pflegedienst Funk aus Hörstel kennen – unser Team, unser Leitbild und die Bezugspflege.',
   type: 'about',
   crumbs: [['Über uns']],
-  heroImage: 'warum',
-  ogImage: 'warum',
+  heroImage: 'team',
+  ogImage: 'team',
   schema: [{ '@type': 'AboutPage', '@id': `${SITE}/ueber-uns/#about`, url: `${SITE}/ueber-uns/`, name: 'Über den Pflegedienst Funk', about: ORG_REF }],
   body: `${pageHero({
     crumbs: [['Über uns']],
     eyebrow: 'Über uns · Seit 2011 in Hörstel',
     title: 'Über den <em>Pflegedienst Funk.</em>',
     lead: 'Wir sind ein regionaler ambulanter Pflegedienst aus Hörstel. Seit 2011 begleiten wir Menschen, die zu Hause Unterstützung brauchen&nbsp;– und ihre Familien. Persönlich, verlässlich und mit festen Ansprechpartnern.',
-    image: 'warum',
-    imageAlt: 'Pflegekraft des Pflegedienstes Funk wird an der Haustür von einem älteren Herrn freundlich begrüßt',
-    mediaClass: 'pos-top',
+    image: 'team',
+    imageAlt: 'Mitarbeiterin der Verwaltung im Büro des Pflegedienstes Funk in Hörstel am Schreibtisch',
     actions: `<a class="btn btn--accent btn--lg" href="#kontakt">Kennenlernen vereinbaren ${icon('arrow')}</a><a class="btn btn--outline btn--lg" href="/leistungen/">Unsere Leistungen</a>`,
     checks: ['Vertragspartner aller Kranken- und Pflegekassen', 'Mitglied im Deutschen Berufsverband für Pflegeberufe (DBfK)'],
   })}
@@ -87,7 +86,7 @@ ${section({
     body: split({
       reverse: true,
       image: 'hero',
-      alt: 'Bezugspflegekraft des Pflegedienstes Funk misst bei einer vertrauten Kundin zu Hause den Blutdruck',
+      alt: 'Pflegefachkraft des Pflegedienstes Funk mit Pflegetasche vor dem Dienstwagen in einer Wohnstraße in Hörstel',
       tall: true,
       mediaCls: 'pos-top',
       text: `

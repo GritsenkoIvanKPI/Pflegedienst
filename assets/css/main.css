@@ -2658,3 +2658,5 @@ li:nth-child(4n + 4) > a.card { border-top-color: var(--navy-300); }
 
 /* Ablauf auf hellem Grund: Ziffern auf Weiß */
 .process .timeline__num { background: var(--white); }
+.office__photo { aspect-ratio: 4 / 3; margin-bottom: var(--sp-3); border-radius: var(--radius); }
+.office__photo::after { display: none; }

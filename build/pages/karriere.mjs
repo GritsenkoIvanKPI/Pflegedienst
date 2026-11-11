@@ -45,7 +45,7 @@ export default {
     title: 'Karriere in der <em>ambulanten Pflege.</em>',
     lead: 'Sie möchten Pflege mit Herz und Verstand leben&nbsp;– in einem Team, in dem Sie keine Nummer sind? Beim Pflegedienst Funk in Hörstel arbeiten Sie mit festen Touren, vertrauten Kundinnen und Kunden und Kolleginnen und Kollegen, die zusammenhalten.',
     image: 'karriere',
-    imageAlt: 'Zwei Pflegekräfte des Pflegedienstes Funk auf dem Weg zum Dienstwagen',
+    imageAlt: 'Zwei Mitarbeitende des Pflegedienstes Funk vor dem Büro in der Bahnhofstraße in Hörstel',
     actions: `<a class="btn btn--accent btn--lg" href="#stellen">Zu den Stellenangeboten ${icon('arrow')}</a><a class="btn btn--outline btn--lg" href="#initiativbewerbung">Initiativ bewerben</a>`,
     checks: ['Flexible Arbeitszeiten, Voll- oder Teilzeit', 'Faire Vergütung inklusive Zuschlägen und Prämien'],
   })}

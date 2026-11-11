@@ -17,3 +17,6 @@ _sheet.py
 
 # Vercel-Ausgabe (wird beim Deploy erzeugt)
 public/
+
+# Originalfotos des Kunden (privat, nicht veröffentlichen)
+Фото/

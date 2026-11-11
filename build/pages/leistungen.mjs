@@ -80,7 +80,7 @@ export default {
     lead: 'Von der Körperpflege am Morgen über die Medikamentengabe bis zur Hilfe im Haushalt: Wir unterstützen Sie zu Hause genau dort, wo Sie Hilfe brauchen&nbsp;– in Hörstel, Mettingen, Recke, Ibbenbüren und Rheine.',
     image: 'hero',
     mediaClass: 'pos-top',
-    imageAlt: 'Pflegefachkraft des Pflegedienstes Funk misst einer älteren Dame zu Hause auf dem Sofa den Blutdruck',
+    imageAlt: 'Pflegefachkraft des Pflegedienstes Funk mit Pflegetasche vor dem Dienstwagen in einer Wohnstraße in Hörstel',
     checks: ['Vertragspartner aller Kranken- und Pflegekassen', 'Kostenlose Beratung vor dem Start'],
   })}
 
