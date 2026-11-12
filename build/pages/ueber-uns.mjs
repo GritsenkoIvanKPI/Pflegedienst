@@ -35,9 +35,9 @@ export default {
   schema: [{ '@type': 'AboutPage', '@id': `${SITE}/ueber-uns/#about`, url: `${SITE}/ueber-uns/`, name: 'Über den Pflegedienst Funk', about: ORG_REF }],
   body: `
     <section class="about-hero" aria-labelledby="page-title">
+      <div class="container">${breadcrumbNav([['Über uns']])}</div>
       <div class="container about-hero__grid">
         <div class="about-hero__text">
-          ${breadcrumbNav([['Über uns']])}
           <h1 class="about-hero__title" id="page-title" data-reveal>
             <span class="about-hero__kicker">Über uns&nbsp;– Ambulanter Pflegedienst Funk GmbH</span>
             <span class="about-hero__line">Pflege mit Verantwortung.</span>

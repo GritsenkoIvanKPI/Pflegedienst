@@ -3037,3 +3037,16 @@ li:nth-child(4n + 4) > a.card { border-top-color: var(--navy-300); }
 }
 .trust__head h2 { -webkit-hyphens: manual; hyphens: manual; }
 @media (max-width: 419px) { .trust__head h2 { font-size: 1.55rem; } .trust__panel { padding: var(--sp-4) var(--sp-3); } }
+/* Über uns: Foto ohne orange Fläche, so hoch wie die Textspalte */
+.about-hero__media { margin: 0; }
+.about-hero__media::after { display: none; }
+@media (min-width: 1024px) and (max-width: 1199px) {
+  .about-hero__grid { grid-template-columns: minmax(0, 1fr); }
+  .about-hero__photo { aspect-ratio: 16 / 10; }
+}
+@media (min-width: 1200px) {
+  .about-hero__grid { align-items: stretch; }
+  .about-hero__media { display: flex; }
+  .about-hero__photo { flex: 1 1 auto; aspect-ratio: auto; min-height: 0; height: 100%; }
+  .about-hero__photo img { position: absolute; inset: 0; }
+}
