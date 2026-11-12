@@ -1,4 +1,4 @@
-import { pageHero, section, split, cards, facts, ticks, ctaBand, cityBand, icon, ORG_REF, SITE } from '../lib.mjs';
+import { pageHero, breadcrumbNav, img, section, split, cards, facts, ticks, ctaBand, cityBand, icon, ORG_REF, SITE } from '../lib.mjs';
 
 /* Leitung – Zitate vom bisherigen Internetauftritt (vor dem Start vom Kunden bestätigen lassen) */
 const LEADERS = [
@@ -30,20 +30,43 @@ export default {
   description: 'Seit 2011 ambulante Pflege mit Herz und Verstand: Lernen Sie den Pflegedienst Funk aus Hörstel kennen – unser Team, unser Leitbild und die Bezugspflege.',
   type: 'about',
   crumbs: [['Über uns']],
-  heroImage: 'warum',
-  ogImage: 'warum',
+  heroImage: 'inhaber',
+  ogImage: 'inhaber',
   schema: [{ '@type': 'AboutPage', '@id': `${SITE}/ueber-uns/#about`, url: `${SITE}/ueber-uns/`, name: 'Über den Pflegedienst Funk', about: ORG_REF }],
-  body: `${pageHero({
-    crumbs: [['Über uns']],
-    eyebrow: 'Über uns · Seit 2011 in Hörstel',
-    title: 'Über den <em>Pflegedienst Funk.</em>',
-    lead: 'Wir sind ein regionaler ambulanter Pflegedienst aus Hörstel. Seit 2011 begleiten wir Menschen, die zu Hause Unterstützung brauchen&nbsp;– und ihre Familien. Persönlich, verlässlich und mit festen Ansprechpartnern.',
-    image: 'warum',
-    imageAlt: 'Pflegekraft des Pflegedienstes Funk wird an der Haustür von einem älteren Herrn freundlich begrüßt',
-    mediaClass: 'pos-top',
-    actions: `<a class="btn btn--accent btn--lg" href="#kontakt">Kennenlernen vereinbaren ${icon('arrow')}</a><a class="btn btn--outline btn--lg" href="/leistungen/">Unsere Leistungen</a>`,
-    checks: ['Vertragspartner aller Kranken- und Pflegekassen', 'Mitglied im Deutschen Berufsverband für Pflegeberufe (DBfK)'],
-  })}
+  body: `
+    <section class="about-hero" aria-labelledby="page-title">
+      <div class="container about-hero__grid">
+        <div class="about-hero__text">
+          ${breadcrumbNav([['Über uns']])}
+          <h1 class="about-hero__title" id="page-title" data-reveal>
+            <span class="about-hero__kicker">Über uns&nbsp;– Ambulanter Pflegedienst Funk GmbH</span>
+            <span class="about-hero__line">Pflege mit Verantwortung.</span>
+            <span class="about-hero__line about-hero__accent">Persönlich geführt.</span>
+            <span class="about-hero__line">Nah bei den <span class="nowrap"><span class="swash">Menschen.<svg viewBox="0 0 220 18" preserveAspectRatio="none" aria-hidden="true"><path d="M3 13C50 5 120 3 217 9"/></svg></span><svg class="about-hero__heart" viewBox="0 0 24 24" aria-hidden="true"><path d="M12 20s-8-4.7-8-10.4A4.4 4.4 0 0 1 12 7a4.4 4.4 0 0 1 8 2.6C20 15.3 12 20 12 20Z"/></svg></span></span>
+          </h1>
+          <ul class="about-hero__points" role="list" data-reveal>
+            <li><span class="about-hero__icon">${icon('hands')}</span><p><strong>Der Ambulante Pflegedienst Funk</strong> ist seit 2011 Ihr verlässlicher Partner für professionelle und herzliche Pflege in Hörstel und der Region. Wir helfen Menschen, möglichst selbstbestimmt und sicher in ihrem vertrauten Zuhause zu leben.</p></li>
+            <li><span class="about-hero__icon">${icon('users')}</span><p><strong>Inhabergeführt und persönlich:</strong> Gemeinsam mit unserem erfahrenen Team stehen wir für zuverlässige Betreuung, hohe Pflegequalität und feste Ansprechpartner. Vertrauen, Respekt und Menschlichkeit stehen dabei im Mittelpunkt.</p></li>
+          </ul>
+          <div class="about-hero__actions" data-reveal>
+            <a class="btn btn--accent" href="#kontakt">${icon('phone')} Kontakt aufnehmen</a>
+            <a class="btn btn--outline" href="/leistungen/">Unsere Leistungen ${icon('arrow')}</a>
+          </div>
+        </div>
+        <figure class="about-hero__media" data-reveal>
+          <div class="about-hero__photo media">${img('inhaber', 'Inhaber des Ambulanten Pflegedienstes Funk am Schreibtisch im Büro in Hörstel', { lazy: false, priority: true, sizes: '(min-width: 1024px) 48vw, 100vw' })}</div>
+        </figure>
+      </div>
+      <div class="container">
+        <ul class="about-hero__usp" role="list" data-reveal>
+          <li>${icon('users')}<span>Erfahrenes<br>Pflegeteam</span></li>
+          <li>${icon('hands')}<span>Persönliche<br>Betreuung</span></li>
+          <li>${icon('shield')}<span>Zuverlässig<br>&amp; kompetent</span></li>
+          <li>${icon('home')}<span>Regional<br>für Sie da</span></li>
+        </ul>
+      </div>
+      <svg class="about-hero__wave" viewBox="0 0 1440 60" preserveAspectRatio="none" aria-hidden="true"><path class="about-hero__wave-line" d="M0 40C420 0 980 -4 1440 28"/></svg>
+    </section>
 
 ${section({
     id: 'wer-wir-sind',

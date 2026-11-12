@@ -60,6 +60,7 @@ const IMAGES = {
   'ratgeber-pflegegrad': { sizes: [640, 1200], w: 1200, h: 896 },
   'ratgeber-wunde': { sizes: [640, 1200], w: 1200, h: 896 },
   hero: { sizes: [640, 960, 1400], w: 1400, h: 1875 },
+  inhaber: { sizes: [640, 1200], w: 1200, h: 896 },
   warum: { sizes: [640, 960, 1200], w: 1200, h: 1789 },
   'beratung-tall': { sizes: [640, 960, 1200], w: 1200, h: 1789 },
   beratung: { sizes: [800, 1600], w: 1600, h: 894 },

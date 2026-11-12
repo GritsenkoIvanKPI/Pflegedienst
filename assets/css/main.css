@@ -2767,3 +2767,70 @@ li:nth-child(4n + 4) > a.card { border-top-color: var(--navy-300); }
   .hero--full .hero__text { max-width: min(40rem, 41vw); }
   .hero--full .hero__title { font-size: clamp(2.5rem, 3.4vw, 3.5rem); }
 }
+
+/* =====================================================================
+   ÜBER UNS – Kopfbereich nach Referenz
+   ===================================================================== */
+.about-hero { position: relative; padding-block: clamp(1.5rem, 3vw, 2.5rem) clamp(3.5rem, 6vw, 5rem); background: var(--white); overflow: hidden; }
+.about-hero__grid { display: grid; grid-template-columns: minmax(0, 1fr); gap: var(--sp-5); align-items: center; }
+.about-hero__kicker {
+  display: block;
+  margin-bottom: var(--sp-2);
+  font-family: var(--font-body);
+  font-size: 0.95rem;
+  font-weight: 700;
+  letter-spacing: 0.06em;
+  line-height: 1.4;
+  text-transform: uppercase;
+  color: var(--accent);
+  font-variation-settings: normal;
+}
+.about-hero__title { margin-bottom: var(--sp-4); font-size: clamp(1.9rem, 1.1rem + 3.3vw, 3.3rem); line-height: 1.1; letter-spacing: -0.025em; text-wrap: initial; }
+.about-hero__line { display: block; }
+.about-hero__accent { color: var(--accent); }
+.about-hero__heart { display: inline-block; width: 0.62em; height: 0.62em; margin-left: 0.2em; vertical-align: 0.02em; fill: none; stroke: var(--accent); stroke-width: 2.4; stroke-linecap: round; stroke-linejoin: round; }
+.about-hero__points { display: grid; gap: var(--sp-3); margin-bottom: var(--sp-4); }
+.about-hero__points li { display: grid; grid-template-columns: auto minmax(0, 1fr); gap: var(--sp-2); align-items: start; }
+.about-hero__icon { display: grid; place-items: center; width: 56px; height: 56px; color: var(--accent); }
+.about-hero__icon .icon { width: 44px; height: 44px; stroke-width: 1.5; }
+.about-hero__points p { padding-left: var(--sp-2); border-left: 2px solid var(--navy-100); font-size: 1.05rem; line-height: 1.6; color: var(--text); }
+.about-hero__points strong { color: var(--navy-900); }
+.about-hero__actions { display: flex; flex-wrap: wrap; gap: var(--sp-2); }
+.about-hero__media { position: relative; margin: 0 14px 14px 0; }
+.about-hero__media::after {
+  content: "";
+  position: absolute;
+  right: -14px;
+  bottom: -14px;
+  z-index: 0;
+  width: 70%;
+  height: 70%;
+  border-radius: var(--radius-l);
+  background: var(--accent);
+}
+.about-hero__photo { position: relative; z-index: 1; aspect-ratio: 4 / 3; border-radius: var(--radius-l); }
+.about-hero__photo img { object-position: 50% 30%; }
+.about-hero__photo::after { display: none; }
+.about-hero__usp { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: var(--sp-3) var(--sp-2); margin-top: var(--sp-5); }
+.about-hero__usp li { display: flex; align-items: center; gap: var(--sp-2); font-weight: 700; font-size: 1.08rem; line-height: 1.3; color: var(--navy-900); }
+.about-hero__usp .icon { flex: none; width: 46px; height: 46px; color: var(--accent); stroke-width: 1.5; }
+.about-hero__wave { position: absolute; left: 0; bottom: 0; width: 100%; height: clamp(24px, 4vw, 50px); }
+.about-hero__wave-line { fill: none; stroke: var(--accent); stroke-width: 4; vector-effect: non-scaling-stroke; }
+@media (min-width: 1024px) {
+  .about-hero__grid { grid-template-columns: minmax(0, 1.05fr) minmax(0, 1fr); gap: var(--sp-6); }
+  .about-hero__usp { grid-template-columns: repeat(4, minmax(0, 1fr)); gap: 0; margin-top: var(--sp-6); }
+  .about-hero__usp li { justify-content: center; padding-inline: var(--sp-2); }
+  .about-hero__usp li + li { border-left: 1px solid var(--line-strong); }
+  .about-hero__photo { aspect-ratio: 5 / 4.4; }
+}
+@media (min-width: 1200px) {
+  .about-hero__title { font-size: clamp(2.6rem, 3.2vw, 3.5rem); }
+  .about-hero__line { white-space: nowrap; }
+}
+@media (max-width: 599px) {
+  .about-hero__icon { width: 44px; height: 44px; }
+  .about-hero__icon .icon { width: 36px; height: 36px; }
+  .about-hero__usp li { font-size: 1rem; }
+  .about-hero__usp .icon { width: 38px; height: 38px; }
+}
+@media (min-width: 1200px) { .about-hero__title { font-size: clamp(2.4rem, 3.2vw, 3.05rem); } }
