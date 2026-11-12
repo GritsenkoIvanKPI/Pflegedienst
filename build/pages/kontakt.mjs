@@ -5,7 +5,7 @@ const MAIL = 'info@pflegedienst-funk.de';
 const LEADERS = [
   { name: 'Olga Speiser', role: 'Pflegedienstleitung', initials: 'OS', text: 'Fragen zur Pflege, zum Pflegegrad und zum Ablauf Ihrer Versorgung.' },
   { name: 'Olga Janke', role: 'Koordination und Verwaltung', initials: 'OJ', text: 'Termine, Abrechnung mit den Kassen und alles Organisatorische.' },
-  { name: 'Jakob Funk', role: 'Inhaber', initials: 'JF', text: 'Ihr Ansprechpartner für Anliegen rund um unser Unternehmen.' },
+  { name: 'Sergej Petrenko', role: 'Inhaber', initials: 'SP', text: 'Ihr Ansprechpartner für Anliegen rund um unser Unternehmen.' },
 ];
 
 export default {

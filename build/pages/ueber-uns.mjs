@@ -2,7 +2,7 @@ import { pageHero, breadcrumbNav, img, section, split, cards, facts, ticks, ctaB
 
 /* Leitung – Zitate vom bisherigen Internetauftritt (vor dem Start vom Kunden bestätigen lassen) */
 const LEADERS = [
-  { name: 'Jakob Funk', role: 'Inhaber', initials: 'JF', quote: 'Als ambulanter Pflegedienst setzen wir uns mit Herz und Kompetenz dafür ein, unseren Kundinnen und Kunden ein würdevolles und selbstbestimmtes Leben in ihrer vertrauten Umgebung zu ermöglichen.' },
+  { name: 'Sergej Petrenko', role: 'Inhaber', initials: 'SP', quote: 'Als ambulanter Pflegedienst setzen wir uns mit Herz und Kompetenz dafür ein, unseren Kundinnen und Kunden ein würdevolles und selbstbestimmtes Leben in ihrer vertrauten Umgebung zu ermöglichen.' },
   { name: 'Olga Speiser', role: 'Pflegedienstleitung', initials: 'OS', quote: 'Als Pflegedienstleitung ist es mir ein persönliches Anliegen, unseren Kundinnen und Kunden eine qualitativ hochwertige und einfühlsame Pflege in ihrer vertrauten Umgebung zu bieten.' },
   { name: 'Olga Janke', role: 'Koordination und Verwaltung', initials: 'OJ', quote: 'Ich sorge für eine reibungslose Organisation, damit sich unsere Pflegekräfte voll auf die Betreuung unserer Kundinnen und Kunden konzentrieren können.' },
 ];
@@ -54,7 +54,8 @@ export default {
           </div>
         </div>
         <figure class="about-hero__media" data-reveal>
-          <div class="about-hero__photo media">${img('inhaber', 'Inhaber des Ambulanten Pflegedienstes Funk GmbH am Schreibtisch im Büro in Hörstel', { lazy: false, priority: true, sizes: '(min-width: 1024px) 48vw, 100vw' })}</div>
+          <div class="about-hero__photo media">${img('inhaber', 'Sergej Petrenko, Inhaber des Ambulanten Pflegedienstes Funk GmbH, am Schreibtisch im Büro in Hörstel', { lazy: false, priority: true, sizes: '(min-width: 1024px) 48vw, 100vw' })}</div>
+          <figcaption class="about-hero__caption"><strong>Sergej Petrenko</strong> Inhaber</figcaption>
         </figure>
       </div>
       <div class="container">
