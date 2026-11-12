@@ -2753,3 +2753,17 @@ li:nth-child(4n + 4) > a.card { border-top-color: var(--navy-300); }
   .hero--full .hero__actions .btn--lg { padding-inline: 1.4rem; font-size: 1.1rem; }
   .hero--full .hero__actions .btn--call { padding-left: 0.5rem; }
 }
+
+/* Hero-Überschrift: genau drei Zeilen, Herz sauber an „stellt.“ */
+.hero__line { display: block; }
+.hero__heart { width: 0.62em; height: 0.62em; margin-left: 0.22em; vertical-align: 0.02em; stroke-width: 2.4; }
+.hero--full .hero__title { letter-spacing: -0.025em; text-wrap: initial; }
+@media (min-width: 1200px) {
+  .hero--full .hero__text { max-width: 40rem; }
+  .hero--full .hero__title { font-size: clamp(2.5rem, 3.15vw, 3.25rem); line-height: 1.08; }
+  .hero__line { white-space: nowrap; }
+}
+@media (min-width: 1200px) {
+  .hero--full .hero__text { max-width: min(40rem, 41vw); }
+  .hero--full .hero__title { font-size: clamp(2.5rem, 3.4vw, 3.5rem); }
+}
