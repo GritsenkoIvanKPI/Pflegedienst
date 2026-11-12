@@ -10,7 +10,7 @@ const FAQ = [
 
 export default {
   path: '/leistungen/medikamentengabe/',
-  title: 'Medikamentengabe durch den Pflegedienst | Funk',
+  title: 'Medikamentengabe durch den Pflegedienst | Funk GmbH',
   description: 'Medikamentengabe zu Hause in Hörstel und Umgebung: Tabletten richten, Insulin, Augentropfen, Einnahme kontrollieren – auf Verordnung zahlt die Krankenkasse.',
   type: 'service',
   nav: 'leistungen',
@@ -34,7 +34,7 @@ export default {
     lead: 'Die richtige Tablette zur richtigen Zeit&nbsp;– das klingt einfach und ist es oft nicht. Unsere Pflegefachkräfte richten, verabreichen und kontrollieren Ihre Medikamente zuverlässig bei Ihnen zu Hause.',
     image: 'hero',
     mediaClass: 'pos-top',
-    imageAlt: 'Pflegefachkraft des Pflegedienstes Funk misst einer älteren Dame zu Hause auf dem Sofa den Blutdruck',
+    imageAlt: 'Pflegefachkraft des Pflegedienstes Funk GmbH misst einer älteren Dame zu Hause auf dem Sofa den Blutdruck',
     checks: ['Auf ärztliche Verordnung&nbsp;– die Krankenkasse zahlt', 'Pünktlich, sorgfältig und lückenlos dokumentiert'],
   })}
 
@@ -80,7 +80,7 @@ ${section({
     body: split({
       reverse: true,
       image: 'behandlungspflege',
-      alt: 'Pflegefachkraft des Pflegedienstes Funk misst bei einem älteren Herrn am Tisch den Blutzucker vor der Insulingabe',
+      alt: 'Pflegefachkraft des Pflegedienstes Funk GmbH misst bei einem älteren Herrn am Tisch den Blutzucker vor der Insulingabe',
       text: `
             <p class="eyebrow">Gut abgestimmt</p>
             <h2>Im Austausch mit <em>Arzt und Apotheke.</em></h2>

@@ -9,8 +9,8 @@ const DS = fs.readFileSync(path.join(ROOT, 'build/content/datenschutz.html'), 'u
 
 const impressum = {
   path: '/impressum/',
-  title: 'Impressum – Ambulanter Pflegedienst Funk',
-  description: 'Impressum des Ambulanten Pflegedienstes Funk, Bahnhofstraße 33, 48477 Hörstel: Anbieterkennzeichnung, Kontakt, Berufsbezeichnung und Verantwortliche.',
+  title: 'Impressum – Ambulanter Pflegedienst Funk GmbH',
+  description: 'Impressum des Ambulanten Pflegedienstes Funk GmbH, Bahnhofstraße 33, 48477 Hörstel: Anbieterkennzeichnung, Kontakt, Berufsbezeichnung und Verantwortliche.',
   type: 'legal',
   crumbs: [['Impressum']],
   noContact: true,
@@ -28,7 +28,7 @@ const impressum = {
         <div class="legal-cards">
           <div data-reveal>
             <h2>Anbieter</h2>
-            <p><strong>Jakob Funk</strong><br>Ambulanter Pflegedienst Funk<br>Bahnhofstraße&nbsp;33<br>48477 Hörstel</p>
+            <p><strong>Jakob Funk</strong><br>Ambulanter Pflegedienst Funk GmbH<br>Bahnhofstraße&nbsp;33<br>48477 Hörstel</p>
           </div>
           <div data-reveal>
             <h2>Kontakt</h2>
@@ -63,7 +63,7 @@ const impressum = {
           <h2>Zentrale Kontaktstelle nach dem Digital Services Act&nbsp;– DSA (Verordnung (EU) 2022/2065)</h2>
           <p>Unsere zentrale Kontaktstelle für Nutzer und Behörden nach Art.&nbsp;11, 12 DSA erreichen Sie wie folgt:</p>
           <p>E-Mail: <a href="mailto:info@pflegedienst-funk.de">info@pflegedienst-funk.de</a><br>Telefon: <a href="tel:+4954595869825">05459&nbsp;5869825</a></p>
-          <p>Sonstige Kontaktwege: Ambulanter Pflegedienst Funk, Bahnhofstraße&nbsp;33, 48477 Hörstel</p>
+          <p>Sonstige Kontaktwege: Ambulanter Pflegedienst Funk GmbH, Bahnhofstraße&nbsp;33, 48477 Hörstel</p>
           <p>Die für den Kontakt zur Verfügung stehenden Sprachen sind: Deutsch.</p>
 
           <h2>Bildnachweis</h2>
@@ -76,8 +76,8 @@ const impressum = {
 
 const datenschutz = {
   path: '/datenschutz/',
-  title: 'Datenschutzerklärung – Pflegedienst Funk',
-  description: 'Datenschutzerklärung des Ambulanten Pflegedienstes Funk: Welche Daten wir verarbeiten, wofür wir sie nutzen und welche Rechte Sie haben – verständlich erklärt.',
+  title: 'Datenschutzerklärung – Pflegedienst Funk GmbH',
+  description: 'Datenschutzerklärung des Ambulanten Pflegedienstes Funk GmbH: Welche Daten wir verarbeiten, wofür wir sie nutzen und welche Rechte Sie haben – verständlich erklärt.',
   type: 'legal',
   crumbs: [['Datenschutz']],
   noContact: true,

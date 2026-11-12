@@ -10,7 +10,7 @@ const FAQ = [
 
 export default {
   path: '/leistungen/hauswirtschaft/',
-  title: 'Hilfe im Haushalt für Senioren | Pflegedienst Funk',
+  title: 'Hilfe im Haushalt für Senioren | Pflegedienst Funk GmbH',
   description: 'Hauswirtschaftliche Versorgung in Hörstel und Umgebung: Einkaufen, Kochen, Wäsche, Reinigung – über Entlastungsbetrag oder Pflegesachleistung. 05459 5869825.',
   type: 'service',
   nav: 'leistungen',
@@ -33,7 +33,7 @@ export default {
     title: 'Hauswirtschaftliche <em>Versorgung.</em>',
     lead: 'Einkaufen, Kochen, Wäsche, ein sauberes Bad&nbsp;– wenn der Haushalt zur Last wird, packen wir mit an. Damit Sie sich in Ihrem Zuhause weiter wohlfühlen.',
     image: 'hauswirtschaft',
-    imageAlt: 'Mitarbeiterin des Pflegedienstes Funk bereitet mit einer älteren Dame in der Küche Gemüse zu',
+    imageAlt: 'Mitarbeiterin des Pflegedienstes Funk GmbH bereitet mit einer älteren Dame in der Küche Gemüse zu',
     checks: ['Entlastungsbetrag schon ab Pflegegrad&nbsp;1 nutzbar', 'Direkte Abrechnung mit Ihrer Pflegekasse'],
   })}
 
@@ -79,7 +79,7 @@ ${section({
     body: split({
       image: 'beratung-tall',
       tall: true,
-      alt: 'Pflegeberaterin des Pflegedienstes Funk spricht mit einem älteren Herrn und seiner Tochter am Küchentisch',
+      alt: 'Pflegeberaterin des Pflegedienstes Funk GmbH spricht mit einem älteren Herrn und seiner Tochter am Küchentisch',
       text: `
             <p class="eyebrow">Entlastung für Familien</p>
             <h2>Mehr Zeit füreinander, <em>weniger Pflichten.</em></h2>

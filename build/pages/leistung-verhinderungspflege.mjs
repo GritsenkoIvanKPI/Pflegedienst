@@ -13,8 +13,8 @@ const crumbs = [['Leistungen', '/leistungen/'], ['Verhinderungspflege']];
 
 export default {
   path: '/leistungen/verhinderungspflege/',
-  title: 'Verhinderungspflege zu Hause | Pflegedienst Funk',
-  description: 'Verhinderungspflege ambulant: Wir vertreten pflegende Angehörige bei Urlaub oder Krankheit – stundenweise oder tageweise. Pflegedienst Funk: 05459 5869825.',
+  title: 'Verhinderungspflege zu Hause | Pflegedienst Funk GmbH',
+  description: 'Verhinderungspflege ambulant: Wir vertreten pflegende Angehörige bei Urlaub oder Krankheit – stundenweise oder tageweise. Pflegedienst Funk GmbH: 05459 5869825.',
   type: 'service',
   nav: 'leistungen',
   crumbs,
@@ -37,7 +37,7 @@ export default {
     lead: 'Wer einen Menschen zu Hause pflegt, braucht auch einmal Urlaub, wird krank oder schlicht müde. Dann springen wir ein&nbsp;– stundenweise oder tageweise, in der vertrauten Umgebung Ihres Angehörigen.',
     image: 'warum',
     mediaClass: 'pos-top',
-    imageAlt: 'Pflegekraft des Pflegedienstes Funk wird von einem älteren Herrn an seiner Haustür begrüßt',
+    imageAlt: 'Pflegekraft des Pflegedienstes Funk GmbH wird von einem älteren Herrn an seiner Haustür begrüßt',
     checks: ['Ab Pflegegrad&nbsp;2&nbsp;– die Pflegekasse zahlt', 'Bis zu acht Wochen im Jahr'],
   })}
 
@@ -82,7 +82,7 @@ ${section({
     body: split({
       reverse: true,
       image: 'hauswirtschaft',
-      alt: 'Mitarbeiterin des Pflegedienstes Funk bereitet mit einer älteren Dame in der Küche Gemüse zu',
+      alt: 'Mitarbeiterin des Pflegedienstes Funk GmbH bereitet mit einer älteren Dame in der Küche Gemüse zu',
       text: `
             <p class="eyebrow">Was wir übernehmen</p>
             <h2>Verhinderungspflege ambulant: <em>vertraut und verlässlich.</em></h2>

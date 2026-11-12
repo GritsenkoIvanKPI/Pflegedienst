@@ -3051,3 +3051,4 @@ li:nth-child(4n + 4) > a.card { border-top-color: var(--navy-300); }
   .about-hero__photo img { position: absolute; inset: 0; }
 }
 @media (max-width: 359px) { .about-hero__usp { gap: var(--sp-3) var(--sp-1); } .about-hero__usp li { gap: 0.6rem; font-size: 0.95rem; } .about-hero__usp .icon { width: 32px; height: 32px; } }
+@media (min-width: 1280px) { .logo img { width: 196px; } }

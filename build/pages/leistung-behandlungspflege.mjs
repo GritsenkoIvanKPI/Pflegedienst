@@ -10,7 +10,7 @@ const FAQ = [
 
 export default {
   path: '/leistungen/behandlungspflege/',
-  title: 'Behandlungspflege in Hörstel & Umgebung | Funk',
+  title: 'Behandlungspflege in Hörstel & Umgebung | Funk GmbH',
   description: 'Behandlungspflege zu Hause in Hörstel und Umgebung: Medikamente, Injektionen, Verbände, Blutzucker – nach ärztlicher Verordnung, die Krankenkasse zahlt.',
   type: 'service',
   nav: 'leistungen',
@@ -33,7 +33,7 @@ export default {
     title: 'Behandlungspflege nach <em>ärztlicher Verordnung.</em>',
     lead: 'Was Ihre Ärztin oder Ihr Arzt anordnet, setzen unsere examinierten Pflegefachkräfte bei Ihnen zu Hause um&nbsp;– zuverlässig, pünktlich und in enger Abstimmung mit der Praxis.',
     image: 'behandlungspflege',
-    imageAlt: 'Pflegefachkraft des Pflegedienstes Funk misst bei einem älteren Herrn am Tisch den Blutzucker',
+    imageAlt: 'Pflegefachkraft des Pflegedienstes Funk GmbH misst bei einem älteren Herrn am Tisch den Blutzucker',
     checks: ['Krankenkasse zahlt&nbsp;– kein Pflegegrad nötig', 'Examinierte Pflegefachkräfte, auch am Wochenende'],
   })}
 
@@ -77,7 +77,7 @@ ${section({
       reverse: true,
       image: 'hero',
       mediaCls: 'pos-top',
-      alt: 'Pflegefachkraft des Pflegedienstes Funk misst einer älteren Dame auf dem Sofa den Blutdruck',
+      alt: 'Pflegefachkraft des Pflegedienstes Funk GmbH misst einer älteren Dame auf dem Sofa den Blutdruck',
       text: `
             <p class="eyebrow">Was wir für Sie tun</p>
             <h2>Leistungen der <em>Behandlungspflege.</em></h2>

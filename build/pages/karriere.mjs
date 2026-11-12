@@ -30,7 +30,7 @@ const jobList = JOBS.length
 
 export default {
   path: '/karriere/',
-  title: 'Jobs Pflege Hörstel – Karriere beim Pflegedienst Funk',
+  title: 'Jobs Pflege Hörstel – Karriere | Pflegedienst Funk GmbH',
   description: 'Jobs in der ambulanten Pflege in Hörstel: Pflegefachkräfte und Pflegehelfer (m/w/d) gesucht. Flexible Arbeitszeiten, faire Vergütung, herzliches Team.',
   type: 'karriere',
   crumbs: [['Karriere']],
@@ -38,14 +38,14 @@ export default {
   ogImage: 'karriere',
   formTopic: 'Karriere / Bewerbung',
   faq: FAQ,
-  schema: [{ '@type': 'WebPage', '@id': `${SITE}/karriere/#jobs`, name: 'Karriere beim Pflegedienst Funk', about: ORG_REF }],
+  schema: [{ '@type': 'WebPage', '@id': `${SITE}/karriere/#jobs`, name: 'Karriere beim Pflegedienst Funk GmbH', about: ORG_REF }],
   body: `${pageHero({
     crumbs: [['Karriere']],
     eyebrow: 'Karriere · Jobs in der Pflege',
     title: 'Karriere in der <em>ambulanten Pflege.</em>',
-    lead: 'Sie möchten Pflege mit Herz und Verstand leben&nbsp;– in einem Team, in dem Sie keine Nummer sind? Beim Pflegedienst Funk in Hörstel arbeiten Sie mit festen Touren, vertrauten Kundinnen und Kunden und Kolleginnen und Kollegen, die zusammenhalten.',
+    lead: 'Sie möchten Pflege mit Herz und Verstand leben&nbsp;– in einem Team, in dem Sie keine Nummer sind? Beim Pflegedienst Funk GmbH in Hörstel arbeiten Sie mit festen Touren, vertrauten Kundinnen und Kunden und Kolleginnen und Kollegen, die zusammenhalten.',
     image: 'karriere',
-    imageAlt: 'Zwei Pflegekräfte des Pflegedienstes Funk auf dem Weg zum Dienstwagen',
+    imageAlt: 'Zwei Pflegekräfte des Pflegedienstes Funk GmbH auf dem Weg zum Dienstwagen',
     actions: `<a class="btn btn--accent btn--lg" href="#stellen">Zu den Stellenangeboten ${icon('arrow')}</a><a class="btn btn--outline btn--lg" href="#initiativbewerbung">Initiativ bewerben</a>`,
     checks: ['Flexible Arbeitszeiten, Voll- oder Teilzeit', 'Faire Vergütung inklusive Zuschlägen und Prämien'],
   })}
@@ -128,7 +128,7 @@ ${section({
         <ul class="facts facts--apply" role="list" data-reveal>
           <li class="fact"><span class="fact__icon" aria-hidden="true">${icon('mail')}</span><div><strong>Per E-Mail</strong><span><a href="${mailto('Bewerbung')}">${MAIL}</a></span></div></li>
           <li class="fact"><span class="fact__icon" aria-hidden="true">${icon('phone')}</span><div><strong>Telefonisch</strong><span><a href="${TEL}">${PHONE}</a></span></div></li>
-          <li class="fact"><span class="fact__icon" aria-hidden="true">${icon('pin')}</span><div><strong>Per Post</strong><span>Ambulanter Pflegedienst Funk, Bahnhofstraße&nbsp;33, 48477&nbsp;Hörstel</span></div></li>
+          <li class="fact"><span class="fact__icon" aria-hidden="true">${icon('pin')}</span><div><strong>Per Post</strong><span>Ambulanter Pflegedienst Funk GmbH, Bahnhofstraße&nbsp;33, 48477&nbsp;Hörstel</span></div></li>
         </ul>
         <p class="apply__note" data-reveal>Hinweise zum Umgang mit Ihren Bewerbungsdaten finden Sie in unserer <a href="/datenschutz/">Datenschutzerklärung</a>.</p>`,
   })}

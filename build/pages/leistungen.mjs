@@ -53,8 +53,8 @@ const crumbs = [['Leistungen']];
 
 export default {
   path: '/leistungen/',
-  title: 'Leistungen – Ambulante Pflege in Hörstel | Funk',
-  description: 'Alle Leistungen des ambulanten Pflegedienstes Funk: Grundpflege, Behandlungspflege, Wundversorgung, Hauswirtschaft und Beratung in Hörstel und Umgebung.',
+  title: 'Leistungen – Ambulante Pflege in Hörstel | Funk GmbH',
+  description: 'Alle Leistungen des ambulanten Pflegedienstes Funk GmbH: Grundpflege, Behandlungspflege, Wundversorgung, Hauswirtschaft und Beratung in Hörstel und Umgebung.',
   type: 'hub',
   nav: 'leistungen',
   crumbs,
@@ -64,7 +64,7 @@ export default {
   schema: [{
     '@type': 'OfferCatalog',
     '@id': `${SITE}/leistungen/#leistungen`,
-    name: 'Leistungen des Ambulanten Pflegedienstes Funk',
+    name: 'Leistungen des Ambulanten Pflegedienstes Funk GmbH',
     provider: ORG_REF,
     url: `${SITE}/leistungen/`,
     itemListElement: SERVICES.map((s, i) => ({
@@ -80,7 +80,7 @@ export default {
     lead: 'Von der Körperpflege am Morgen über die Medikamentengabe bis zur Hilfe im Haushalt: Wir unterstützen Sie zu Hause genau dort, wo Sie Hilfe brauchen&nbsp;– in Hörstel, Mettingen, Recke, Ibbenbüren und Rheine.',
     image: 'hero',
     mediaClass: 'pos-top',
-    imageAlt: 'Pflegefachkraft des Pflegedienstes Funk misst einer älteren Dame zu Hause auf dem Sofa den Blutdruck',
+    imageAlt: 'Pflegefachkraft des Pflegedienstes Funk GmbH misst einer älteren Dame zu Hause auf dem Sofa den Blutdruck',
     checks: ['Vertragspartner aller Kranken- und Pflegekassen', 'Kostenlose Beratung vor dem Start'],
   })}
 

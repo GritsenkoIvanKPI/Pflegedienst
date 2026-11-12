@@ -13,7 +13,7 @@ const crumbs = [['Leistungen', '/leistungen/'], ['Kompressionsversorgung']];
 
 export default {
   path: '/leistungen/kompressionsversorgung/',
-  title: 'Kompressionsversorgung zu Hause | Pflegedienst Funk',
+  title: 'Kompressionsversorgung zu Hause | Pflegedienst Funk GmbH',
   description: 'Kompressionsstrümpfe anziehen durch den Pflegedienst: Wir legen Strümpfe und Verbände fachgerecht an – in Hörstel und Umgebung. Auf Verordnung zahlt die Kasse.',
   type: 'service',
   nav: 'leistungen',
@@ -37,7 +37,7 @@ export default {
     lead: 'Medizinische Kompressionsstrümpfe wirken nur, wenn sie jeden Tag richtig sitzen. Wir ziehen sie morgens an und abends aus, legen Kompressionsverbände an und achten dabei auf Ihre Haut&nbsp;– bei Ihnen zu Hause.',
     image: 'hero',
     mediaClass: 'pos-top',
-    imageAlt: 'Pflegefachkraft des Pflegedienstes Funk betreut eine ältere Dame zu Hause auf dem Sofa',
+    imageAlt: 'Pflegefachkraft des Pflegedienstes Funk GmbH betreut eine ältere Dame zu Hause auf dem Sofa',
     checks: ['Ab Kompressionsklasse&nbsp;2 auf Verordnung&nbsp;– die Krankenkasse zahlt', 'Morgens anziehen, abends ausziehen&nbsp;– zuverlässig geplant'],
   })}
 
@@ -84,7 +84,7 @@ ${section({
     body: split({
       reverse: true,
       image: 'grundpflege',
-      alt: 'Pflegekraft des Pflegedienstes Funk hilft einem älteren Herrn an der Bettkante beim Anziehen',
+      alt: 'Pflegekraft des Pflegedienstes Funk GmbH hilft einem älteren Herrn an der Bettkante beim Anziehen',
       text: `
             <p class="eyebrow">Was wir für Sie tun</p>
             <h2>Kompressionsstrümpfe anziehen, <em>sicher und faltenfrei.</em></h2>

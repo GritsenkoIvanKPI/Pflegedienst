@@ -389,7 +389,7 @@ export const renderPage = (p) => {
 
   <meta property="og:locale" content="de_DE">
   <meta property="og:type" content="${p.ogType ?? 'website'}">
-  <meta property="og:site_name" content="Ambulanter Pflegedienst Funk">
+  <meta property="og:site_name" content="Ambulanter Pflegedienst Funk GmbH">
   <meta property="og:title" content="${p.ogTitle ?? p.title}">
   <meta property="og:description" content="${p.description}">
   <meta property="og:url" content="${SITE}${url}">

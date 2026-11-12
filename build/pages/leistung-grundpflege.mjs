@@ -10,7 +10,7 @@ const FAQ = [
 
 export default {
   path: '/leistungen/grundpflege/',
-  title: 'Grundpflege zu Hause in Hörstel | Pflegedienst Funk',
+  title: 'Grundpflege zu Hause in Hörstel | Pflegedienst Funk GmbH',
   description: 'Grundpflege zu Hause in Hörstel, Ibbenbüren, Rheine, Mettingen und Recke: Körperpflege, Anziehen, Mobilisation – ab Pflegegrad 2. Tel. 05459 5869825.',
   type: 'service',
   nav: 'leistungen',
@@ -33,7 +33,7 @@ export default {
     title: 'Grundpflege <em>zu&nbsp;Hause.</em>',
     lead: 'Waschen, Anziehen, Aufstehen&nbsp;– wenn diese Dinge allein nicht mehr gelingen, unterstützen wir Sie. Unsere Grundpflege hilft Ihnen, so selbstständig wie möglich in den eigenen vier Wänden zu leben.',
     image: 'grundpflege',
-    imageAlt: 'Pflegekraft des Pflegedienstes Funk hilft einem älteren Herrn an seinem Bett beim Anziehen',
+    imageAlt: 'Pflegekraft des Pflegedienstes Funk GmbH hilft einem älteren Herrn an seinem Bett beim Anziehen',
     checks: ['Ab Pflegegrad&nbsp;2&nbsp;– Abrechnung direkt mit der Pflegekasse', 'Feste Bezugspflegekräfte statt wechselnder Gesichter'],
   })}
 
@@ -80,7 +80,7 @@ ${section({
     body: split({
       reverse: true,
       image: 'warum',
-      alt: 'Pflegekraft des Pflegedienstes Funk wird von einem älteren Herrn an seiner Haustür begrüßt',
+      alt: 'Pflegekraft des Pflegedienstes Funk GmbH wird von einem älteren Herrn an seiner Haustür begrüßt',
       tall: true,
       text: `
             <p class="eyebrow">Ihre Vorteile</p>

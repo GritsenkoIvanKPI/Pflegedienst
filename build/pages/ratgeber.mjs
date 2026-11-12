@@ -59,14 +59,14 @@ const article = (a) => {
           <ul class="article__meta" role="list">
             <li>${icon('calendar')} <time datetime="${DATE}">${DATE_LABEL}</time></li>
             <li>${icon('clock')} ${minutes}&nbsp;Min. Lesezeit</li>
-            <li>${icon('users')} Redaktion Pflegedienst Funk</li>
+            <li>${icon('users')} Redaktion Pflegedienst Funk GmbH</li>
           </ul>
           <p class="lead">${a.intro}</p>
           ${summary(a.summary)}
           ${sectionsHtml}
           <div class="author-box">
             <span class="card__icon" aria-hidden="true">${icon('heart')}</span>
-            <p><strong>Redaktion Pflegedienst Funk</strong><br>Geschrieben von unserem Team aus examinierten Pflegefachkräften in Hörstel. Dieser Ratgeber ersetzt keine persönliche Beratung&nbsp;– bei Fragen zu Ihrer Situation sind wir gern für Sie da.</p>
+            <p><strong>Redaktion Pflegedienst Funk GmbH</strong><br>Geschrieben von unserem Team aus examinierten Pflegefachkräften in Hörstel. Dieser Ratgeber ersetzt keine persönliche Beratung&nbsp;– bei Fragen zu Ihrer Situation sind wir gern für Sie da.</p>
           </div>
         </article>
         <aside class="article__aside" aria-label="Inhalt und Kontakt">
@@ -107,7 +107,7 @@ ${related(a.related)}
 const pflegegrad = article({
   slug: 'pflegegrad-pflegeleistungen',
   crumb: 'Pflegegrad &amp; Pflegeleistungen',
-  title: 'Pflegegrad & Pflegeleistungen zu Hause erklärt | Funk',
+  title: 'Pflegegrad & Pflegeleistungen zu Hause erklärt | Funk GmbH',
   description: 'Pflegegrad beantragen, Begutachtung, Pflegegeld, Pflegesachleistung und Entlastungsbetrag: Welche Pflegeleistungen zu Hause es gibt – verständlich erklärt.',
   keywords: 'Pflegegrad beantragen, Pflegeleistungen zu Hause, Pflegesachleistung, Pflegegeld, ambulanter Pflegedienst Leistungen',
   eyebrow: 'Pflegegrad &amp; Leistungen',
@@ -217,7 +217,7 @@ ${ticks([
     '<a href="/leistungen/verhinderungspflege/">Verhinderungspflege</a>, wenn Angehörige eine Pause brauchen',
     '<a href="/leistungen/pflegeberatung-37-3/">Pflegeberatung nach §&nbsp;37.3</a> für Pflegegeld-Empfänger',
   ])}
-<p>Der Ambulante Pflegedienst Funk begleitet seit 2011 Menschen in Hörstel, Mettingen, Recke, Ibbenbüren und Rheine. Wir sind Vertragspartner aller Kranken- und Pflegekassen und rechnen direkt mit ihnen ab. Durch Bezugspflege kommen möglichst immer dieselben vertrauten Pflegekräfte zu Ihnen. Alle Angebote finden Sie in unserer <a href="/leistungen/">Übersicht der Leistungen</a>.</p>
+<p>Der Ambulante Pflegedienst Funk GmbH begleitet seit 2011 Menschen in Hörstel, Mettingen, Recke, Ibbenbüren und Rheine. Wir sind Vertragspartner aller Kranken- und Pflegekassen und rechnen direkt mit ihnen ab. Durch Bezugspflege kommen möglichst immer dieselben vertrauten Pflegekräfte zu Ihnen. Alle Angebote finden Sie in unserer <a href="/leistungen/">Übersicht der Leistungen</a>.</p>
 <p>Sie wissen noch nicht, welche Leistungen zu Ihrer Situation passen? Rufen Sie uns an. Wir beraten Sie kostenlos und helfen auch bei den ersten Schritten mit der Pflegekasse.</p>`,
     },
   ],
@@ -243,7 +243,7 @@ const beratung = article({
   eyebrow: 'Beratung',
   h1: 'Beratungseinsatz nach §&nbsp;37.3&nbsp;SGB&nbsp;XI <em>einfach erklärt.</em>',
   lead: 'Wer Pflegegeld bezieht, bekommt regelmäßig Besuch von einer Pflegefachkraft. Hier lesen Sie, wer den Beratungseinsatz braucht, wie oft er fällig ist und wie Sie sich gut darauf vorbereiten.',
-  imageAlt: 'Pflegefachkraft des Pflegedienstes Funk notiert sich im Gespräch mit einem älteren Herrn dessen Anliegen',
+  imageAlt: 'Pflegefachkraft des Pflegedienstes Funk GmbH notiert sich im Gespräch mit einem älteren Herrn dessen Anliegen',
   intro: 'Viele Familien kennen den Brief: Die Pflegekasse erinnert an den Beratungseinsatz nach §&nbsp;37.3&nbsp;SGB&nbsp;XI. Was zunächst nach Kontrolle klingt, ist in Wahrheit eine Unterstützung. Bei diesem Beratungsbesuch schaut eine Pflegefachkraft gemeinsam mit Ihnen, ob die Pflege zu Hause gut gelingt und wo es Erleichterung geben kann. In diesem Ratgeber erfahren Sie, wer die Pflichtberatung beim Pflegegeld braucht, was dabei passiert und was Sie beachten sollten.',
   summary: [
     'Wer ausschließlich Pflegegeld bezieht, muss den Beratungseinsatz regelmäßig nachweisen.',
@@ -362,7 +362,7 @@ const wunde = article({
   eyebrow: 'Wundversorgung',
   h1: 'Wundversorgung zu Hause&nbsp;– <em>wann hilft ein Wundexperte?</em>',
   lead: 'Manche Wunden wollen einfach nicht heilen. Erfahren Sie, woran Sie eine chronische Wunde erkennen, wann fachkundige Hilfe sinnvoll ist und wie Wundversorgung zu Hause abläuft.',
-  imageAlt: 'Pflegefachkraft des Pflegedienstes Funk bereitet am Schreibtisch sterile Verbandsmaterialien vor',
+  imageAlt: 'Pflegefachkraft des Pflegedienstes Funk GmbH bereitet am Schreibtisch sterile Verbandsmaterialien vor',
   intro: 'Eine kleine Wunde am Bein, die nach Wochen immer noch nicht zu ist. Eine Druckstelle, die größer wird. Viele Menschen kennen solche Sorgen&nbsp;– bei sich selbst oder bei einem Angehörigen. Gerade chronische Wunden brauchen Geduld und Fachwissen. In diesem Ratgeber erklären wir, was eine gute Wundversorgung zu Hause ausmacht, auf welche Warnzeichen Sie achten sollten und wann ein Wundexperte den Unterschied macht.',
   summary: [
     'Heilt eine Wunde nach etwa acht Wochen nicht ab, spricht man von einer chronischen Wunde.',
@@ -419,7 +419,7 @@ ${callout_('Im Zweifel ärztlich abklären lassen', 'Dieser Ratgeber kann keine 
   <li><strong>Behandlung der Ursache:</strong> Beim offenen Bein ist oft eine Kompression wichtig, beim Dekubitus die Druckentlastung, beim diabetischen Fuß ein gut eingestellter Blutzucker. Ein Wundexperte behält das im Blick.</li>
   <li><strong>Schmerz und Hautschutz:</strong> Eine schonende Versorgung und der Schutz der Haut rund um die Wunde machen den Alltag leichter.</li>
 </ul>
-<p>Im Team des Ambulanten Pflegedienstes Funk arbeitet eine Fachkraft mit Spezialisierung im Wundmanagement. Mehr dazu lesen Sie auf unserer Seite zur <a href="/leistungen/wundversorgung/">professionellen Wundversorgung</a>.</p>`,
+<p>Im Team des Ambulanten Pflegedienstes Funk GmbH arbeitet eine Fachkraft mit Spezialisierung im Wundmanagement. Mehr dazu lesen Sie auf unserer Seite zur <a href="/leistungen/wundversorgung/">professionellen Wundversorgung</a>.</p>`,
     },
     {
       id: 'heilung-foerdern',
@@ -484,7 +484,7 @@ function callout_(title, body, ic) {
 /* ---------- Übersicht /ratgeber/ ---------- */
 const index = {
   path: '/ratgeber/',
-  title: 'Ratgeber Pflege zu Hause | Pflegedienst Funk',
+  title: 'Ratgeber Pflege zu Hause | Pflegedienst Funk GmbH',
   description: 'Ratgeber zur Pflege zu Hause: Pflegegrad beantragen, Beratungseinsatz nach § 37.3 SGB XI und Wundversorgung verständlich erklärt. Fragen? 05459 5869825.',
   type: 'blog',
   crumbs: [['Ratgeber']],

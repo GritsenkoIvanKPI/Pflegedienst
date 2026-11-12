@@ -13,7 +13,7 @@ const crumbs = [['Leistungen', '/leistungen/'], ['Pflegeberatung §&nbsp;37.3']]
 
 export default {
   path: '/leistungen/pflegeberatung-37-3/',
-  title: 'Beratungseinsatz § 37.3 SGB XI in Hörstel | Funk',
+  title: 'Beratungseinsatz § 37.3 SGB XI in Hörstel | Funk GmbH',
   description: 'Beratungseinsatz nach § 37.3 SGB XI für Pflegegeld-Empfänger: Pflichtberatung zu Hause in Hörstel und Umgebung, Nachweis an die Kasse. Termin: 05459 5869825.',
   type: 'service',
   nav: 'leistungen',
@@ -36,7 +36,7 @@ export default {
     title: 'Beratungseinsatz nach <em>§&nbsp;37.3&nbsp;SGB&nbsp;XI.</em>',
     lead: 'Wer Pflegegeld bezieht, braucht regelmäßig einen Beratungsbesuch. Wir kommen zu Ihnen nach Hause, nehmen uns Zeit für Ihre Fragen und senden den Nachweis direkt an Ihre Pflegekasse.',
     image: 'beratung-tall',
-    imageAlt: 'Pflegeberaterin des Pflegedienstes Funk spricht mit einem älteren Herrn und seiner Tochter am Küchentisch',
+    imageAlt: 'Pflegeberaterin des Pflegedienstes Funk GmbH spricht mit einem älteren Herrn und seiner Tochter am Küchentisch',
     checks: ['Für Sie kostenlos&nbsp;– die Pflegekasse zahlt', 'Nachweis an die Pflegekasse übernehmen wir'],
   })}
 

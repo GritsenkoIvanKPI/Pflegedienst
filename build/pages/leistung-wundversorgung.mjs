@@ -10,7 +10,7 @@ const FAQ = [
 
 export default {
   path: '/leistungen/wundversorgung/',
-  title: 'Wundversorgung & Wundmanagement zu Hause | Funk',
+  title: 'Wundversorgung & Wundmanagement zu Hause | Funk GmbH',
   description: 'Professionelle Wundversorgung zu Hause in Hörstel, Ibbenbüren, Rheine, Mettingen und Recke: Wundmanagement für chronische Wunden – auf Verordnung, Kasse zahlt.',
   type: 'service',
   nav: 'leistungen',
@@ -33,7 +33,7 @@ export default {
     title: 'Professionelle <em>Wundversorgung zu&nbsp;Hause.</em>',
     lead: 'Chronische oder schwer heilende Wunden brauchen Erfahrung, Geduld und saubere Abläufe. Unser Wundmanagement bringt die fachgerechte Versorgung direkt zu Ihnen nach Hause&nbsp;– in Hörstel und der ganzen Umgebung.',
     image: 'wundversorgung',
-    imageAlt: 'Pflegefachkraft des Pflegedienstes Funk legt einer älteren Dame zu Hause einen sterilen Wundverband an',
+    imageAlt: 'Pflegefachkraft des Pflegedienstes Funk GmbH legt einer älteren Dame zu Hause einen sterilen Wundverband an',
     checks: ['Auf ärztliche Verordnung&nbsp;– die Krankenkasse zahlt', 'Erfahrene Pflegefachkräfte mit Schwerpunkt Wundmanagement'],
   })}
 

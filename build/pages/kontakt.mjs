@@ -10,16 +10,16 @@ const LEADERS = [
 
 export default {
   path: '/kontakt/',
-  title: 'Kontakt – Pflegedienst Funk Hörstel',
-  description: 'Kontakt zum Pflegedienst Funk in Hörstel: Tel. 05459 5869825, info@pflegedienst-funk.de, Bahnhofstraße 33. Rückruf anfordern – wir melden uns schnell.',
+  title: 'Kontakt – Ambulanter Pflegedienst Funk GmbH, Hörstel',
+  description: 'Kontakt zum Pflegedienst Funk GmbH in Hörstel: Tel. 05459 5869825, info@pflegedienst-funk.de, Bahnhofstraße 33. Rückruf anfordern – wir melden uns schnell.',
   type: 'kontakt',
   crumbs: [['Kontakt']],
   noContact: true,
-  schema: [{ '@type': 'ContactPage', '@id': `${SITE}/kontakt/#contact`, url: `${SITE}/kontakt/`, name: 'Kontakt zum Pflegedienst Funk', about: ORG_REF }],
+  schema: [{ '@type': 'ContactPage', '@id': `${SITE}/kontakt/#contact`, url: `${SITE}/kontakt/`, name: 'Kontakt zum Pflegedienst Funk GmbH', about: ORG_REF }],
   body: `${pageHero({
     crumbs: [['Kontakt']],
     eyebrow: 'Kontakt',
-    title: 'Kontakt zum <em>Pflegedienst Funk.</em>',
+    title: 'Kontakt zum <em>Pflegedienst Funk GmbH.</em>',
     lead: 'Wir sind für alle Fragen rund um die Pflege für Sie da. Rufen Sie uns an, schreiben Sie uns oder besuchen Sie uns in Hörstel&nbsp;– wir beraten Sie persönlich und finden gemeinsam die passende Lösung.',
     compact: true,
     actions: false,

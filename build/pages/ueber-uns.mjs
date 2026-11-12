@@ -26,13 +26,13 @@ const quoteCard = (l) => `<li class="quote-card" data-reveal>
 
 export default {
   path: '/ueber-uns/',
-  title: 'Über uns – Ambulanter Pflegedienst Funk, Hörstel',
-  description: 'Seit 2011 ambulante Pflege mit Herz und Verstand: Lernen Sie den Pflegedienst Funk aus Hörstel kennen – unser Team, unser Leitbild und die Bezugspflege.',
+  title: 'Über uns – Ambulanter Pflegedienst Funk GmbH, Hörstel',
+  description: 'Seit 2011 ambulante Pflege mit Herz und Verstand: Lernen Sie den Pflegedienst Funk GmbH aus Hörstel kennen – unser Team, unser Leitbild und die Bezugspflege.',
   type: 'about',
   crumbs: [['Über uns']],
   heroImage: 'inhaber',
   ogImage: 'inhaber',
-  schema: [{ '@type': 'AboutPage', '@id': `${SITE}/ueber-uns/#about`, url: `${SITE}/ueber-uns/`, name: 'Über den Pflegedienst Funk', about: ORG_REF }],
+  schema: [{ '@type': 'AboutPage', '@id': `${SITE}/ueber-uns/#about`, url: `${SITE}/ueber-uns/`, name: 'Über den Pflegedienst Funk GmbH', about: ORG_REF }],
   body: `
     <section class="about-hero" aria-labelledby="page-title">
       <div class="container">${breadcrumbNav([['Über uns']])}</div>
@@ -45,7 +45,7 @@ export default {
             <span class="about-hero__line">Nah bei den <span class="nowrap"><span class="swash">Menschen.<svg viewBox="0 0 220 18" preserveAspectRatio="none" aria-hidden="true"><path d="M3 13C50 5 120 3 217 9"/></svg></span><svg class="about-hero__heart" viewBox="0 0 24 24" aria-hidden="true"><path d="M12 20s-8-4.7-8-10.4A4.4 4.4 0 0 1 12 7a4.4 4.4 0 0 1 8 2.6C20 15.3 12 20 12 20Z"/></svg></span></span>
           </h1>
           <ul class="about-hero__points" role="list" data-reveal>
-            <li><span class="about-hero__icon">${icon('hands')}</span><p><strong>Der Ambulante Pflegedienst Funk</strong> ist seit 2011 Ihr verlässlicher Partner für professionelle und herzliche Pflege in Hörstel und der Region. Wir helfen Menschen, möglichst selbstbestimmt und sicher in ihrem vertrauten Zuhause zu leben.</p></li>
+            <li><span class="about-hero__icon">${icon('hands')}</span><p><strong>Der Ambulante Pflegedienst Funk GmbH</strong> ist seit 2011 Ihr verlässlicher Partner für professionelle und herzliche Pflege in Hörstel und der Region. Wir helfen Menschen, möglichst selbstbestimmt und sicher in ihrem vertrauten Zuhause zu leben.</p></li>
             <li><span class="about-hero__icon">${icon('users')}</span><p><strong>Inhabergeführt und persönlich:</strong> Gemeinsam mit unserem erfahrenen Team stehen wir für zuverlässige Betreuung, hohe Pflegequalität und feste Ansprechpartner. Vertrauen, Respekt und Menschlichkeit stehen dabei im Mittelpunkt.</p></li>
           </ul>
           <div class="about-hero__actions" data-reveal>
@@ -54,7 +54,7 @@ export default {
           </div>
         </div>
         <figure class="about-hero__media" data-reveal>
-          <div class="about-hero__photo media">${img('inhaber', 'Inhaber des Ambulanten Pflegedienstes Funk am Schreibtisch im Büro in Hörstel', { lazy: false, priority: true, sizes: '(min-width: 1024px) 48vw, 100vw' })}</div>
+          <div class="about-hero__photo media">${img('inhaber', 'Inhaber des Ambulanten Pflegedienstes Funk GmbH am Schreibtisch im Büro in Hörstel', { lazy: false, priority: true, sizes: '(min-width: 1024px) 48vw, 100vw' })}</div>
         </figure>
       </div>
       <div class="container">
@@ -76,7 +76,7 @@ ${section({
             <p class="eyebrow">Wer wir sind</p>
             <h2>Pflege ist mehr als eine Dienstleistung&nbsp;– <em>sie ist eine Leistung von Mensch zu&nbsp;Mensch.</em></h2>
             <p class="lead">Zuwendung, Vertrautheit, Aufmerksamkeit und ein feines Gespür dafür, was ein Mensch wirklich braucht: Das gehört für uns zur Pflege dazu.</p>
-            <p>Der Ambulante Pflegedienst Funk wurde 2011 in Hörstel gegründet. Seitdem sind wir für Pflegebedürftige und ihre Angehörigen ein verlässlicher Partner&nbsp;– in Hörstel, Mettingen, Recke, Ibbenbüren, Rheine und den umliegenden Orten.</p>
+            <p>Der Ambulante Pflegedienst Funk GmbH wurde 2011 in Hörstel gegründet. Seitdem sind wir für Pflegebedürftige und ihre Angehörigen ein verlässlicher Partner&nbsp;– in Hörstel, Mettingen, Recke, Ibbenbüren, Rheine und den umliegenden Orten.</p>
             <p>Wir versorgen Menschen jeden Alters: nach einer Operation, bei chronischer Krankheit, mit einer Behinderung oder wenn im Alter die Kräfte nachlassen. Unser Ziel ist immer dasselbe&nbsp;– ein würdevolles und möglichst selbstbestimmtes Leben in den eigenen vier Wänden.</p>
             <p>Dafür bieten wir das ganze Spektrum der ambulanten Pflege: von der <a href="/leistungen/grundpflege/">Grundpflege</a> über die medizinische <a href="/leistungen/behandlungspflege/">Behandlungspflege</a> und das professionelle <a href="/leistungen/wundversorgung/">Wundmanagement</a> bis zur <a href="/leistungen/hauswirtschaft/">Hilfe im Haushalt</a>.</p>`,
       aside: `<aside data-reveal>
@@ -110,13 +110,13 @@ ${section({
     body: split({
       reverse: true,
       image: 'hero',
-      alt: 'Bezugspflegekraft des Pflegedienstes Funk misst bei einer vertrauten Kundin zu Hause den Blutdruck',
+      alt: 'Bezugspflegekraft des Pflegedienstes Funk GmbH misst bei einer vertrauten Kundin zu Hause den Blutdruck',
       tall: true,
       mediaCls: 'pos-top',
       text: `
             <p class="eyebrow">So arbeiten wir</p>
             <h2>Bezugspflege: <em>vertraute Gesichter statt ständiger Wechsel.</em></h2>
-            <p>Beim Pflegedienst Funk hat jeder Mensch, den wir versorgen, eine feste Bezugspflegekraft. Sie kennt die Gewohnheiten, Wünsche und Besonderheiten genau&nbsp;– und ist für Sie und Ihre Angehörigen erreichbar.</p>
+            <p>Beim Pflegedienst Funk GmbH hat jeder Mensch, den wir versorgen, eine feste Bezugspflegekraft. Sie kennt die Gewohnheiten, Wünsche und Besonderheiten genau&nbsp;– und ist für Sie und Ihre Angehörigen erreichbar.</p>
             <p>Möglich macht das eine durchdachte Dienst- und Tourenplanung. Sie stellt nicht nur die bestmögliche Betreuung in den Mittelpunkt, sondern sorgt auch für gute Arbeitsbedingungen in unserem Team. Denn wer zufrieden arbeitet, pflegt mit Ruhe und Aufmerksamkeit.</p>
             ${ticks([
     'Feste Pflegekräfte, die Ihre Bedürfnisse kennen',

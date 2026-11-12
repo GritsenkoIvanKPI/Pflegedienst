@@ -24,7 +24,7 @@ const serviceSchema = (c) => ({
    ====================================================================== */
 const HOE = city('pflegedienst-hoerstel');
 const HOE_FAQ = [
-  ['Versorgt der Pflegedienst Funk auch Dreierwalde, Bevergern und Riesenbeck?', 'Ja. Alle Ortsteile von Hörstel gehören zu unserem Einsatzgebiet. Sie erhalten dort dieselben Leistungen wie in der Kernstadt, und Ihre Ansprechpartner sitzen in unserem Büro an der Bahnhofstraße&nbsp;33.'],
+  ['Versorgt der Pflegedienst Funk GmbH auch Dreierwalde, Bevergern und Riesenbeck?', 'Ja. Alle Ortsteile von Hörstel gehören zu unserem Einsatzgebiet. Sie erhalten dort dieselben Leistungen wie in der Kernstadt, und Ihre Ansprechpartner sitzen in unserem Büro an der Bahnhofstraße&nbsp;33.'],
   ['Wie schnell kann die Pflege in Hörstel beginnen?', 'Das hängt von Ihrem Bedarf und unserer Tourenplanung ab. Rufen Sie uns an&nbsp;– wir sagen Ihnen offen, ab wann wir Sie versorgen können. Gerade nach einem Krankenhausaufenthalt bemühen wir uns um einen zügigen Start.'],
   ['Kann ich persönlich im Büro vorbeikommen?', 'Gern. Unser Büro in der Bahnhofstraße&nbsp;33 ist montags bis freitags von 8 bis 14&nbsp;Uhr besetzt. Damit sich jemand in Ruhe Zeit für Sie nehmen kann, rufen Sie am besten vorher kurz an.'],
   ['Wer bezahlt die ambulante Pflege?', 'Behandlungspflege auf ärztliche Verordnung zahlt die Krankenkasse, einen Pflegegrad brauchen Sie dafür nicht. Grundpflege und Hauswirtschaft werden ab Pflegegrad&nbsp;2 über die Pflegekasse abgerechnet. Wir rechnen direkt mit Ihrer Kasse ab und erklären Ihnen vorab, was auf Sie zukommt.'],
@@ -33,7 +33,7 @@ const HOE_FAQ = [
 
 const hoerstel = {
   path: '/pflegedienst-hoerstel/',
-  title: 'Pflegedienst Hörstel | Ambulante Pflege Funk',
+  title: 'Pflegedienst Hörstel | Ambulanter Pflegedienst Funk GmbH',
   description: 'Ihr ambulanter Pflegedienst in Hörstel, Bevergern, Riesenbeck und Dreierwalde: Grundpflege, Behandlungspflege und Beratung aus dem Ort. Tel. 05459 5869825',
   type: 'city',
   nav: 'orte',
@@ -46,9 +46,9 @@ const hoerstel = {
     crumbs: crumbsFor(HOE),
     eyebrow: 'Einsatzgebiet · Hörstel',
     title: 'Ambulanter Pflegedienst in <em>Hörstel.</em>',
-    lead: 'Seit 2011 ist der Pflegedienst Funk in Hörstel zu Hause. Von unserem Büro in der Bahnhofstraße&nbsp;33 fahren wir zu Ihnen nach Hörstel, Bevergern, Riesenbeck und Dreierwalde&nbsp;– mit kurzen Wegen und vertrauten Gesichtern.',
+    lead: 'Seit 2011 ist der Pflegedienst Funk GmbH in Hörstel zu Hause. Von unserem Büro in der Bahnhofstraße&nbsp;33 fahren wir zu Ihnen nach Hörstel, Bevergern, Riesenbeck und Dreierwalde&nbsp;– mit kurzen Wegen und vertrauten Gesichtern.',
     image: 'warum',
-    imageAlt: 'Pflegekraft des Pflegedienstes Funk wird von einem älteren Herrn an seiner Haustür begrüßt',
+    imageAlt: 'Pflegekraft des Pflegedienstes Funk GmbH wird von einem älteren Herrn an seiner Haustür begrüßt',
     mediaClass: 'pos-top',
     checks: ['Büro direkt in Hörstel, Mo–Fr 8–14&nbsp;Uhr', 'Vertragspartner aller Kranken- und Pflegekassen'],
   })}
@@ -60,7 +60,7 @@ ${section({
       text: `
             <p class="eyebrow">Ihr Pflegedienst vor Ort</p>
             <h2>Pflege aus Hörstel <em>für Hörstel.</em></h2>
-            <p class="lead">Der Pflegedienst Funk ist ein ambulanter Pflegedienst mit Sitz in Hörstel. Wir pflegen Menschen dort, wo sie sich am wohlsten fühlen: in der eigenen Wohnung, im eigenen Haus, in der vertrauten Nachbarschaft.</p>
+            <p class="lead">Der Pflegedienst Funk GmbH ist ein ambulanter Pflegedienst mit Sitz in Hörstel. Wir pflegen Menschen dort, wo sie sich am wohlsten fühlen: in der eigenen Wohnung, im eigenen Haus, in der vertrauten Nachbarschaft.</p>
             <p>Häusliche Pflege in Hörstel bedeutet für uns mehr als pünktliche Einsätze. Weil unser Büro im Ort liegt, sind die Wege kurz&nbsp;– für unsere Pflegekräfte ebenso wie für Sie, wenn Sie einmal persönlich vorbeikommen und Unterlagen besprechen möchten.</p>
             <p>Wir arbeiten nach dem Prinzip der <strong>Bezugspflege</strong>: Ein festes, kleines Team kennt Sie und Ihre Gewohnheiten. Unsere Dienst- und Tourenplanung sorgt dafür, dass möglichst dieselben Pflegekräfte zu Ihnen kommen.</p>
             <p>Ambulante Pflege ist dabei nicht nur etwas für das hohe Alter. Wir unterstützen auch nach einer Operation, bei chronischen Erkrankungen oder mit einer Behinderung&nbsp;– so lange, wie Sie Hilfe brauchen.</p>`,
@@ -112,10 +112,10 @@ ${section({
     body: split({
       reverse: true,
       image: 'hero',
-      alt: 'Pflegekraft des Pflegedienstes Funk misst einer älteren Dame auf dem Sofa den Blutdruck',
+      alt: 'Pflegekraft des Pflegedienstes Funk GmbH misst einer älteren Dame auf dem Sofa den Blutdruck',
       mediaCls: 'pos-top',
       text: `
-            <p class="eyebrow">Warum Pflegedienst Funk</p>
+            <p class="eyebrow">Warum Pflegedienst Funk GmbH</p>
             <h2>Kurze Wege, <em>feste Gesichter.</em></h2>
             <p>Viele Familien suchen bewusst einen Pflegedienst aus dem eigenen Ort. Das hat ganz praktische Vorteile für Sie:</p>
             ${ticks([
@@ -150,7 +150,7 @@ const MET_FAQ = [
 
 const mettingen = {
   path: '/pflegedienst-mettingen/',
-  title: 'Pflegedienst Mettingen | Ambulante Pflege Funk',
+  title: 'Pflegedienst Mettingen | Ambulanter Pflegedienst Funk GmbH',
   description: 'Ambulanter Pflegedienst für Mettingen, Schlickelde und Espel: Pflege, Hilfe im Haushalt und Beratungsbesuch nach § 37.3 – feste Pflegekräfte. Rufen Sie an.',
   type: 'city',
   nav: 'orte',
@@ -165,7 +165,7 @@ const mettingen = {
     title: 'Ambulanter Pflegedienst in <em>Mettingen.</em>',
     lead: 'Ob im Ortskern, in Schlickelde oder in Espel: Als Pflegedienst für Mettingen unterstützen wir Sie mit Pflege, Hilfe im Haushalt und Beratung&nbsp;– damit Sie in Ihrem gewohnten Umfeld bleiben können.',
     image: 'hauswirtschaft',
-    imageAlt: 'Hauswirtschaftskraft des Pflegedienstes Funk bereitet mit einer Seniorin in deren Küche Gemüse zu',
+    imageAlt: 'Hauswirtschaftskraft des Pflegedienstes Funk GmbH bereitet mit einer Seniorin in deren Küche Gemüse zu',
     checks: ['Pflege, Haushalt und Beratung aus einer Hand', 'Direkte Abrechnung mit Ihrer Kasse'],
   })}
 
@@ -237,7 +237,7 @@ ${section({
     body: split({
       reverse: true,
       image: 'ratgeber-beratung',
-      alt: 'Pflegekraft des Pflegedienstes Funk macht sich im Gespräch mit einem älteren Herrn Notizen',
+      alt: 'Pflegekraft des Pflegedienstes Funk GmbH macht sich im Gespräch mit einem älteren Herrn Notizen',
       text: `
             <p class="eyebrow">Beratungseinsatz in Mettingen</p>
             <h2>Sie beziehen Pflegegeld? <em>Wir beraten Sie zu Hause.</em></h2>
@@ -282,7 +282,7 @@ const REC_FAQ = [
 
 const recke = {
   path: '/pflegedienst-recke/',
-  title: 'Pflegedienst Recke | Ambulante Pflege Funk',
+  title: 'Pflegedienst Recke | Ambulanter Pflegedienst Funk GmbH',
   description: 'Ambulanter Pflegedienst für Recke, Steinbeck, Obersteinbeck und Uffeln: häusliche Pflege mit festen Pflegekräften, auch am Wochenende. Tel. 05459 5869825',
   type: 'city',
   nav: 'orte',
@@ -297,7 +297,7 @@ const recke = {
     title: 'Ambulanter Pflegedienst in <em>Recke.</em>',
     lead: 'Wir sind Ihr Pflegedienst für Recke, Steinbeck, Obersteinbeck und Uffeln&nbsp;– mit Pflegekräften, die Sie kennen, und einer Planung, auf die Sie sich verlassen können.',
     image: 'karriere',
-    imageAlt: 'Zwei Pflegekräfte des Pflegedienstes Funk in dunkelblauer Dienstkleidung auf dem Weg zu ihrem Dienstwagen',
+    imageAlt: 'Zwei Pflegekräfte des Pflegedienstes Funk GmbH in dunkelblauer Dienstkleidung auf dem Weg zu ihrem Dienstwagen',
     checks: ['Feste Bezugspflegekräfte', 'Auch am Wochenende und an Feiertagen'],
   })}
 
@@ -305,7 +305,7 @@ ${section({
     id: 'zuhause',
     body: split({
       image: 'grundpflege',
-      alt: 'Pflegekraft des Pflegedienstes Funk hilft einem älteren Herrn an seinem Bett beim Anziehen',
+      alt: 'Pflegekraft des Pflegedienstes Funk GmbH hilft einem älteren Herrn an seinem Bett beim Anziehen',
       text: `
             <p class="eyebrow">Häusliche Pflege in Recke</p>
             <h2>Zu Hause bleiben&nbsp;– <em>auch auf dem Land.</em></h2>
@@ -388,7 +388,7 @@ const IBB_FAQ = [
 
 const ibbenbueren = {
   path: '/pflegedienst-ibbenbueren/',
-  title: 'Pflegedienst Ibbenbüren | Ambulante Pflege Funk',
+  title: 'Pflegedienst Ibbenbüren | Ambulanter Pflegedienst Funk GmbH',
   description: 'Ambulanter Pflegedienst in Ibbenbüren, Bockraden, Dickenberg und Püsselbüren: Pflege zu Hause und Entlastung für Angehörige. Kostenlose Beratung: 05459 5869825',
   type: 'city',
   nav: 'orte',
@@ -403,7 +403,7 @@ const ibbenbueren = {
     title: 'Ambulanter Pflegedienst in <em>Ibbenbüren.</em>',
     lead: 'Als Pflegedienst für Ibbenbüren, Bockraden, Dickenberg und Püsselbüren pflegen wir Menschen zu Hause&nbsp;– und entlasten Familien, die Beruf und Pflege unter einen Hut bringen müssen.',
     image: 'beratung-tall',
-    imageAlt: 'Pflegeberaterin des Pflegedienstes Funk bespricht mit einem älteren Herrn und seiner Tochter Unterlagen am Küchentisch',
+    imageAlt: 'Pflegeberaterin des Pflegedienstes Funk GmbH bespricht mit einem älteren Herrn und seiner Tochter Unterlagen am Küchentisch',
     mediaClass: 'pos-top',
     checks: ['Kostenlose Beratung für Angehörige', 'Verhinderungspflege, wenn Sie eine Pause brauchen'],
   })}
@@ -415,7 +415,7 @@ ${section({
       tall: true,
       mediaCls: 'pos-top',
       image: 'warum',
-      alt: 'Pflegekraft des Pflegedienstes Funk wird von einem älteren Herrn an seiner Haustür begrüßt',
+      alt: 'Pflegekraft des Pflegedienstes Funk GmbH wird von einem älteren Herrn an seiner Haustür begrüßt',
       text: `
             <p class="eyebrow">Ambulante Pflege in Ibbenbüren</p>
             <h2>Pflege, die sich nach <em>Ihrem Alltag richtet.</em></h2>
@@ -498,7 +498,7 @@ ${cityBand('Weitere Einsatzgebiete')}
    ====================================================================== */
 const RHE = city('pflegedienst-rheine');
 const RHE_FAQ = [
-  ['Versorgt der Pflegedienst Funk auch Rodde und Altenrheine?', 'Ja. Rodde und Altenrheine gehören ebenso zu unserem Einsatzgebiet wie die Innenstadt von Rheine. Rufen Sie uns an, dann klären wir die Einzelheiten.'],
+  ['Versorgt der Pflegedienst Funk GmbH auch Rodde und Altenrheine?', 'Ja. Rodde und Altenrheine gehören ebenso zu unserem Einsatzgebiet wie die Innenstadt von Rheine. Rufen Sie uns an, dann klären wir die Einzelheiten.'],
   ['Kann die Pflege direkt nach der Entlassung aus dem Krankenhaus beginnen?', 'Melden Sie sich am besten schon, bevor Sie entlassen werden. Dann können wir den Start rechtzeitig planen. Wichtig ist eine Verordnung für häusliche Krankenpflege, die die Klinik oder Ihre Hausarztpraxis ausstellt.'],
   ['Ich lebe allein. Was ist, wenn zwischen den Besuchen etwas passiert?', 'Wir vermitteln Ihnen gern einen Hausnotruf, mit dem Sie per Knopfdruck Hilfe rufen können. Außerdem achten Ihre Pflegekräfte bei jedem Besuch darauf, wie es Ihnen geht, und sprechen Veränderungen offen an.'],
   ['Wer bezahlt die häusliche Pflege in Rheine?', 'Das hängt von der Leistung ab. Behandlungspflege auf ärztliche Verordnung zahlt die Krankenkasse, ohne dass Sie einen Pflegegrad brauchen. Grundpflege und Hauswirtschaft rechnen wir ab Pflegegrad&nbsp;2 mit der Pflegekasse ab. Wir sagen Ihnen vorher, ob Kosten für Sie entstehen.'],
@@ -507,7 +507,7 @@ const RHE_FAQ = [
 
 const rheine = {
   path: '/pflegedienst-rheine/',
-  title: 'Pflegedienst Rheine | Ambulante Pflege Funk',
+  title: 'Pflegedienst Rheine | Ambulanter Pflegedienst Funk GmbH',
   description: 'Ambulanter Pflegedienst für Rheine, Rodde und Altenrheine: Pflege zu Hause, Behandlungspflege nach dem Krankenhaus, feste Pflegekräfte. Tel. 05459 5869825',
   type: 'city',
   nav: 'orte',
@@ -522,7 +522,7 @@ const rheine = {
     title: 'Ambulanter Pflegedienst in <em>Rheine.</em>',
     lead: 'Als Pflegedienst für Rheine, Rodde und Altenrheine kommen wir zu Ihnen nach Hause&nbsp;– für die tägliche Pflege, nach einem Krankenhausaufenthalt oder wenn Sie allein leben und Unterstützung brauchen.',
     image: 'behandlungspflege',
-    imageAlt: 'Pflegefachkraft des Pflegedienstes Funk misst bei einem älteren Herrn zu Hause den Blutzucker',
+    imageAlt: 'Pflegefachkraft des Pflegedienstes Funk GmbH misst bei einem älteren Herrn zu Hause den Blutzucker',
     checks: ['Behandlungspflege auf Verordnung&nbsp;– ohne Pflegegrad', 'Feste Pflegekräfte durch Bezugspflege'],
   })}
 
@@ -594,7 +594,7 @@ ${section({
     body: split({
       reverse: true,
       image: 'beratung',
-      alt: 'Pflegeberaterin des Pflegedienstes Funk im Gespräch mit einem älteren Herrn und seiner Tochter am Küchentisch',
+      alt: 'Pflegeberaterin des Pflegedienstes Funk GmbH im Gespräch mit einem älteren Herrn und seiner Tochter am Küchentisch',
       text: `
             <p class="eyebrow">Rodde und Altenrheine</p>
             <h2>Auch in Rodde und Altenrheine <em>für Sie da.</em></h2>
@@ -606,7 +606,7 @@ ${section({
 
 ${section({
     id: 'warum',
-    eyebrow: 'Warum Pflegedienst Funk',
+    eyebrow: 'Warum Pflegedienst Funk GmbH',
     title: 'Darauf können Sie <em>sich verlassen.</em>',
     body: `<div data-reveal>${ticks([
       'Seit 2011 ambulante Pflege im Kreis Steinfurt',
