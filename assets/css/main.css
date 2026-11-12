@@ -2834,3 +2834,14 @@ li:nth-child(4n + 4) > a.card { border-top-color: var(--navy-300); }
   .about-hero__usp .icon { width: 38px; height: 38px; }
 }
 @media (min-width: 1200px) { .about-hero__title { font-size: clamp(2.4rem, 3.2vw, 3.05rem); } }
+
+/* Anliegen-Auswahl: eine Zeile, wenn das Formular breit genug ist; sonst 2 × 2 gleich breit */
+.form { container-type: inline-size; }
+.form__topics { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 0.5rem; }
+.form__topics legend { grid-column: 1 / -1; }
+.form__topics .pill span { display: flex; justify-content: center; width: 100%; height: 100%; padding: 0.5rem 0.6rem; text-align: center; line-height: 1.25; }
+@container (min-width: 31.5rem) {
+  .form__topics { display: flex; flex-wrap: nowrap; gap: 0.4rem; }
+  .form__topics .pill { flex: 1 1 auto; }
+  .form__topics .pill span { min-height: 48px; padding-inline: 0.7rem; font-size: 0.97rem; white-space: nowrap; }
+}
