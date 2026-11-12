@@ -2658,3 +2658,98 @@ li:nth-child(4n + 4) > a.card { border-top-color: var(--navy-300); }
 
 /* Ablauf auf hellem Grund: Ziffern auf Weiß */
 .process .timeline__num { background: var(--white); }
+
+/* =====================================================================
+   STARTSEITE – Hero nach Referenz: Vollbild-Foto, Text links, Leistungsleiste
+   ===================================================================== */
+.hero--full { padding: 0; background: var(--white); overflow: hidden; }
+.hero__stage { position: relative; background: var(--navy-900); color: var(--on-dark); isolation: isolate; }
+.hero--full .hero__photo { position: relative; display: block; height: clamp(300px, 62vw, 560px); }
+.hero--full .hero__photo img { width: 100%; height: 100%; object-fit: cover; object-position: 78% 35%; }
+.hero--full .hero__photo::after {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(to top, var(--navy-900) 0%, rgba(8, 36, 63, 0.5) 25%, rgba(8, 36, 63, 0) 50%);
+  pointer-events: none;
+}
+.hero--full .hero__grid { position: relative; z-index: 1; margin-top: -4rem; padding-bottom: var(--sp-6); }
+.hero__kicker {
+  display: block;
+  margin-bottom: var(--sp-2);
+  font-family: var(--font-body);
+  font-size: 0.95rem;
+  font-weight: 700;
+  letter-spacing: 0.08em;
+  line-height: 1.4;
+  text-transform: uppercase;
+  color: var(--accent);
+  font-variation-settings: normal;
+}
+.hero--full .hero__title { color: var(--white); margin-bottom: var(--sp-3); }
+.hero--full .hero__title-accent { color: var(--accent); }
+.hero--full .swash svg { stroke: var(--accent); }
+.hero__heart { display: inline-block; width: 0.78em; height: 0.78em; margin-left: 0.15em; vertical-align: -0.02em; fill: none; stroke: var(--accent); stroke-width: 2; stroke-linecap: round; stroke-linejoin: round; }
+.hero--full .hero__lead { color: var(--on-dark); font-size: 1.15em; line-height: 1.55; }
+.hero--full .hero__actions { margin-bottom: 0; }
+.hero--full .btn--call { border-color: transparent; }
+
+/* Leistungsleiste unter dem Foto */
+.hero__services { position: relative; z-index: 2; margin-top: -1px; padding-bottom: var(--sp-4); background: var(--white); }
+.hero__wave { position: absolute; left: 0; bottom: 100%; width: 100%; height: clamp(28px, 5vw, 70px); }
+.hero__wave-fill { fill: var(--white); }
+.hero__wave-line { fill: none; stroke: var(--accent); stroke-width: 4; vector-effect: non-scaling-stroke; }
+.hero-svc__list { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: var(--sp-1); padding-top: var(--sp-2); }
+.hero-svc__list li:last-child { grid-column: 1 / -1; }
+.hero-svc {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 0.6rem;
+  height: 100%;
+  min-height: 44px;
+  padding: var(--sp-2) var(--sp-1);
+  border-radius: var(--radius);
+  text-align: center;
+  text-decoration: none;
+  transition: var(--t-colors);
+}
+.hero-svc__icon { display: grid; place-items: center; color: var(--accent); transition: transform 0.45s var(--ease-out); }
+.hero-svc__icon .icon { width: 48px; height: 48px; stroke-width: 1.5; }
+.hero-svc__text strong { display: block; font-size: 1.05rem; line-height: 1.3; color: var(--navy-900); }
+.hero-svc__text small { display: block; margin-top: 0.15rem; font-size: 0.95rem; color: var(--muted); }
+.hero-svc:hover { background: var(--navy-50); }
+.hero-svc:hover .hero-svc__icon { transform: translateY(-3px); }
+.hero-svc:active .hero-svc__icon { transform: scale(0.96); }
+@media (min-width: 1024px) {
+  .hero-svc__list { grid-template-columns: repeat(5, minmax(0, 1fr)); gap: 0; }
+  .hero-svc__list li:last-child { grid-column: auto; }
+  .hero-svc__list li + li { border-left: 1px solid var(--line); }
+  .hero-svc { padding-inline: var(--sp-2); }
+}
+@media (min-width: 1140px) {
+  .hero-svc__text strong { font-size: 1.15rem; }
+}
+
+/* Desktop: Text liegt auf dem Foto */
+@media (min-width: 1200px) {
+  .hero__stage { display: flex; align-items: center; min-height: clamp(600px, 78vh, 820px); }
+  .hero--full .hero__photo { position: absolute; inset: 0; z-index: -1; height: auto; }
+  .hero--full .hero__photo img { object-position: 100% 35%; }
+  .hero--full .hero__photo::after {
+    background:
+      linear-gradient(90deg, rgba(6, 26, 46, 0.95) 0%, rgba(6, 26, 46, 0.88) 26%, rgba(6, 26, 46, 0.4) 42%, rgba(6, 26, 46, 0) 55%),
+      linear-gradient(to top, rgba(6, 26, 46, 0.35) 0%, rgba(6, 26, 46, 0) 25%);
+  }
+  .hero--full .hero__grid { width: 100%; margin-top: 0; padding-block: var(--sp-6) calc(var(--sp-6) + 2rem); }
+  .hero--full .hero__text { max-width: min(36rem, 39vw); }
+  .hero--full .hero__title { font-size: clamp(2.8rem, 3.7vw, 4rem); line-height: 1.04; }
+  .hero--full .hero__actions .btn { flex: none; white-space: nowrap; }
+}
+
+@media (min-width: 1200px) {
+  .hero--full .hero__text { max-width: min(37rem, 41vw); }
+  .hero--full .hero__actions { flex-wrap: nowrap; gap: 0.75rem; }
+  .hero--full .hero__actions .btn--lg { padding-inline: 1.4rem; font-size: 1.1rem; }
+  .hero--full .hero__actions .btn--call { padding-left: 0.5rem; }
+}

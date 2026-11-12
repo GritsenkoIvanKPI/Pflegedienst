@@ -23,7 +23,7 @@
   <link rel="icon" type="image/png" href="/assets/img/favicon-72.png">
   <link rel="preload" href="/assets/fonts/figtree-latin.woff2" as="font" type="font/woff2" crossorigin>
   <link rel="preload" href="/assets/fonts/fraunces-latin.woff2" as="font" type="font/woff2" crossorigin>
-  <link rel="preload" as="image" href="/assets/img/hero-960.webp" imagesrcset="/assets/img/hero-640.webp 640w, /assets/img/hero-960.webp 960w, /assets/img/hero-1400.webp 1400w" imagesizes="(min-width: 1200px) 45vw, 100vw">
+  <link rel="preload" as="image" href="/assets/img/hero-bg-1600.webp" imagesrcset="/assets/img/hero-bg-960.webp 960w, /assets/img/hero-bg-1600.webp 1600w, /assets/img/hero-bg-2400.webp 2400w" imagesizes="100vw">
   <link rel="stylesheet" href="/assets/css/main.css">
   <script>document.documentElement.classList.add('js');</script>
 
@@ -274,50 +274,40 @@
   <main id="inhalt">
 
     <!-- ============ HERO ============ -->
-    <section class="hero" aria-labelledby="hero-title">
-      <div class="hero__bg" aria-hidden="true"></div>
-      <div class="container hero__grid">
-        <div class="hero__text">
-          <p class="eyebrow" data-reveal>Seit 2011 · Ambulante Pflege im Tecklenburger Land</p>
-          <h1 class="hero__title" id="hero-title" data-reveal>
-            Ambulanter Pflegedienst
-            <span class="hero__title-accent">in <span class="swash">Hörstel<svg viewBox="0 0 220 18" preserveAspectRatio="none" aria-hidden="true"><path d="M3 13C50 5 120 3 217 9"/></svg></span> und Umgebung.</span>
-          </h1>
-          <p class="hero__lead" data-reveal>
-            Professionelle Pflege und Betreuung im vertrauten Zuhause&nbsp;– persönlich, zuverlässig und mit festen Ansprechpartnern. Für Pflegebedürftige und ihre Familien in Hörstel, Mettingen, Recke, Ibbenbüren und Rheine.
-          </p>
-          <div class="hero__actions" data-reveal>
+    <section class="hero hero--full" aria-labelledby="hero-title">
+      <div class="hero__stage">
+        <picture class="hero__photo">
+          <img src="/assets/img/hero-bg-1600.webp" srcset="/assets/img/hero-bg-960.webp 960w, /assets/img/hero-bg-1600.webp 1600w, /assets/img/hero-bg-2400.webp 2400w" sizes="100vw" width="2752" height="1536" alt="Pflegefachkraft des Pflegedienstes Funk misst bei einer älteren Dame zu Hause auf dem Sofa den Blutdruck" fetchpriority="high">
+        </picture>
+        <div class="container hero__grid">
+          <div class="hero__text">
+            <h1 class="hero__title" id="hero-title" data-reveal>
+              <span class="hero__kicker">Ambulanter Pflegedienst in Hörstel &amp; Umgebung</span>
+              Ambulante Pflege, <span class="hero__title-accent">die den Menschen</span> in den Mittelpunkt <span class="nowrap"><span class="swash">stellt.<svg viewBox="0 0 220 18" preserveAspectRatio="none" aria-hidden="true"><path d="M3 13C50 5 120 3 217 9"/></svg></span><svg class="hero__heart" viewBox="0 0 24 24" aria-hidden="true"><path d="M12 20s-8-4.7-8-10.4A4.4 4.4 0 0 1 12 7a4.4 4.4 0 0 1 8 2.6C20 15.3 12 20 12 20Z"/></svg></span>
+            </h1>
+            <p class="hero__lead" data-reveal>Menschlich. Nah. Zuverlässig.<br>Ihr Pflegedienst für Hörstel, Mettingen, Recke, Ibbenbüren und Rheine.</p>
+            <div class="hero__actions" data-reveal>
             <a class="btn btn--accent btn--lg" href="#kontakt">Jetzt Kontakt aufnehmen <svg class="icon"><use href="#i-arrow"/></svg></a>
             <a class="btn btn--call btn--lg" href="tel:+4954595869825">
               <svg class="icon"><use href="#i-phone"/></svg>
               <span><small>Direkt anrufen</small>05459&nbsp;5869825</span>
             </a>
           </div>
-          <ul class="hero__checks" role="list" data-reveal>
-            <li><svg class="icon"><use href="#i-check"/></svg> Vertragspartner aller Kranken- und Pflegekassen</li>
-            <li><svg class="icon"><use href="#i-check"/></svg> Kostenlose Erstberatung bei Ihnen zu Hause</li>
-          </ul>
-        </div>
-
-        <div class="hero__media" data-reveal>
-          <figure class="hero__figure media">
-            <img src="/assets/img/hero-960.webp" srcset="/assets/img/hero-640.webp 640w, /assets/img/hero-960.webp 960w, /assets/img/hero-1400.webp 1400w" sizes="(min-width: 1200px) 45vw, 100vw" width="1400" height="1875" alt="Pflegefachkraft des Pflegedienstes Funk misst bei einer älteren Dame zu Hause den Blutdruck" fetchpriority="high">
-          </figure>
-          <div class="hero__card">
-            <p class="hero__card-title">Wir sind ganz in Ihrer Nähe.</p>
-            <p class="hero__card-sub">Wählen Sie Ihren Ort:</p>
-            <ul class="chips" role="list">
-              <li><a class="chip" href="/pflegedienst-hoerstel/">Hörstel</a></li>
-              <li><a class="chip" href="/pflegedienst-mettingen/">Mettingen</a></li>
-              <li><a class="chip" href="/pflegedienst-recke/">Recke</a></li>
-              <li><a class="chip" href="/pflegedienst-ibbenbueren/">Ibbenbüren</a></li>
-              <li><a class="chip" href="/pflegedienst-rheine/">Rheine</a></li>
-            </ul>
-            <a class="hero__card-link" href="#einsatzgebiete"><svg class="icon"><use href="#i-pin"/></svg> Alle Einsatzgebiete ansehen</a>
           </div>
         </div>
       </div>
-      <svg class="curve curve--bottom" viewBox="0 0 1440 90" preserveAspectRatio="none" aria-hidden="true"><path d="M0 90V62C380 18 900 0 1440 22V90Z"/></svg>
+      <nav class="hero__services" aria-label="Unsere Leistungen im Überblick">
+        <svg class="hero__wave" viewBox="0 0 1440 90" preserveAspectRatio="none" aria-hidden="true"><path class="hero__wave-fill" d="M0 90V52C420 6 980 -6 1440 34V90Z"/><path class="hero__wave-line" d="M0 52C420 6 980 -6 1440 34"/></svg>
+        <div class="container">
+          <ul class="hero-svc__list" role="list">
+            <li><a class="hero-svc" href="/leistungen/grundpflege/"><span class="hero-svc__icon"><svg class="icon"><use href="#i-hands"/></svg></span><span class="hero-svc__text"><strong>Grundpflege &amp;<br>Behandlungspflege</strong></span></a></li>
+            <li><a class="hero-svc" href="/leistungen/wundversorgung/"><span class="hero-svc__icon"><svg class="icon"><use href="#i-bandage"/></svg></span><span class="hero-svc__text"><strong>Wundversorgung</strong></span></a></li>
+            <li><a class="hero-svc" href="/leistungen/pflegeberatung-37-3/"><span class="hero-svc__icon"><svg class="icon"><use href="#i-clipboard"/></svg></span><span class="hero-svc__text"><strong>Beratungseinsätze<br>nach §&nbsp;37.3</strong></span></a></li>
+            <li><a class="hero-svc" href="/leistungen/hauswirtschaft/"><span class="hero-svc__icon"><svg class="icon"><use href="#i-home"/></svg></span><span class="hero-svc__text"><strong>Hauswirtschaftliche<br>Unterstützung</strong></span></a></li>
+            <li><a class="hero-svc" href="/leistungen/verhinderungspflege/"><span class="hero-svc__icon"><svg class="icon"><use href="#i-swap"/></svg></span><span class="hero-svc__text"><strong>Verhinderungspflege</strong><small>Entlastung für Angehörige</small></span></a></li>
+          </ul>
+        </div>
+      </nav>
     </section>
 
     <!-- ============ VERTRAUEN ============ -->
