@@ -89,7 +89,94 @@ export const callBtn = (small = 'Direkt anrufen') => `<a class="btn btn--call bt
 export const ctaBtn = (label = 'Jetzt Kontakt aufnehmen', href = '#kontakt') => `<a class="btn btn--accent btn--lg" href="${href}">${label} ${icon('arrow')}</a>`;
 
 /* Seitenkopf mit Brotkrumen, H1 und Bild */
-export const pageHero = ({ crumbs, eyebrow, title, lead, image, imageAlt, actions, checks, compact = false, mediaClass = '', extra = '' }) => `
+/* Drei Gruppen bekommen eigene Kopfbereiche:
+   Pflege & Medizin (klinisch, dunkel), Entlastung & Beratung (warm, hell), Einsatzgebiete (lokal, Karte) */
+const MEDICAL = {
+  Grundpflege: ['Pflegekasse (SGB&nbsp;XI)', 'ab Pflegegrad&nbsp;2', 'feste Bezugspflegekräfte'],
+  Behandlungspflege: ['Krankenkasse (SGB&nbsp;V)', 'ärztliche Verordnung', 'examinierte Pflegefachkräfte'],
+  Wundversorgung: ['Krankenkasse (SGB&nbsp;V)', 'ärztliche Verordnung', 'Fachkräfte für Wundmanagement'],
+  Medikamentengabe: ['Krankenkasse (SGB&nbsp;V)', 'ärztliche Verordnung', 'examinierte Pflegefachkräfte'],
+  Kompressionsversorgung: ['Krankenkasse (SGB&nbsp;V)', 'ärztliche Verordnung', 'examinierte Pflegefachkräfte'],
+};
+const RELIEF = new Set(['Hauswirtschaft', 'Verhinderungspflege', 'Pflegeberatung §&nbsp;37.3']);
+
+export const pageHero = (o) => {
+  const last = o.crumbs[o.crumbs.length - 1][0];
+  const group = o.crumbs[0][0];
+  if (group === 'Leistungen' && MEDICAL[last]) return medicalHero(o, MEDICAL[last]);
+  if (group === 'Leistungen' && RELIEF.has(last)) return reliefHero(o);
+  if (group === 'Einsatzgebiete' && city(`pflegedienst-${last.toLowerCase().replace('ö', 'oe').replace('ü', 'ue')}`)) return cityHero(o, city(`pflegedienst-${last.toLowerCase().replace('ö', 'oe').replace('ü', 'ue')}`));
+  return defaultHero(o);
+};
+
+const heroText = ({ crumbs, eyebrow, title, lead, actions }, eyebrowCls = 'eyebrow') => `
+          ${breadcrumbNav(crumbs)}
+          ${eyebrow ? `<p class="${eyebrowCls}" data-reveal>${eyebrow}</p>` : ''}
+          <h1 class="page-hero__title" id="page-title" data-reveal>${title}</h1>
+          ${lead ? `<p class="page-hero__lead" data-reveal>${lead}</p>` : ''}
+          ${actions === false ? '' : `<div class="hero__actions" data-reveal>${actions ?? `${ctaBtn()}${callBtn()}`}</div>`}`;
+const heroImg = (o, sizes = '(min-width: 1024px) 44vw, 100vw') => img(o.image, o.imageAlt, { lazy: false, priority: true, sizes });
+
+/* Pflege & Medizin */
+const medicalHero = (o, [payer, need, who]) => `
+    <section class="med-hero" aria-labelledby="page-title">
+      <div class="container med-hero__grid">
+        <div class="med-hero__text">${heroText(o, 'eyebrow eyebrow--light')}
+          ${o.checks ? `<ul class="med-hero__checks" role="list" data-reveal>${o.checks.map((c) => `<li>${icon('check')} ${c}</li>`).join('')}</ul>` : ''}
+        </div>
+        <div class="med-hero__media" data-reveal>
+          <figure class="med-hero__photo media${o.mediaClass ? ` ${o.mediaClass}` : ''}">${heroImg(o)}</figure>
+          <dl class="med-hero__card">
+            <div><dt>${icon('shield')} Kostenträger</dt><dd>${payer}</dd></div>
+            <div><dt>${icon('clipboard')} Voraussetzung</dt><dd>${need}</dd></div>
+            <div><dt>${icon('stetho')} Durch</dt><dd>${who}</dd></div>
+          </dl>
+        </div>
+      </div>
+      <svg class="curve curve--bottom" viewBox="0 0 1440 90" preserveAspectRatio="none" aria-hidden="true"><path d="M0 90V62C380 18 900 0 1440 22V90Z"/></svg>
+    </section>`;
+
+/* Entlastung & Beratung */
+const reliefHero = (o) => `
+    <section class="relief-hero" aria-labelledby="page-title">
+      <div class="container relief-hero__grid">
+        <div class="relief-hero__media" data-reveal>
+          <figure class="relief-hero__photo media${o.mediaClass ? ` ${o.mediaClass}` : ''}">${heroImg(o, '(min-width: 1024px) 40vw, 100vw')}</figure>
+          ${o.checks ? `<div class="relief-hero__note"><p class="relief-hero__note-title">${icon('heart')} Gut zu wissen</p><ul role="list">${o.checks.map((c) => `<li>${c}</li>`).join('')}</ul></div>` : ''}
+        </div>
+        <div class="relief-hero__text">
+          ${heroText(o).replace('</ol></nav>', `</ol></nav>
+          <p class="relief-hero__tag" data-reveal>${icon('users')} Für Pflegebedürftige und Angehörige</p>`)}
+        </div>
+      </div>
+      <svg class="curve curve--bottom" viewBox="0 0 1440 90" preserveAspectRatio="none" aria-hidden="true"><path d="M0 90V30C460 80 1000 86 1440 50V90Z"/></svg>
+    </section>`;
+
+/* Einsatzgebiete */
+const cityHero = (o, c) => `
+    <section class="city-hero" aria-labelledby="page-title">
+      <div class="container city-hero__grid">
+        <div class="city-hero__text">${heroText(o)}
+          ${o.checks ? `<ul class="hero__checks" role="list" data-reveal>${o.checks.map((ch) => `<li>${icon('check')} ${ch}</li>`).join('')}</ul>` : ''}
+        </div>
+        <aside class="city-hero__card" data-reveal aria-label="Einsatzgebiet ${c.name}">
+          <figure class="city-hero__photo media${o.mediaClass ? ` ${o.mediaClass}` : ''}">${heroImg(o, '(min-width: 1024px) 36vw, 100vw')}
+            <figcaption class="city-hero__badge">${icon('pin')} ${c.name}</figcaption>
+          </figure>
+          <div class="city-hero__places">
+            <p class="city-hero__label">Unterwegs in</p>
+            <ul class="city-hero__route" role="list">
+              <li class="is-main"><strong>${c.name}</strong></li>
+              ${c.parts.map((part) => `<li>${part}</li>`).join('\n              ')}
+            </ul>
+            <p class="city-hero__office">${icon('home')} <span>Büro: Bahnhofstraße&nbsp;33, Hörstel · <a href="${TEL}">${PHONE}</a></span></p>
+          </div>
+        </aside>
+      </div>
+      <svg class="curve curve--bottom" viewBox="0 0 1440 90" preserveAspectRatio="none" aria-hidden="true"><path d="M0 90V54C420 6 1000 0 1440 40V90Z"/></svg>
+    </section>`;
+
+const defaultHero = ({ crumbs, eyebrow, title, lead, image, imageAlt, actions, checks, compact = false, mediaClass = '', extra = '' }) => `
     <section class="page-hero${compact ? ' page-hero--compact' : ''}${image ? '' : ' page-hero--noimg'}" aria-labelledby="page-title">
       <div class="container page-hero__grid">
         <div class="page-hero__text">
