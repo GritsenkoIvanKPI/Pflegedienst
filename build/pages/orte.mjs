@@ -112,7 +112,7 @@ ${section({
     body: split({
       reverse: true,
       image: 'hero',
-      alt: 'Pflegefachkraft des Pflegedienstes Funk mit Pflegetasche vor dem Dienstwagen in einer Wohnstraße in Hörstel',
+      alt: 'Pflegekraft des Pflegedienstes Funk misst einer älteren Dame auf dem Sofa den Blutdruck',
       mediaCls: 'pos-top',
       text: `
             <p class="eyebrow">Warum Pflegedienst Funk</p>
@@ -297,7 +297,7 @@ const recke = {
     title: 'Ambulanter Pflegedienst in <em>Recke.</em>',
     lead: 'Wir sind Ihr Pflegedienst für Recke, Steinbeck, Obersteinbeck und Uffeln&nbsp;– mit Pflegekräften, die Sie kennen, und einer Planung, auf die Sie sich verlassen können.',
     image: 'karriere',
-    imageAlt: 'Zwei Mitarbeitende des Pflegedienstes Funk vor dem Büro in der Bahnhofstraße in Hörstel',
+    imageAlt: 'Zwei Pflegekräfte des Pflegedienstes Funk in dunkelblauer Dienstkleidung auf dem Weg zu ihrem Dienstwagen',
     checks: ['Feste Bezugspflegekräfte', 'Auch am Wochenende und an Feiertagen'],
   })}
 

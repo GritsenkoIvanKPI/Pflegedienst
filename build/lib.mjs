@@ -64,9 +64,6 @@ const IMAGES = {
   'beratung-tall': { sizes: [640, 960, 1200], w: 1200, h: 1789 },
   beratung: { sizes: [800, 1600], w: 1600, h: 894 },
   karriere: { sizes: [640, 1000, 1400], w: 1400, h: 1400 },
-  buero: { sizes: [640, 1200], w: 1200, h: 896 },
-  team: { sizes: [640, 1200], w: 1200, h: 896 },
-  gruender: { sizes: [640, 1000], w: 1000, h: 1241 },
 };
 export const img = (name, alt, { sizes = '(min-width: 1024px) 45vw, 100vw', lazy = true, cls = '', priority = false } = {}) => {
   const m = IMAGES[name];
@@ -195,7 +192,6 @@ export const office = ({ eyebrow = 'Anfahrt', title = 'Unser Büro <em>in Hörst
     <section class="section office" aria-labelledby="office-title">
       <div class="container office__grid">
         <div class="office__card" data-reveal>
-          <figure class="office__photo media">${img('buero', 'Büro des Ambulanten Pflegedienstes Funk in der Bahnhofstraße 33 in Hörstel mit Dienstwagen davor', { sizes: '(min-width: 1024px) 38vw, 100vw' })}</figure>
           <p class="eyebrow">${eyebrow}</p>
           <h2 id="office-title">${title}</h2>
           <p>${t}</p>

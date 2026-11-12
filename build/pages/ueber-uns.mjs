@@ -30,40 +30,19 @@ export default {
   description: 'Seit 2011 ambulante Pflege mit Herz und Verstand: Lernen Sie den Pflegedienst Funk aus Hörstel kennen – unser Team, unser Leitbild und die Bezugspflege.',
   type: 'about',
   crumbs: [['Über uns']],
-  heroImage: 'team',
-  ogImage: 'team',
+  heroImage: 'warum',
+  ogImage: 'warum',
   schema: [{ '@type': 'AboutPage', '@id': `${SITE}/ueber-uns/#about`, url: `${SITE}/ueber-uns/`, name: 'Über den Pflegedienst Funk', about: ORG_REF }],
   body: `${pageHero({
     crumbs: [['Über uns']],
     eyebrow: 'Über uns · Seit 2011 in Hörstel',
     title: 'Über den <em>Pflegedienst Funk.</em>',
     lead: 'Wir sind ein regionaler ambulanter Pflegedienst aus Hörstel. Seit 2011 begleiten wir Menschen, die zu Hause Unterstützung brauchen&nbsp;– und ihre Familien. Persönlich, verlässlich und mit festen Ansprechpartnern.',
-    image: 'team',
-    imageAlt: 'Mitarbeiterin der Verwaltung im Büro des Pflegedienstes Funk in Hörstel am Schreibtisch',
+    image: 'warum',
+    imageAlt: 'Pflegekraft des Pflegedienstes Funk wird an der Haustür von einem älteren Herrn freundlich begrüßt',
+    mediaClass: 'pos-top',
     actions: `<a class="btn btn--accent btn--lg" href="#kontakt">Kennenlernen vereinbaren ${icon('arrow')}</a><a class="btn btn--outline btn--lg" href="/leistungen/">Unsere Leistungen</a>`,
     checks: ['Vertragspartner aller Kranken- und Pflegekassen', 'Mitglied im Deutschen Berufsverband für Pflegeberufe (DBfK)'],
-  })}
-
-${section({
-    id: 'gruender',
-    body: split({
-      reverse: true,
-      tall: true,
-      mediaCls: 'pos-top',
-      image: 'gruender',
-      alt: 'Sergej Petrenko, Gründer des Ambulanten Pflegedienstes Funk, vor dem Büro in Hörstel',
-      text: `
-            <p class="eyebrow">Der Gründer</p>
-            <h2>Sergej Petrenko&nbsp;– <em>Pflege aus eigener Erfahrung.</em></h2>
-            <p class="lead">Hinter dem Pflegedienst Funk steht ein Mensch, der Pflege nicht nur organisiert, sondern selbst gelernt und gelebt hat.</p>
-            <p>Sergej Petrenko hat den Pflegedienst Funk gegründet und aufgebaut. Als Krankenpfleger mit Schwerpunkt Wundmanagement kennt er den Alltag der ambulanten Pflege aus erster Hand&nbsp;– die Touren, die Gespräche mit Angehörigen und die Verantwortung, die jeder Hausbesuch mit sich bringt.</p>
-            <p>Diese Erfahrung prägt bis heute, wie wir arbeiten: mit festen Bezugspflegekräften, kurzen Wegen und einem offenen Ohr für Pflegebedürftige und ihre Familien in Hörstel und der Region.</p>
-            ${ticks([
-    'Gründer des Pflegedienstes Funk',
-    'Krankenpfleger mit Schwerpunkt Wundmanagement',
-    'Persönlich ansprechbar für Familien und Mitarbeitende',
-  ])}`,
-    }),
   })}
 
 ${section({
@@ -108,7 +87,7 @@ ${section({
     body: split({
       reverse: true,
       image: 'hero',
-      alt: 'Pflegefachkraft des Pflegedienstes Funk mit Pflegetasche vor dem Dienstwagen in einer Wohnstraße in Hörstel',
+      alt: 'Bezugspflegekraft des Pflegedienstes Funk misst bei einer vertrauten Kundin zu Hause den Blutdruck',
       tall: true,
       mediaCls: 'pos-top',
       text: `

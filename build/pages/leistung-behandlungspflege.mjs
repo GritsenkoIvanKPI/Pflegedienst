@@ -77,7 +77,7 @@ ${section({
       reverse: true,
       image: 'hero',
       mediaCls: 'pos-top',
-      alt: 'Pflegefachkraft des Pflegedienstes Funk mit Pflegetasche vor dem Dienstwagen in einer Wohnstraße in Hörstel',
+      alt: 'Pflegefachkraft des Pflegedienstes Funk misst einer älteren Dame auf dem Sofa den Blutdruck',
       text: `
             <p class="eyebrow">Was wir für Sie tun</p>
             <h2>Leistungen der <em>Behandlungspflege.</em></h2>
