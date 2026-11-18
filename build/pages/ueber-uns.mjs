@@ -4,7 +4,7 @@ import { pageHero, breadcrumbNav, img, section, split, cards, facts, ticks, ctaB
 const LEADERS = [
   { name: 'Sergej Petrenko', role: 'Inhaber', initials: 'SP', quote: 'Als ambulanter Pflegedienst setzen wir uns mit Herz und Kompetenz dafür ein, unseren Kundinnen und Kunden ein würdevolles und selbstbestimmtes Leben in ihrer vertrauten Umgebung zu ermöglichen.' },
   { name: 'Olga Speiser', role: 'Pflegedienstleitung', initials: 'OS', quote: 'Als Pflegedienstleitung ist es mir ein persönliches Anliegen, unseren Kundinnen und Kunden eine qualitativ hochwertige und einfühlsame Pflege in ihrer vertrauten Umgebung zu bieten.' },
-  { name: 'Olga Janke', role: 'Koordination und Verwaltung', initials: 'OJ', quote: 'Ich sorge für eine reibungslose Organisation, damit sich unsere Pflegekräfte voll auf die Betreuung unserer Kundinnen und Kunden konzentrieren können.' },
+  { name: 'Olga Janke', role: 'Stellvertretende Pflegedienstleitung (PDL)', initials: 'OJ', quote: 'Als stellvertretende Pflegedienstleitung sorge ich dafür, dass Pflege und Organisation gut ineinandergreifen&nbsp;– damit sich unsere Pflegekräfte voll auf die Betreuung unserer Kundinnen und Kunden konzentrieren können.' },
 ];
 
 const VALUES = [
@@ -77,7 +77,7 @@ ${section({
             <p class="eyebrow">Wer wir sind</p>
             <h2>Pflege ist mehr als eine Dienstleistung&nbsp;– <em>sie ist eine Leistung von Mensch zu&nbsp;Mensch.</em></h2>
             <p class="lead">Zuwendung, Vertrautheit, Aufmerksamkeit und ein feines Gespür dafür, was ein Mensch wirklich braucht: Das gehört für uns zur Pflege dazu.</p>
-            <p>Der Ambulante Pflegedienst Funk GmbH wurde 2011 in Hörstel gegründet. Seitdem sind wir für Pflegebedürftige und ihre Angehörigen ein verlässlicher Partner&nbsp;– in Hörstel, Mettingen, Recke, Ibbenbüren, Rheine und den umliegenden Orten.</p>
+            <p>Der Pflegedienst Funk begleitet seit 2011 Pflegebedürftige und ihre Angehörigen in Hörstel. Heute sind wir als Ambulanter Pflegedienst Funk GmbH ein verlässlicher Partner&nbsp;– in Hörstel, Mettingen, Recke, Ibbenbüren, Rheine und den umliegenden Orten.</p>
             <p>Wir versorgen Menschen jeden Alters: nach einer Operation, bei chronischer Krankheit, mit einer Behinderung oder wenn im Alter die Kräfte nachlassen. Unser Ziel ist immer dasselbe&nbsp;– ein würdevolles und möglichst selbstbestimmtes Leben in den eigenen vier Wänden.</p>
             <p>Dafür bieten wir das ganze Spektrum der ambulanten Pflege: von der <a href="/leistungen/grundpflege/">Grundpflege</a> über die medizinische <a href="/leistungen/behandlungspflege/">Behandlungspflege</a> und das professionelle <a href="/leistungen/wundversorgung/">Wundmanagement</a> bis zur <a href="/leistungen/hauswirtschaft/">Hilfe im Haushalt</a>.</p>`,
       aside: `<aside data-reveal>

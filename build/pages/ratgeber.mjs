@@ -247,7 +247,7 @@ const beratung = article({
   intro: 'Viele Familien kennen den Brief: Die Pflegekasse erinnert an den Beratungseinsatz nach §&nbsp;37.3&nbsp;SGB&nbsp;XI. Was zunächst nach Kontrolle klingt, ist in Wahrheit eine Unterstützung. Bei diesem Beratungsbesuch schaut eine Pflegefachkraft gemeinsam mit Ihnen, ob die Pflege zu Hause gut gelingt und wo es Erleichterung geben kann. In diesem Ratgeber erfahren Sie, wer die Pflichtberatung beim Pflegegeld braucht, was dabei passiert und was Sie beachten sollten.',
   summary: [
     'Wer ausschließlich Pflegegeld bezieht, muss den Beratungseinsatz regelmäßig nachweisen.',
-    'Pflegegrad&nbsp;2 und&nbsp;3: einmal im Halbjahr. Pflegegrad&nbsp;4 und&nbsp;5: einmal im Vierteljahr.',
+    'Pflegegrad&nbsp;2 bis&nbsp;5: Pflicht einmal im Halbjahr. Bei Pflegegrad&nbsp;4 und&nbsp;5 auf Wunsch auch vierteljährlich.',
     'Der Besuch ist für Sie kostenlos, die Pflegekasse bezahlt ihn.',
     'Fehlt der Nachweis, kann die Pflegekasse das Pflegegeld kürzen.',
   ],
@@ -264,11 +264,11 @@ const beratung = article({
       id: 'wer-muss',
       toc: 'Wer muss ihn nachweisen?',
       title: 'Pflichtberatung beim Pflegegeld: Wer muss den Besuch nachweisen?',
-      html: `<p>Verpflichtend ist der Beratungseinsatz für alle, die <strong>ausschließlich Pflegegeld</strong> beziehen. Wie oft der Besuch stattfinden muss, hängt vom Pflegegrad ab. Alle anderen können die Beratung freiwillig nutzen.</p>
+      html: `<p>Verpflichtend ist der Beratungseinsatz für alle, die <strong>ausschließlich Pflegegeld</strong> beziehen. Bei Pflegegrad&nbsp;2 bis&nbsp;5 muss der Besuch einmal im Halbjahr stattfinden; bei Pflegegrad&nbsp;4 und&nbsp;5 können Sie ihn auf Wunsch auch vierteljährlich nutzen. Alle anderen können die Beratung freiwillig nutzen.</p>
 ${table(['Ihre Situation', 'Beratungsbesuch'], [
     ['Pflegegrad&nbsp;1', 'einmal im Halbjahr, <strong>freiwillig</strong>'],
     ['Pflegegrad&nbsp;2 oder&nbsp;3, nur Pflegegeld', 'einmal im Halbjahr, <strong>Pflicht</strong>'],
-    ['Pflegegrad&nbsp;4 oder&nbsp;5, nur Pflegegeld', 'einmal im Vierteljahr, <strong>Pflicht</strong>'],
+    ['Pflegegrad&nbsp;4 oder&nbsp;5, nur Pflegegeld', 'einmal im Halbjahr, <strong>Pflicht</strong>; auf Wunsch einmal im Vierteljahr'],
     ['Pflegesachleistung (Pflegegrad&nbsp;2 bis&nbsp;5)', 'einmal im Halbjahr, <strong>freiwillig</strong>'],
   ])}
 <p>Wer Pflegesachleistungen bezieht, also bereits von einem ambulanten Pflegedienst versorgt wird, ist nicht zum Beratungseinsatz verpflichtet. Hier hat ohnehin regelmäßig eine Pflegefachkraft einen Blick auf die Situation. Eine freiwillige Beratung kann trotzdem sinnvoll sein, wenn sich etwas verändert hat.</p>
@@ -344,7 +344,7 @@ ${ticks([
   aside: ['Beratungseinsatz fällig?', 'Wir kommen zu Ihnen nach Hause, beraten Sie in Ruhe und senden den Nachweis an Ihre Pflegekasse.'],
   faqTitle: 'Fragen zum <em>Beratungseinsatz.</em>',
   faq: [
-    ['Ist der Beratungseinsatz Pflicht?', 'Ja, für alle, die ausschließlich Pflegegeld beziehen: bei Pflegegrad&nbsp;2 und&nbsp;3 einmal im Halbjahr, bei Pflegegrad&nbsp;4 und&nbsp;5 einmal im Vierteljahr. Bei Pflegegrad&nbsp;1 und für Empfänger von Pflegesachleistungen ist er freiwillig.'],
+    ['Ist der Beratungseinsatz Pflicht?', 'Ja, für alle, die ausschließlich Pflegegeld beziehen: bei Pflegegrad&nbsp;2 bis&nbsp;5 einmal im Halbjahr. Bei Pflegegrad&nbsp;4 und&nbsp;5 können Sie die Beratung auf Wunsch auch einmal im Vierteljahr nutzen. Bei Pflegegrad&nbsp;1 und für Empfänger von Pflegesachleistungen ist er freiwillig.'],
     ['Kostet der Beratungsbesuch etwas?', 'Nein. Die Pflegekasse bezahlt den Beratungseinsatz. Der Pflegedienst rechnet direkt mit ihr ab, und Ihr Pflegegeld wird dadurch nicht gekürzt.'],
     ['Was passiert, wenn ich den Termin verpasse?', 'Die Pflegekasse erinnert meist zunächst daran. Wird der Beratungseinsatz trotzdem nicht nachgewiesen, kann sie das Pflegegeld kürzen und im Wiederholungsfall ganz entziehen. Holen Sie einen verpassten Termin deshalb möglichst schnell nach.'],
     ['Kann ich mir den Pflegedienst selbst aussuchen?', 'Ja. Sie können jeden zugelassenen Pflegedienst oder eine anerkannte Beratungsstelle beauftragen. Ein Pflegedienst aus der Nähe kennt meist auch die Hilfsangebote vor Ort.'],
