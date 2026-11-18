@@ -2,7 +2,7 @@ import { pageHero, section, split, cards, facts, callout, steps, ticks, faq, rel
 
 const FAQ = [
   ['Wer muss den Beratungseinsatz nach §&nbsp;37.3 machen?', 'Pflicht ist er für alle, die ausschließlich Pflegegeld beziehen, also ihre Pflege selbst mit Angehörigen oder Bekannten organisieren. Das gilt ab Pflegegrad&nbsp;2.'],
-  ['Wie oft muss der Beratungsbesuch stattfinden?', 'Bei Pflegegrad&nbsp;2 bis&nbsp;5 ist der Besuch einmal im Halbjahr Pflicht. Bei Pflegegrad&nbsp;4 und&nbsp;5 können Sie ihn auf Wunsch auch einmal im Vierteljahr nutzen. Mit Pflegegrad&nbsp;1 oder wenn Sie Pflegesachleistungen erhalten, können Sie den Besuch freiwillig einmal im Halbjahr in Anspruch nehmen.'],
+  ['Wie oft muss der Beratungsbesuch stattfinden?', 'Pflegegrad&nbsp;2 bis&nbsp;5: verpflichtend einmal pro Halbjahr. Pflegebedürftige mit Pflegegrad&nbsp;4 oder&nbsp;5 können die Beratung auf Wunsch einmal pro Vierteljahr in Anspruch nehmen. Mit Pflegegrad&nbsp;1 oder wenn Sie Pflegesachleistungen erhalten, können Sie den Besuch freiwillig einmal pro Halbjahr in Anspruch nehmen.'],
   ['Was kostet der Beratungseinsatz?', 'Für Sie nichts. Die Kosten übernimmt Ihre Pflegekasse, wir rechnen direkt mit ihr ab.'],
   ['Was passiert, wenn ich den Termin versäume?', 'Dann kann die Pflegekasse das Pflegegeld kürzen und im Wiederholungsfall ganz entziehen. Damit es nicht so weit kommt, vereinbaren wir die Termine rechtzeitig und senden den Nachweis direkt an Ihre Pflegekasse.'],
   ['Ist der Beratungsbesuch eine Kontrolle?', 'Nein. Es geht nicht darum, Sie zu prüfen, sondern darum, die Pflege zu Hause zu sichern und Sie zu entlasten. Wir beraten, geben praktische Tipps und hören zu. Kritik an Ihrer Pflege ist nicht das Ziel.'],
@@ -52,9 +52,9 @@ ${section({
             <p>Für uns ist der Besuch vor allem eine Gelegenheit, Sie zu unterstützen. Wir schauen gemeinsam, was gut läuft, wo es hakt und welche Hilfen Ihnen zustehen, die Sie vielleicht noch nicht nutzen. Viele Familien erfahren erst dabei, welche Möglichkeiten es gibt.</p>`,
       aside: `<aside class="split__aside" data-reveal>
             ${facts([
-    ['calendar', 'Pflegegrad&nbsp;2 bis&nbsp;5', 'Pflicht: einmal im Halbjahr'],
-    ['calendar', 'Pflegegrad&nbsp;4 und&nbsp;5', 'auf Wunsch einmal im Vierteljahr'],
-    ['clipboard', 'Pflegegrad&nbsp;1 und Sachleistung', 'freiwillig, einmal im Halbjahr'],
+    ['calendar', 'Pflegegrad&nbsp;2 bis&nbsp;5', 'verpflichtend einmal pro Halbjahr'],
+    ['calendar', 'Pflegegrad&nbsp;4 oder&nbsp;5', 'auf Wunsch einmal pro Vierteljahr'],
+    ['clipboard', 'Pflegegrad&nbsp;1 und Sachleistung', 'freiwillig, einmal pro Halbjahr'],
     ['shield', 'Kostenlos für Sie', 'die Pflegekasse übernimmt die Kosten'],
   ])}
           </aside>`,
@@ -83,8 +83,8 @@ ${section({
           <div class="prose" data-reveal>
             <p class="eyebrow">Pflicht oder freiwillig?</p>
             <h2>Wann die Pflichtberatung zum <em>Pflegegeld gilt.</em></h2>
-            <p>Verpflichtend ist der Beratungseinsatz nur, wenn Sie <strong>ausschließlich Pflegegeld</strong> beziehen und die Pflege ohne Pflegedienst organisieren. Dann ist der Besuch bei Pflegegrad&nbsp;2 bis&nbsp;5 einmal im Halbjahr vorgeschrieben. Wer Pflegegrad&nbsp;4 oder&nbsp;5 hat, kann die Beratung auf Wunsch auch einmal im Vierteljahr nutzen&nbsp;– etwa wenn sich die Pflege häufiger verändert.</p>
-            <p>Mit Pflegegrad&nbsp;1 oder wenn wir oder ein anderer Dienst bereits Pflegesachleistungen erbringen, ist der Besuch freiwillig. Sie können ihn trotzdem einmal im Halbjahr nutzen&nbsp;– gerade dann, wenn sich die Situation verändert hat und neue Fragen aufkommen.</p>
+            <p>Verpflichtend ist der Beratungseinsatz nur, wenn Sie <strong>ausschließlich Pflegegeld</strong> beziehen und die Pflege ohne Pflegedienst organisieren. Dann gilt: Pflegegrad&nbsp;2 bis&nbsp;5: verpflichtend einmal pro Halbjahr. Pflegebedürftige mit Pflegegrad&nbsp;4 oder&nbsp;5 können die Beratung auf Wunsch einmal pro Vierteljahr in Anspruch nehmen.</p>
+            <p>Mit Pflegegrad&nbsp;1 oder wenn wir oder ein anderer Dienst bereits Pflegesachleistungen erbringen, ist der Besuch freiwillig. Sie können ihn trotzdem einmal pro Halbjahr nutzen&nbsp;– gerade dann, wenn sich die Situation verändert hat und neue Fragen aufkommen.</p>
             <p>Den Termin vereinbaren wir mit Ihnen, ob Sie in Hörstel, Bevergern, Mettingen, Recke, Ibbenbüren oder Rheine wohnen.</p>
           </div>
           <div class="split__aside prose" data-reveal>
