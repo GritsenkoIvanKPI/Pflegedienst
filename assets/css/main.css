@@ -3101,3 +3101,13 @@ li:nth-child(4n + 4) > a.card { border-top-color: var(--navy-300); }
   border-left: 4px solid var(--accent);
 }
 .about-hero__caption strong { font-size: 1.1rem; color: var(--navy-900); }
+
+/* Leistungsseiten: Infokarte hängt unten am Foto und überdeckt nur dessen Rand */
+.med-hero__media { padding-bottom: 0; }
+.med-hero__card { position: relative; left: auto; right: auto; bottom: auto; margin: -2.5rem var(--sp-2) 0; }
+.relief-hero__note { margin-top: -2.5rem; }
+@media (min-width: 1024px) {
+  .med-hero__card { margin: -3rem 0 0 calc(-1 * var(--sp-5)); width: min(25rem, 88%); }
+  .relief-hero__note { position: relative; right: auto; bottom: auto; margin: -3rem calc(-1 * var(--sp-4)) 0 auto; width: min(20rem, 80%); }
+}
+@media (max-width: 479px) { .med-hero__card { margin: -2rem var(--sp-1) 0; } }
