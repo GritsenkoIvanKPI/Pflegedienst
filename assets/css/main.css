@@ -3129,3 +3129,29 @@ li:nth-child(4n + 4) > a.card { border-top-color: var(--navy-300); }
 @media (max-width: 479px) { html.is-large .logo img { width: 156px; } }
 @media (max-width: 389px) { html.is-large .logo img { width: 134px; } }
 @media (max-width: 359px) { html.is-large .logo img { width: 112px; } }
+
+/* Social Media: Marken-Icons, gleich groß, dezenter Hover */
+.social { gap: 0.5rem; }
+.social__link--brand {
+  width: 32px;
+  height: 32px;
+  border-radius: 9px;
+  color: #fff;
+  box-shadow: inset 0 0 0 1px rgba(255, 255, 255, 0.12);
+  transition: transform 0.3s var(--ease-out), opacity 0.3s var(--ease-out);
+}
+.social__glyph { width: 20px; height: 20px; }
+.social__link--instagram { background: radial-gradient(circle at 30% 107%, #fdf497 0%, #fdf497 5%, #fd5949 45%, #d6249f 60%, #285AEB 90%); }
+.social__link--facebook { background: #1877F2; }
+.social__link--tiktok { background: #010101; }
+.social__link--brand:hover { background-color: inherit; transform: translateY(-2px); opacity: 0.92; }
+.social__link--facebook:hover { background: #1877F2; }
+.social__link--tiktok:hover { background: #010101; }
+.social__link--brand:active { transform: translateY(0) scale(0.95); }
+.social__link--brand:focus-visible { outline: 3px solid var(--accent); outline-offset: 3px; }
+/* klickbare Fläche mind. 44 px, sichtbares Icon 32 px */
+.social__link--brand { position: relative; }
+.social__link--brand::after { content: ""; position: absolute; inset: -6px; }
+.social--footer { gap: 0.75rem; margin-left: 0; }
+.social--footer .social__link--brand { width: 36px; height: 36px; border-radius: 10px; }
+.social--footer .social__glyph { width: 22px; height: 22px; }
