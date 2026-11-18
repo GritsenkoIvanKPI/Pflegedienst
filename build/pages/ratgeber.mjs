@@ -217,7 +217,7 @@ ${ticks([
     '<a href="/leistungen/verhinderungspflege/">Verhinderungspflege</a>, wenn Angehörige eine Pause brauchen',
     '<a href="/leistungen/pflegeberatung-37-3/">Pflegeberatung nach §&nbsp;37.3</a> für Pflegegeld-Empfänger',
   ])}
-<p>Der Ambulante Pflegedienst Funk GmbH begleitet seit 2011 Menschen in Hörstel, Mettingen, Recke, Ibbenbüren und Rheine. Wir sind Vertragspartner aller Kranken- und Pflegekassen und rechnen direkt mit ihnen ab. Durch Bezugspflege kommen möglichst immer dieselben vertrauten Pflegekräfte zu Ihnen. Alle Angebote finden Sie in unserer <a href="/leistungen/">Übersicht der Leistungen</a>.</p>
+<p>Der Pflegedienst Funk begleitet seit 2011 Menschen in Hörstel, Mettingen, Recke, Ibbenbüren und Rheine. Wir sind Vertragspartner aller Kranken- und Pflegekassen und rechnen direkt mit ihnen ab. Durch Bezugspflege kommen möglichst immer dieselben vertrauten Pflegekräfte zu Ihnen. Alle Angebote finden Sie in unserer <a href="/leistungen/">Übersicht der Leistungen</a>.</p>
 <p>Sie wissen noch nicht, welche Leistungen zu Ihrer Situation passen? Rufen Sie uns an. Wir beraten Sie kostenlos und helfen auch bei den ersten Schritten mit der Pflegekasse.</p>`,
     },
   ],

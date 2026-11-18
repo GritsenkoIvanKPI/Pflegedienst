@@ -46,7 +46,7 @@ const hoerstel = {
     crumbs: crumbsFor(HOE),
     eyebrow: 'Einsatzgebiet · Hörstel',
     title: 'Ambulanter Pflegedienst in <em>Hörstel.</em>',
-    lead: 'Seit 2011 ist der Pflegedienst Funk GmbH in Hörstel zu Hause. Von unserem Büro in der Bahnhofstraße&nbsp;33 fahren wir zu Ihnen nach Hörstel, Bevergern, Riesenbeck und Dreierwalde&nbsp;– mit kurzen Wegen und vertrauten Gesichtern.',
+    lead: 'Seit 2011 ist der Pflegedienst Funk in Hörstel zu Hause. Von unserem Büro in der Bahnhofstraße&nbsp;33 fahren wir zu Ihnen nach Hörstel, Bevergern, Riesenbeck und Dreierwalde&nbsp;– mit kurzen Wegen und vertrauten Gesichtern.',
     image: 'warum',
     imageAlt: 'Pflegekraft des Pflegedienstes Funk GmbH wird von einem älteren Herrn an seiner Haustür begrüßt',
     mediaClass: 'pos-top',

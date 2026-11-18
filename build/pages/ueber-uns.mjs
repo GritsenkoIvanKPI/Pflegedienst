@@ -45,7 +45,7 @@ export default {
             <span class="about-hero__line">Nah bei den <span class="nowrap"><span class="swash">Menschen.<svg viewBox="0 0 220 18" preserveAspectRatio="none" aria-hidden="true"><path d="M3 13C50 5 120 3 217 9"/></svg></span><svg class="about-hero__heart" viewBox="0 0 24 24" aria-hidden="true"><path d="M12 20s-8-4.7-8-10.4A4.4 4.4 0 0 1 12 7a4.4 4.4 0 0 1 8 2.6C20 15.3 12 20 12 20Z"/></svg></span></span>
           </h1>
           <ul class="about-hero__points" role="list" data-reveal>
-            <li><span class="about-hero__icon">${icon('hands')}</span><p><strong>Der Ambulante Pflegedienst Funk GmbH</strong> ist seit 2011 Ihr verlässlicher Partner für professionelle und herzliche Pflege in Hörstel und der Region. Wir helfen Menschen, möglichst selbstbestimmt und sicher in ihrem vertrauten Zuhause zu leben.</p></li>
+            <li><span class="about-hero__icon">${icon('hands')}</span><p><strong>Der Pflegedienst Funk</strong> ist seit 2011 Ihr verlässlicher Partner für professionelle und herzliche Pflege in Hörstel und der Region. Wir helfen Menschen, möglichst selbstbestimmt und sicher in ihrem vertrauten Zuhause zu leben.</p></li>
             <li><span class="about-hero__icon">${icon('users')}</span><p><strong>Inhabergeführt und persönlich:</strong> Gemeinsam mit unserem erfahrenen Team stehen wir für zuverlässige Betreuung, hohe Pflegequalität und feste Ansprechpartner. Vertrauen, Respekt und Menschlichkeit stehen dabei im Mittelpunkt.</p></li>
           </ul>
           <div class="about-hero__actions" data-reveal>
@@ -77,7 +77,7 @@ ${section({
             <p class="eyebrow">Wer wir sind</p>
             <h2>Pflege ist mehr als eine Dienstleistung&nbsp;– <em>sie ist eine Leistung von Mensch zu&nbsp;Mensch.</em></h2>
             <p class="lead">Zuwendung, Vertrautheit, Aufmerksamkeit und ein feines Gespür dafür, was ein Mensch wirklich braucht: Das gehört für uns zur Pflege dazu.</p>
-            <p>Der Pflegedienst Funk begleitet seit 2011 Pflegebedürftige und ihre Angehörigen in Hörstel. Heute sind wir als Ambulanter Pflegedienst Funk GmbH ein verlässlicher Partner&nbsp;– in Hörstel, Mettingen, Recke, Ibbenbüren, Rheine und den umliegenden Orten.</p>
+            <p>Der Pflegedienst Funk ist seit 2011 in Hörstel für pflegebedürftige Menschen und ihre Angehörigen da. Heute sind wir als Ambulanter Pflegedienst Funk GmbH ein verlässlicher Partner&nbsp;– in Hörstel, Mettingen, Recke, Ibbenbüren, Rheine und den umliegenden Orten.</p>
             <p>Wir versorgen Menschen jeden Alters: nach einer Operation, bei chronischer Krankheit, mit einer Behinderung oder wenn im Alter die Kräfte nachlassen. Unser Ziel ist immer dasselbe&nbsp;– ein würdevolles und möglichst selbstbestimmtes Leben in den eigenen vier Wänden.</p>
             <p>Dafür bieten wir das ganze Spektrum der ambulanten Pflege: von der <a href="/leistungen/grundpflege/">Grundpflege</a> über die medizinische <a href="/leistungen/behandlungspflege/">Behandlungspflege</a> und das professionelle <a href="/leistungen/wundversorgung/">Wundmanagement</a> bis zur <a href="/leistungen/hauswirtschaft/">Hilfe im Haushalt</a>.</p>`,
       aside: `<aside data-reveal>
