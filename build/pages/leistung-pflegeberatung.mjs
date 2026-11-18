@@ -122,7 +122,7 @@ ${section({
     'Termine auch für Familien in Rheine, Ibbenbüren und Recke',
     'Vertragspartner aller Pflegekassen&nbsp;– direkte Abrechnung',
     'Mitglied im Deutschen Berufsverband für Pflegeberufe (DBfK)',
-    'Feste Ansprechpartner durch unsere Bezugspflege',
+    'Möglichst vertraute Ansprechpartner durch unsere Bezugspflege',
   ])}
           </aside>`,
     }),

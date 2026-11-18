@@ -97,7 +97,7 @@ ${section({
       aside: `<aside class="split__aside" data-reveal>
             ${facts([
     ['award', 'Seit 2011', 'ambulante Pflege aus Hörstel'],
-    ['users', 'Bezugspflege', 'feste Pflegekräfte für Sie'],
+    ['users', 'Bezugspflege', 'möglichst feste Bezugspflegekräfte'],
     ['shield', 'Alle Kassen', 'direkte Abrechnung'],
     ['calendar', 'Auch am Wochenende', 'und an Feiertagen im Einsatz'],
   ])}

@@ -46,7 +46,7 @@ export default {
           </h1>
           <ul class="about-hero__points" role="list" data-reveal>
             <li><span class="about-hero__icon">${icon('hands')}</span><p><strong>Der Pflegedienst Funk</strong> ist seit 2011 Ihr verlässlicher Partner für professionelle und herzliche Pflege in Hörstel und der Region. Wir helfen Menschen, möglichst selbstbestimmt und sicher in ihrem vertrauten Zuhause zu leben.</p></li>
-            <li><span class="about-hero__icon">${icon('users')}</span><p><strong>Inhabergeführt und persönlich:</strong> Gemeinsam mit unserem erfahrenen Team stehen wir für zuverlässige Betreuung, hohe Pflegequalität und feste Ansprechpartner. Vertrauen, Respekt und Menschlichkeit stehen dabei im Mittelpunkt.</p></li>
+            <li><span class="about-hero__icon">${icon('users')}</span><p><strong>Inhabergeführt und persönlich:</strong> Gemeinsam mit unserem erfahrenen Team stehen wir für zuverlässige Betreuung, hohe Pflegequalität und möglichst feste Ansprechpartner. Vertrauen, Respekt und Menschlichkeit stehen dabei im Mittelpunkt.</p></li>
           </ul>
           <div class="about-hero__actions" data-reveal>
             <a class="btn btn--accent" href="#kontakt">${icon('phone')} Kontakt aufnehmen</a>
@@ -84,7 +84,7 @@ ${section({
             ${facts([
     ['calendar', 'Seit 2011', 'Erfahrung in der ambulanten Pflege'],
     ['shield', 'Alle Kassen', 'direkte Abrechnung, keine Vorkasse'],
-    ['users', 'Bezugspflege', 'feste Pflegekräfte für jeden Menschen'],
+    ['users', 'Bezugspflege', 'möglichst feste Pflegekräfte'],
     ['award', 'DBfK-Mitglied', 'Deutscher Berufsverband für Pflegeberufe'],
   ])}
           </aside>`,
@@ -116,11 +116,11 @@ ${section({
       mediaCls: 'pos-top',
       text: `
             <p class="eyebrow">So arbeiten wir</p>
-            <h2>Bezugspflege: <em>vertraute Gesichter statt ständiger Wechsel.</em></h2>
-            <p>Beim Pflegedienst Funk GmbH hat jeder Mensch, den wir versorgen, eine feste Bezugspflegekraft. Sie kennt die Gewohnheiten, Wünsche und Besonderheiten genau&nbsp;– und ist für Sie und Ihre Angehörigen erreichbar.</p>
+            <h2>Bezugspflege: <em>möglichst vertraute Gesichter.</em></h2>
+            <p>Beim Pflegedienst Funk GmbH bekommt jeder Mensch, den wir versorgen, möglichst eine feste Bezugspflegekraft. Sie kennt die Gewohnheiten, Wünsche und Besonderheiten genau&nbsp;– und ist für Sie und Ihre Angehörigen erreichbar.</p>
             <p>Möglich macht das eine durchdachte Dienst- und Tourenplanung. Sie stellt nicht nur die bestmögliche Betreuung in den Mittelpunkt, sondern sorgt auch für gute Arbeitsbedingungen in unserem Team. Denn wer zufrieden arbeitet, pflegt mit Ruhe und Aufmerksamkeit.</p>
             ${ticks([
-    'Feste Pflegekräfte, die Ihre Bedürfnisse kennen',
+    'Möglichst feste Bezugspflegekräfte, die Ihre Bedürfnisse kennen',
     'Verlässliche Zeiten durch strukturierte Tourenplanung',
     'Kurze Wege in der Kommunikation&nbsp;– auch für Angehörige',
     'Kontinuität, die Vertrauen schafft',

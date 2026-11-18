@@ -51,7 +51,7 @@ ${section({
             ${facts([
     ['home', 'Bei Ihnen zu Hause', 'in Ihren gewohnten Abläufen'],
     ['shield', 'Ab Pflegegrad&nbsp;1', 'über den Entlastungsbetrag'],
-    ['users', 'Feste Ansprechpartner', 'vertraute Gesichter im Haus'],
+    ['users', 'Vertraute Ansprechpartner', 'möglichst feste Bezugspersonen'],
     ['clipboard', 'Ohne Papierkram', 'wir rechnen direkt ab'],
   ])}
           </aside>`,
@@ -102,7 +102,7 @@ ${section({
     body: steps([
       ['Kurzes Telefonat', 'Sie erzählen uns, wobei Sie Hilfe brauchen. Wir fragen nach Ihrem Pflegegrad und klären, welche Leistungen Ihnen zustehen.'],
       ['Besuch und Plan', 'Wir kommen vorbei, schauen uns den Haushalt an und legen mit Ihnen Aufgaben, Tage und Uhrzeiten fest.'],
-      ['Regelmäßige Hilfe', 'Ihre feste Ansprechpartnerin kommt zu den vereinbarten Zeiten. Die Abrechnung mit der Pflegekasse übernehmen wir.'],
+      ['Regelmäßige Hilfe', 'Möglichst dieselbe vertraute Ansprechpartnerin kommt zu den vereinbarten Zeiten. Die Abrechnung mit der Pflegekasse übernehmen wir.'],
     ]),
   })}
 

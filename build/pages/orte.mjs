@@ -28,7 +28,7 @@ const HOE_FAQ = [
   ['Wie schnell kann die Pflege in Hörstel beginnen?', 'Das hängt von Ihrem Bedarf und unserer Tourenplanung ab. Rufen Sie uns an&nbsp;– wir sagen Ihnen offen, ab wann wir Sie versorgen können. Gerade nach einem Krankenhausaufenthalt bemühen wir uns um einen zügigen Start.'],
   ['Kann ich persönlich im Büro vorbeikommen?', 'Gern. Unser Büro in der Bahnhofstraße&nbsp;33 ist montags bis freitags von 8 bis 14&nbsp;Uhr besetzt. Damit sich jemand in Ruhe Zeit für Sie nehmen kann, rufen Sie am besten vorher kurz an.'],
   ['Wer bezahlt die ambulante Pflege?', 'Behandlungspflege auf ärztliche Verordnung zahlt die Krankenkasse, einen Pflegegrad brauchen Sie dafür nicht. Grundpflege und Hauswirtschaft werden ab Pflegegrad&nbsp;2 über die Pflegekasse abgerechnet. Wir rechnen direkt mit Ihrer Kasse ab und erklären Ihnen vorab, was auf Sie zukommt.'],
-  ['Habe ich feste Ansprechpartner?', 'Ja. Durch die Bezugspflege kommen möglichst immer dieselben Pflegekräfte zu Ihnen. Für Fragen zur Planung oder Abrechnung erreichen Sie unser Büro unter 05459&nbsp;5869825.'],
+  ['Habe ich feste Ansprechpartner?', 'Ja. Durch die Bezugspflege kommen möglichst dieselben vertrauten Pflegekräfte zu Ihnen. Für Fragen zur Planung oder Abrechnung erreichen Sie unser Büro unter 05459&nbsp;5869825.'],
 ];
 
 const hoerstel = {
@@ -68,7 +68,7 @@ ${section({
             ${facts([
     ['pin', 'Bahnhofstraße 33', 'unser Büro in 48477 Hörstel'],
     ['calendar', 'Seit 2011', 'ambulante Pflege in der Region'],
-    ['users', 'Bezugspflege', 'feste Pflegekräfte für Sie'],
+    ['users', 'Bezugspflege', 'möglichst feste Bezugspflegekräfte'],
     ['clock', 'Auch am Wochenende', 'und an Feiertagen im Einsatz'],
   ])}
           </aside>`,
@@ -120,7 +120,7 @@ ${section({
             <p>Viele Familien suchen bewusst einen Pflegedienst aus dem eigenen Ort. Das hat ganz praktische Vorteile für Sie:</p>
             ${ticks([
     'Persönliche Gespräche im Büro an der Bahnhofstraße&nbsp;– montags bis freitags von 8 bis 14&nbsp;Uhr',
-    'Feste Bezugspflegekräfte statt ständig wechselnder Gesichter',
+    'Möglichst feste Bezugspflegekräfte und vertraute Ansprechpartner',
     'Examinierte Pflegefachkräfte und eine Fachkraft für Wundmanagement im Team',
     'Direkte Abrechnung mit allen Kranken- und Pflegekassen',
     'Hilfe bei Medikamenten und Hilfsmitteln, Vermittlung von Hausnotruf und Hilfsdiensten',
@@ -144,14 +144,14 @@ const MET_FAQ = [
   ['Fahren Sie auch nach Schlickelde und Espel?', 'Ja. Neben dem Ortskern von Mettingen versorgen wir auch Schlickelde und Espel. Sprechen Sie uns einfach an&nbsp;– wir klären, wie wir Ihre Besuche in unsere Touren einplanen.'],
   ['Ab welchem Pflegegrad hilft der Pflegedienst im Haushalt?', 'Den Entlastungsbetrag der Pflegekasse können Sie schon ab Pflegegrad&nbsp;1 für hauswirtschaftliche Hilfe nutzen. Ab Pflegegrad&nbsp;2 kommen die Pflegesachleistungen hinzu. Die genauen Beträge teilt Ihnen Ihre Pflegekasse mit&nbsp;– wir rechnen es auch gern für Sie aus.'],
   ['Wie schnell kann ein Pflegedienst in Mettingen starten?', 'Nach Ihrem Anruf vereinbaren wir zeitnah ein Gespräch. Wann die regelmäßigen Besuche beginnen, hängt von Ihrem Bedarf und unserer Tourenplanung ab. Wir sagen Ihnen ehrlich, was möglich ist.'],
-  ['Kommen immer dieselben Pflegekräfte?', 'Wir arbeiten mit Bezugspflege: Ein festes, kleines Team ist für Sie zuständig. Bei Urlaub oder Krankheit übernimmt eine Kollegin oder ein Kollege, die oder der Ihre Pflegeplanung kennt.'],
+  ['Kommen immer dieselben Pflegekräfte?', 'Wir arbeiten mit Bezugspflege: Möglichst ein festes, kleines Team ist für Sie zuständig. Bei Urlaub oder Krankheit übernimmt eine Kollegin oder ein Kollege, die oder der Ihre Pflegeplanung kennt.'],
   ['Wer bezahlt den Beratungsbesuch nach §&nbsp;37.3?', 'Die Kosten für den Beratungseinsatz übernimmt Ihre Pflegekasse. Wir rechnen direkt mit ihr ab, für Sie entstehen dafür keine Kosten.'],
 ];
 
 const mettingen = {
   path: '/pflegedienst-mettingen/',
   title: 'Pflegedienst Mettingen | Ambulanter Pflegedienst Funk GmbH',
-  description: 'Ambulanter Pflegedienst für Mettingen, Schlickelde und Espel: Pflege, Hilfe im Haushalt und Beratungsbesuch nach § 37.3 – feste Pflegekräfte. Rufen Sie an.',
+  description: 'Ambulanter Pflegedienst für Mettingen, Schlickelde und Espel: Pflege, Hilfe im Haushalt und Beratungsbesuch nach § 37.3 – vertraute Pflegekräfte. Rufen Sie an.',
   type: 'city',
   nav: 'orte',
   crumbs: crumbsFor(MET),
@@ -177,7 +177,7 @@ ${section({
             <p class="eyebrow">Ambulante Pflege in Mettingen</p>
             <h2>Vertraute Menschen <em>an Ihrer Seite.</em></h2>
             <p class="lead">In einer Gemeinde wie Mettingen kennt man sich. Diese Nähe soll auch in der Pflege spürbar sein: Wir kommen mit einem festen Team zu Ihnen, das Sie und Ihre Familie kennenlernt.</p>
-            <p>Unser Büro liegt in Hörstel im Tecklenburger Land. Von dort planen wir die Touren so, dass Sie in Mettingen verlässlich versorgt werden&nbsp;– zu Zeiten, die zu Ihrem Tagesablauf passen. Dank <strong>Bezugspflege</strong> kommen möglichst immer dieselben Pflegekräfte.</p>
+            <p>Unser Büro liegt in Hörstel im Tecklenburger Land. Von dort planen wir die Touren so, dass Sie in Mettingen verlässlich versorgt werden&nbsp;– zu Zeiten, die zu Ihrem Tagesablauf passen. Dank <strong>Bezugspflege</strong> kommen möglichst dieselben vertrauten Pflegekräfte.</p>
             <p>Häusliche Pflege in Mettingen beginnt oft mit kleinen Dingen: Der Einkauf fällt schwer, das Duschen wird unsicher, die Tabletten geraten durcheinander. Genau hier setzen wir an&nbsp;– früh genug, damit aus kleinen Hürden keine großen werden.</p>
             <p>Wird mehr Hilfe nötig, wächst die Unterstützung mit: von der Hauswirtschaft über die Grundpflege bis zur medizinischen Behandlungspflege nach einer Operation oder bei einer chronischen Erkrankung.</p>`,
       aside: `<aside class="split__aside" data-reveal>
@@ -185,7 +185,7 @@ ${section({
             ${facts([
     ['home', 'Hauswirtschaft', 'Einkauf, Wäsche, Mahlzeiten'],
     ['clipboard', 'Beratungsbesuch', 'nach §&nbsp;37.3&nbsp;SGB&nbsp;XI'],
-    ['users', 'Bezugspflege', 'feste Pflegekräfte für Sie'],
+    ['users', 'Bezugspflege', 'möglichst feste Bezugspflegekräfte'],
   ])}
           </aside>`,
     }),
@@ -283,7 +283,7 @@ const REC_FAQ = [
 const recke = {
   path: '/pflegedienst-recke/',
   title: 'Pflegedienst Recke | Ambulanter Pflegedienst Funk GmbH',
-  description: 'Ambulanter Pflegedienst für Recke, Steinbeck, Obersteinbeck und Uffeln: häusliche Pflege mit festen Pflegekräften, auch am Wochenende. Tel. 05459 5869825',
+  description: 'Ambulanter Pflegedienst für Recke, Steinbeck, Obersteinbeck und Uffeln: häusliche Pflege mit vertrauten Pflegekräften, auch am Wochenende. Tel. 05459 5869825',
   type: 'city',
   nav: 'orte',
   crumbs: crumbsFor(REC),
@@ -298,7 +298,7 @@ const recke = {
     lead: 'Wir sind Ihr Pflegedienst für Recke, Steinbeck, Obersteinbeck und Uffeln&nbsp;– mit Pflegekräften, die Sie kennen, und einer Planung, auf die Sie sich verlassen können.',
     image: 'karriere',
     imageAlt: 'Zwei Pflegekräfte des Pflegedienstes Funk GmbH in dunkelblauer Dienstkleidung auf dem Weg zu ihrem Dienstwagen',
-    checks: ['Feste Bezugspflegekräfte', 'Auch am Wochenende und an Feiertagen'],
+    checks: ['Möglichst feste Bezugspflegekräfte', 'Auch am Wochenende und an Feiertagen'],
   })}
 
 ${section({
@@ -356,7 +356,7 @@ ${section({
             <p>Pflege ist Vertrauenssache. Seit 2011 arbeiten wir als ambulanter Pflegedienst im Kreis Steinfurt und wissen, worauf es Familien ankommt: dass jemand pünktlich kommt, zuhört und mitdenkt.</p>
             <p>Mehr über unser Team und unsere Arbeitsweise lesen Sie auf der Seite <a href="/ueber-uns/">Über uns</a>.</p>`,
       facts: facts([
-    ['users', 'Feste Bezugspflege', 'vertraute Gesichter statt Wechsel'],
+    ['users', 'Bezugspflege', 'möglichst vertraute Ansprechpartner'],
     ['calendar', 'Wochenende &amp; Feiertage', 'wir sind auch dann für Sie da'],
     ['shield', 'Alle Kassen', 'direkte Abrechnung ohne Papierkram'],
     ['award', 'Mitglied im DBfK', 'Berufsverband für Pflegeberufe'],
@@ -502,13 +502,13 @@ const RHE_FAQ = [
   ['Kann die Pflege direkt nach der Entlassung aus dem Krankenhaus beginnen?', 'Melden Sie sich am besten schon, bevor Sie entlassen werden. Dann können wir den Start rechtzeitig planen. Wichtig ist eine Verordnung für häusliche Krankenpflege, die die Klinik oder Ihre Hausarztpraxis ausstellt.'],
   ['Ich lebe allein. Was ist, wenn zwischen den Besuchen etwas passiert?', 'Wir vermitteln Ihnen gern einen Hausnotruf, mit dem Sie per Knopfdruck Hilfe rufen können. Außerdem achten Ihre Pflegekräfte bei jedem Besuch darauf, wie es Ihnen geht, und sprechen Veränderungen offen an.'],
   ['Wer bezahlt die häusliche Pflege in Rheine?', 'Das hängt von der Leistung ab. Behandlungspflege auf ärztliche Verordnung zahlt die Krankenkasse, ohne dass Sie einen Pflegegrad brauchen. Grundpflege und Hauswirtschaft rechnen wir ab Pflegegrad&nbsp;2 mit der Pflegekasse ab. Wir sagen Ihnen vorher, ob Kosten für Sie entstehen.'],
-  ['Habe ich in Rheine feste Pflegekräfte?', 'Ja. Wir arbeiten mit Bezugspflege, das heißt: Ein kleines, festes Team kommt zu Ihnen. So müssen Sie nicht jedes Mal einem neuen Gesicht erklären, was Sie brauchen.'],
+  ['Habe ich in Rheine feste Ansprechpartner?', 'Ja. Wir arbeiten mit Bezugspflege, das heißt: Möglichst ein kleines, festes Team kommt zu Ihnen. So müssen Sie nicht jedes Mal einem neuen Gesicht erklären, was Sie brauchen.'],
 ];
 
 const rheine = {
   path: '/pflegedienst-rheine/',
   title: 'Pflegedienst Rheine | Ambulanter Pflegedienst Funk GmbH',
-  description: 'Ambulanter Pflegedienst für Rheine, Rodde und Altenrheine: Pflege zu Hause, Behandlungspflege nach dem Krankenhaus, feste Pflegekräfte. Tel. 05459 5869825',
+  description: 'Ambulanter Pflegedienst für Rheine, Rodde und Altenrheine: Pflege zu Hause, Behandlungspflege nach dem Krankenhaus, vertraute Pflegekräfte. Tel. 05459 5869825',
   type: 'city',
   nav: 'orte',
   crumbs: crumbsFor(RHE),
@@ -523,7 +523,7 @@ const rheine = {
     lead: 'Als Pflegedienst für Rheine, Rodde und Altenrheine kommen wir zu Ihnen nach Hause&nbsp;– für die tägliche Pflege, nach einem Krankenhausaufenthalt oder wenn Sie allein leben und Unterstützung brauchen.',
     image: 'behandlungspflege',
     imageAlt: 'Pflegefachkraft des Pflegedienstes Funk GmbH misst bei einem älteren Herrn zu Hause den Blutzucker',
-    checks: ['Behandlungspflege auf Verordnung&nbsp;– ohne Pflegegrad', 'Feste Pflegekräfte durch Bezugspflege'],
+    checks: ['Behandlungspflege auf Verordnung&nbsp;– ohne Pflegegrad', 'Möglichst feste Bezugspflegekräfte'],
   })}
 
 ${section({
@@ -599,7 +599,7 @@ ${section({
             <p class="eyebrow">Rodde und Altenrheine</p>
             <h2>Auch in Rodde und Altenrheine <em>für Sie da.</em></h2>
             <p>Wir versorgen nicht nur die Innenstadt von Rheine. Auch in Rodde und Altenrheine besuchen unsere Pflegekräfte Menschen, die zu Hause Unterstützung brauchen.</p>
-            <p>Wer einen Pflegedienst in Rodde oder Altenrheine sucht, bekommt bei uns dasselbe wie in der Kernstadt: feste Bezugspflegekräfte, alle Leistungen von der Grundpflege bis zur Wundversorgung und eine direkte Abrechnung mit Ihrer Kasse.</p>
+            <p>Wer einen Pflegedienst in Rodde oder Altenrheine sucht, bekommt bei uns dasselbe wie in der Kernstadt: möglichst feste Bezugspflegekräfte, alle Leistungen von der Grundpflege bis zur Wundversorgung und eine direkte Abrechnung mit Ihrer Kasse.</p>
             <p>Am Anfang steht immer ein Gespräch&nbsp;– am Telefon oder bei Ihnen zu Hause, gern auch gemeinsam mit Ihren Angehörigen.</p>`,
     }),
   })}
@@ -610,7 +610,7 @@ ${section({
     title: 'Darauf können Sie <em>sich verlassen.</em>',
     body: `<div data-reveal>${ticks([
       'Seit 2011 ambulante Pflege im Kreis Steinfurt',
-      'Feste Pflegekräfte durch Bezugspflege',
+      'Möglichst feste Bezugspflegekräfte',
       'Examinierte Pflegefachkräfte und eine Fachkraft für Wundmanagement',
       'Mitglied im Deutschen Berufsverband für Pflegeberufe (DBfK)',
       'Wochenend- und Feiertagsdienst',

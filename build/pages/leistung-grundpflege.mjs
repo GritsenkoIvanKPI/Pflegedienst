@@ -4,7 +4,7 @@ const FAQ = [
   ['Wer bezahlt die Grundpflege zu Hause?', 'Ab Pflegegrad&nbsp;2 übernimmt die Pflegekasse die Grundpflege als Pflegesachleistung bis zu einem monatlichen Höchstbetrag. Wir rechnen direkt mit Ihrer Pflegekasse ab. Ihre Pflegekasse teilt Ihnen die genauen Beträge mit&nbsp;– wir rechnen es auch gern gemeinsam mit Ihnen durch.'],
   ['Kann ich Grundpflege und Pflegegeld kombinieren?', 'Ja. Mit der Kombinationsleistung nutzen Sie einen Teil der Pflegesachleistung für unseren Pflegedienst und erhalten den nicht genutzten Anteil anteilig als Pflegegeld. So können Angehörige einen Teil der Pflege weiter selbst übernehmen.'],
   ['Wir haben noch keinen Pflegegrad. Was nun?', 'Stellen Sie einen Antrag bei Ihrer Pflegekasse&nbsp;– ein kurzer Anruf oder ein formloses Schreiben genügt. Danach kommt eine Gutachterin oder ein Gutachter zu Ihnen nach Hause. Wir erklären Ihnen gern, worauf es bei diesem Termin ankommt.'],
-  ['Kommt immer dieselbe Pflegekraft?', 'Wir arbeiten nach dem Prinzip der Bezugspflege. Das heißt: Ein festes, kleines Team ist für Sie zuständig. Urlaub und Krankheit lassen sich nicht ganz vermeiden, aber Sie sehen vertraute Gesichter statt ständig neuer Menschen.'],
+  ['Kommt immer dieselbe Pflegekraft?', 'Wir arbeiten nach dem Prinzip der Bezugspflege. Das heißt: Möglichst ein festes, kleines Team ist für Sie zuständig. Urlaub und Krankheit lassen sich nicht ganz vermeiden, aber Sie haben möglichst vertraute Ansprechpartner und Bezugspflegekräfte.'],
   ['Zu welchen Uhrzeiten kommen Sie?', 'Die Besuchszeiten planen wir gemeinsam mit Ihnen, zum Beispiel morgens zum Waschen und Anziehen und abends zum Zubettgehen. Auch am Wochenende und an Feiertagen sind wir für unsere Klientinnen und Klienten im Einsatz.'],
 ];
 
@@ -34,7 +34,7 @@ export default {
     lead: 'Waschen, Anziehen, Aufstehen&nbsp;– wenn diese Dinge allein nicht mehr gelingen, unterstützen wir Sie. Unsere Grundpflege hilft Ihnen, so selbstständig wie möglich in den eigenen vier Wänden zu leben.',
     image: 'grundpflege',
     imageAlt: 'Pflegekraft des Pflegedienstes Funk GmbH hilft einem älteren Herrn an seinem Bett beim Anziehen',
-    checks: ['Ab Pflegegrad&nbsp;2&nbsp;– Abrechnung direkt mit der Pflegekasse', 'Feste Bezugspflegekräfte statt wechselnder Gesichter'],
+    checks: ['Ab Pflegegrad&nbsp;2&nbsp;– Abrechnung direkt mit der Pflegekasse', 'Möglichst feste Bezugspflegekräfte und vertraute Ansprechpartner'],
   })}
 
 ${section({

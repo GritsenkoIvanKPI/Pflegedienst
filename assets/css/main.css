@@ -3326,3 +3326,17 @@ li:nth-child(4n + 4) > a.card { border-top-color: var(--navy-300); }
 .apply__cta { margin-top: var(--sp-4); }
 /* Platzhalter im Impressum – vor dem Start ersetzen */
 .legal-todo { display: inline-block; padding: 0 0.45rem; border-radius: 6px; background: var(--accent-100); color: var(--accent); font-weight: 700; }
+
+/* Feinschliff vor dem Start: sehr schmale Handys und große Schrift */
+@media (max-width: 379px) {
+  .hero-svc__list { grid-template-columns: minmax(0, 1fr); gap: 0; }
+  .hero-svc__list li + li { border-top: 1px solid var(--line); }
+  .hero-svc__list li:last-child { grid-column: auto; }
+  .hero-svc { flex-direction: row; align-items: center; gap: var(--sp-2); padding: var(--sp-2) 0; text-align: left; }
+  .hero-svc__icon .icon { width: 40px; height: 40px; }
+}
+.form__topics .pill span, .vacancy__cat { -webkit-hyphens: auto; hyphens: auto; overflow-wrap: anywhere; }
+.vacancy__top { min-width: 0; }
+.vacancy__cat { min-width: 0; }
+.panel__label { font-size: 0.875rem; }
+.logo { display: flex; align-items: center; min-height: 44px; }

@@ -92,7 +92,7 @@ export const ctaBtn = (label = 'Jetzt Kontakt aufnehmen', href = '#kontakt') => 
 /* Drei Gruppen bekommen eigene Kopfbereiche:
    Pflege & Medizin (klinisch, dunkel), Entlastung & Beratung (warm, hell), Einsatzgebiete (lokal, Karte) */
 const MEDICAL = {
-  Grundpflege: ['Pflegekasse (SGB&nbsp;XI)', 'ab Pflegegrad&nbsp;2', 'feste Bezugspflegekräfte'],
+  Grundpflege: ['Pflegekasse (SGB&nbsp;XI)', 'ab Pflegegrad&nbsp;2', 'möglichst feste Bezugspflegekräfte'],
   Behandlungspflege: ['Krankenkasse (SGB&nbsp;V)', 'ärztliche Verordnung', 'examinierte Pflegefachkräfte'],
   Wundversorgung: ['Krankenkasse (SGB&nbsp;V)', 'ärztliche Verordnung', 'Fachkräfte für Wundmanagement'],
   Medikamentengabe: ['Krankenkasse (SGB&nbsp;V)', 'ärztliche Verordnung', 'examinierte Pflegefachkräfte'],
