@@ -3155,3 +3155,45 @@ li:nth-child(4n + 4) > a.card { border-top-color: var(--navy-300); }
 .social--footer { gap: 0.75rem; margin-left: 0; }
 .social--footer .social__link--brand { width: 36px; height: 36px; border-radius: 10px; }
 .social--footer .social__glyph { width: 22px; height: 22px; }
+
+/* =====================================================================
+   Hauptmenü: sanfter Hover in Orange, Dropdown gleitet nach unten
+   ===================================================================== */
+.nav__link { transition: color 0.3s var(--ease-out), transform 0.2s var(--ease-out); }
+.nav__link:hover, .nav__link[aria-expanded="true"] { color: var(--accent); }
+.nav__link::after { transition: transform 0.35s var(--ease-out); }
+.nav__link[aria-expanded="true"] .icon--chev { transform: rotate(180deg); }
+
+.panel {
+  transform: translateY(-8px);
+  transition: opacity 0.28s var(--ease-out), transform 0.38s var(--ease-out), visibility 0s linear 0.38s;
+}
+.panel.is-open {
+  transform: translateY(0);
+  transition: opacity 0.28s var(--ease-out), transform 0.38s var(--ease-out), visibility 0s;
+}
+
+/* Einträge im Dropdown */
+.panel li a { position: relative; }
+.panel li a::before {
+  content: "";
+  position: absolute;
+  left: 0;
+  top: 0.7rem;
+  bottom: 0.7rem;
+  width: 3px;
+  border-radius: 3px;
+  background: var(--accent);
+  opacity: 0;
+  transform: scaleY(0.4);
+  transition: opacity 0.25s var(--ease-out), transform 0.3s var(--ease-out);
+}
+.panel li a strong, .panel li a .icon { transition: var(--t-colors); }
+.panel a:not(.link-arrow):not(.panel__promo-phone):hover,
+.panel a:not(.link-arrow):not(.panel__promo-phone):focus-visible { background: rgba(253, 102, 21, 0.08); }
+.panel li a:hover::before, .panel li a:focus-visible::before, .panel li a[aria-current="page"]::before { opacity: 1; transform: scaleY(1); }
+.panel li a:hover strong, .panel li a:focus-visible strong { color: var(--accent); }
+.panel li a:hover .icon, .panel li a:focus-visible .icon { background: var(--accent); color: var(--white); }
+.panel a[aria-current="page"] { background: rgba(253, 102, 21, 0.06); }
+.panel .link-arrow:hover { color: var(--accent); }
+@media (prefers-reduced-motion: reduce) { .panel, .panel.is-open { transform: none; } }
