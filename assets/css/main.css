@@ -3197,3 +3197,40 @@ li:nth-child(4n + 4) > a.card { border-top-color: var(--navy-300); }
 .panel a[aria-current="page"] { background: rgba(253, 102, 21, 0.06); }
 .panel .link-arrow:hover { color: var(--accent); }
 @media (prefers-reduced-motion: reduce) { .panel, .panel.is-open { transform: none; } }
+
+/* =====================================================================
+   Karriere: Stellenangebote als moderne Karten
+   ===================================================================== */
+.jobs__count { margin-bottom: var(--sp-3); color: var(--muted); }
+.jobs__count strong { display: inline-flex; align-items: center; margin-right: 0.4rem; padding: 0.2rem 0.75rem; border-radius: var(--radius-pill); background: var(--accent); color: var(--white); font-size: 0.95rem; }
+.vacancies { display: grid; grid-template-columns: minmax(0, 1fr); gap: var(--sp-3); }
+@media (min-width: 900px) { .vacancies { grid-template-columns: repeat(2, minmax(0, 1fr)); } }
+.vacancy {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  padding: var(--sp-4) var(--sp-3) var(--sp-3);
+  border-radius: var(--radius-l);
+  background: var(--white);
+  border: 1.5px solid var(--line);
+  overflow: hidden;
+  transition: transform 0.4s var(--ease-out), var(--t-colors);
+}
+.vacancy::before { content: ""; position: absolute; left: 0; top: 0; right: 0; height: 4px; background: var(--accent); transform: scaleX(0); transform-origin: left; transition: transform 0.45s var(--ease-out); }
+.vacancy:hover { transform: translateY(-3px); border-color: var(--navy-300); }
+.vacancy:hover::before { transform: scaleX(1); }
+.vacancy:last-child:nth-child(odd) { grid-column: 1 / -1; }
+.vacancy__top { display: flex; align-items: center; gap: var(--sp-2); margin-bottom: var(--sp-2); }
+.vacancy__icon { display: grid; place-items: center; flex: none; width: 52px; height: 52px; border-radius: 16px; background: var(--accent-100); color: var(--accent); }
+.vacancy__icon .icon { width: 26px; height: 26px; }
+.vacancy__cat { font-size: 0.9rem; font-weight: 700; letter-spacing: 0.06em; text-transform: uppercase; color: var(--navy-600); }
+.vacancy__title { margin-bottom: var(--sp-1); font-family: var(--font-display); font-weight: 560; font-size: clamp(1.35rem, 1.1rem + 0.9vw, 1.7rem); letter-spacing: -0.02em; line-height: 1.2; color: var(--navy-900); }
+.vacancy__text { margin-bottom: var(--sp-3); font-size: 1.02rem; line-height: 1.6; color: var(--muted); }
+.vacancy__meta { display: flex; flex-wrap: wrap; gap: 0.5rem; margin-bottom: var(--sp-3); }
+.vacancy__meta li { display: inline-flex; align-items: center; gap: 0.4rem; min-height: 34px; padding: 0.25rem 0.8rem; border-radius: var(--radius-pill); background: var(--navy-50); font-size: 0.95rem; font-weight: 600; color: var(--navy); }
+.vacancy__meta .icon { width: 1.05em; height: 1.05em; color: var(--accent); }
+.vacancy__actions { display: flex; flex-wrap: wrap; align-items: center; gap: var(--sp-2); margin-top: auto; padding-top: var(--sp-2); border-top: 1px solid var(--line); }
+.vacancy__call { display: inline-flex; align-items: center; gap: 0.5rem; min-height: 44px; font-weight: 700; color: var(--navy); text-decoration: underline; text-decoration-color: transparent; text-underline-offset: 4px; }
+.vacancy__call .icon { color: var(--accent); }
+.vacancy__call:hover { color: var(--accent); text-decoration-color: currentColor; }
+@media (max-width: 599px) { .vacancy__actions .btn { width: 100%; } }

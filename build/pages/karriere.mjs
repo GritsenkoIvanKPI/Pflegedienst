@@ -13,14 +13,24 @@ const FAQ = [
 ];
 
 const jobList = JOBS.length
-  ? `<ul class="jobs" role="list">
-          ${JOBS.map((j) => `<li class="job" data-reveal>
-            <div>
-              <h3>${j.title}</h3>
-              <p>${j.text}</p>
-              <ul class="job__tags" role="list">${j.tags.map((t) => `<li class="tag">${t}</li>`).join('')}</ul>
+  ? `<p class="jobs__count" data-reveal><strong>${JOBS.length} offene Stellen</strong> in Hörstel, Mettingen, Recke, Ibbenbüren und Rheine</p>
+        <ul class="vacancies" role="list">
+          ${JOBS.map((j) => `<li class="vacancy" data-reveal>
+            <div class="vacancy__top">
+              <span class="vacancy__icon">${icon(j.icon)}</span>
+              <span class="vacancy__cat">${j.category}</span>
             </div>
-            <a class="btn btn--accent" href="${mailto(`Bewerbung: ${j.title.replace(/&nbsp;/g, ' ')}`)}">Jetzt bewerben ${icon('arrow')}</a>
+            <h3 class="vacancy__title">${j.title}</h3>
+            <p class="vacancy__text">${j.text}</p>
+            <ul class="vacancy__meta" role="list">
+              <li>${icon('clock')} ${j.time}</li>
+              <li>${icon('pin')} ${j.place}</li>
+              <li>${icon('award')} ${j.requirement}</li>
+            </ul>
+            <div class="vacancy__actions">
+              <a class="btn btn--accent" href="${mailto(`Bewerbung: ${j.title.replace(/&nbsp;/g, ' ').replace(/&amp;/g, '&')}`)}">Jetzt bewerben ${icon('arrow')}</a>
+              <a class="vacancy__call" href="${TEL}">${icon('phone')} Fragen? Anrufen</a>
+            </div>
           </li>`).join('\n          ')}
         </ul>`
   : `<div class="jobs__empty" data-reveal>
@@ -38,7 +48,16 @@ export default {
   ogImage: 'karriere',
   formTopic: 'Karriere / Bewerbung',
   faq: FAQ,
-  schema: [{ '@type': 'WebPage', '@id': `${SITE}/karriere/#jobs`, name: 'Karriere beim Pflegedienst Funk GmbH', about: ORG_REF }],
+  schema: [{ '@type': 'WebPage', '@id': `${SITE}/karriere/#jobs`, name: 'Karriere beim Pflegedienst Funk GmbH', about: ORG_REF }, ...JOBS.map((j) => ({
+    '@type': 'JobPosting',
+    title: j.title.replace(/&nbsp;/g, ' ').replace(/&amp;/g, '&'),
+    description: `<p>${j.text.replace(/&nbsp;/g, ' ')}</p><p>${j.requirement}. ${j.time}. Einsatzgebiet: ${j.place}.</p>`,
+    datePosted: '2026-11-18',
+    employmentType: ['FULL_TIME', 'PART_TIME'],
+    hiringOrganization: { '@type': 'Organization', name: 'Ambulanter Pflegedienst Funk GmbH', sameAs: SITE, logo: `${SITE}/assets/img/logo-funk@2x.png` },
+    jobLocation: { '@type': 'Place', address: { '@type': 'PostalAddress', streetAddress: 'Bahnhofstraße 33', postalCode: '48477', addressLocality: 'Hörstel', addressRegion: 'Nordrhein-Westfalen', addressCountry: 'DE' } },
+    directApply: false,
+  }))],
   body: `${pageHero({
     crumbs: [['Karriere']],
     eyebrow: 'Karriere · Jobs in der Pflege',
