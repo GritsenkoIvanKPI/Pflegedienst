@@ -294,4 +294,93 @@
     try { localStorage.setItem('funk-gmaps', 'yes'); } catch (e) { /* ignorieren */ }
     loadMap();
   });
+
+  /* ---------- Online-Bewerbung: Prüfung, Dateiauswahl, Versand per PHP ---------- */
+  const apply = document.querySelector('[data-apply]');
+  if (apply) {
+    const MAX = 5 * 1024 * 1024;
+    const OK_EXT = /\.(pdf|docx?|jpe?g|png)$/i;
+    const ts = apply.querySelector('[data-ts]');
+    if (ts) ts.value = String(Date.now());
+
+    // Stelle aus dem Link vorauswählen (?stelle=pflegefachkraft)
+    const wanted = new URLSearchParams(location.search).get('stelle');
+    const jobSel = apply.querySelector('[data-job]');
+    if (wanted && jobSel) {
+      const opt = [...jobSel.options].find((o) => o.dataset.slug === wanted);
+      if (opt) jobSel.value = opt.value;
+    }
+
+    // Dateinamen anzeigen
+    apply.querySelectorAll('[data-upload] input[type="file"]').forEach((inp) => {
+      const name = inp.closest('[data-upload]').querySelector('[data-upload-name]');
+      const empty = name.textContent;
+      inp.addEventListener('change', () => {
+        const files = [...inp.files];
+        name.textContent = files.length ? files.map((f) => f.name).join(', ') : empty;
+        inp.closest('[data-upload]').classList.toggle('has-file', files.length > 0);
+        checkFile(inp);
+      });
+    });
+
+    const mark = (el, ok) => {
+      const wrap = el.closest('.field, [data-upload]');
+      wrap.classList.toggle('has-error', !ok);
+      el.setAttribute('aria-invalid', String(!ok));
+      return ok;
+    };
+    const checkFile = (inp) => {
+      const files = [...inp.files];
+      if (inp.required && !files.length) return mark(inp, false);
+      return mark(inp, files.every((f) => f.size <= MAX && OK_EXT.test(f.name)));
+    };
+    const rules = {
+      '#a-first': (v) => v.trim().length > 1,
+      '#a-last': (v) => v.trim().length > 1,
+      '#a-mail': (v) => /^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(v.trim()),
+      '#a-phone': (v) => v.replace(/[^\d]/g, '').length >= 6,
+      '#a-job': (v) => v !== '',
+    };
+    Object.entries(rules).forEach(([sel, test]) => {
+      const el = apply.querySelector(sel);
+      el.addEventListener('blur', () => { if (el.value) mark(el, test(el.value)); });
+      ['input', 'change'].forEach((ev) => el.addEventListener(ev, () => { if (el.closest('.has-error')) mark(el, test(el.value)); }));
+    });
+    apply.querySelector('input[name="datenschutz"]').addEventListener('change', (ev) => { if (ev.target.checked) apply.querySelector('#a-check-err').classList.remove('is-visible'); });
+
+    const errBox = apply.querySelector('[data-apply-error]');
+    const btn = apply.querySelector('[data-apply-submit]');
+    const consent = apply.querySelector('input[name="datenschutz"]');
+    const consentErr = apply.querySelector('#a-check-err');
+
+    apply.addEventListener('submit', async (e) => {
+      e.preventDefault();
+      errBox.hidden = true;
+      let firstBad = null;
+      Object.entries(rules).forEach(([sel, test]) => { const el = apply.querySelector(sel); if (!mark(el, test(el.value)) && !firstBad) firstBad = el; });
+      apply.querySelectorAll('[data-upload] input[type="file"]').forEach((inp) => { if (!checkFile(inp) && !firstBad) firstBad = inp; });
+      consentErr.classList.toggle('is-visible', !consent.checked);
+      if (!consent.checked && !firstBad) firstBad = consent;
+      if (firstBad) { firstBad.focus(); return; }
+      if (apply.querySelector('#a-website').value) return; // Honeypot
+
+      btn.disabled = true;
+      btn.querySelector('span').textContent = 'Wird gesendet …';
+      try {
+        const res = await fetch(apply.action, { method: 'POST', body: new FormData(apply), headers: { Accept: 'application/json' } });
+        const data = await res.json().catch(() => ({}));
+        if (!res.ok || !data.ok) throw new Error(data.error || 'send failed');
+        apply.querySelector('.apply__form-body').hidden = true;
+        const ok = apply.querySelector('[data-apply-success]');
+        ok.hidden = false;
+        ok.focus();
+        ok.scrollIntoView({ block: 'center' });
+      } catch (err) {
+        errBox.hidden = false;
+        errBox.scrollIntoView({ block: 'center' });
+        btn.disabled = false;
+        btn.querySelector('span').textContent = 'Bewerbung absenden';
+      }
+    });
+  }
 })();

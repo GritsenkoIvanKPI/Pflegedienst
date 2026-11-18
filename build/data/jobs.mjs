@@ -1,10 +1,11 @@
 /* Aktuelle Stellenangebote.
    Bis zum Admin-Bereich hier pflegen: Eintrag hinzufügen, ändern oder löschen, dann `npm run build`.
    Leere Liste → die Seite zeigt automatisch den Hinweis auf die Initiativbewerbung.
-   Felder: title, category, icon (Symbolname), text, requirement, time, place */
+   Felder: title, slug (für den Bewerbungslink), category, icon (Symbolname), text, requirement, time, place */
 export default [
   {
     title: 'Pflegefachkraft (m/w/d)',
+    slug: 'pflegefachkraft',
     category: 'Fachkraft',
     icon: 'stetho',
     text: 'Sie übernehmen Behandlungspflege und Pflegeplanung, arbeiten in der Bezugspflege und sind feste Ansprechperson für Ihre Kundinnen, Kunden und deren Angehörige.',
@@ -14,6 +15,7 @@ export default [
   },
   {
     title: 'Gesundheits- und Krankenpflegehelfer / Altenpflegehelfer (m/w/d)',
+    slug: 'pflegehelfer-mit-ausbildung',
     category: 'Pflegehilfe mit Ausbildung',
     icon: 'hands',
     text: 'Sie unterstützen bei der Grundpflege und bei einfachen pflegerischen Aufgaben&nbsp;– in einem festen Tourenteam und mit vertrauten Kundinnen und Kunden.',
@@ -23,6 +25,7 @@ export default [
   },
   {
     title: 'Pflegeassistent (m/w/d)',
+    slug: 'pflegeassistent',
     category: 'Pflegeassistenz',
     icon: 'clipboard',
     text: 'Sie unterstützen unsere Pflegefachkräfte bei der täglichen Versorgung, achten auf das Wohlbefinden Ihrer Kundinnen und Kunden und dokumentieren Ihre Einsätze.',
@@ -32,6 +35,7 @@ export default [
   },
   {
     title: 'Pflegehelfer (m/w/d)',
+    slug: 'pflegehelfer',
     category: 'Pflegehilfe',
     icon: 'heart',
     text: 'Sie helfen bei der Körperpflege, beim An- und Auskleiden und im Alltag. Eine Ausbildung ist wünschenswert, aber keine Voraussetzung&nbsp;– wir arbeiten Sie gründlich ein.',
@@ -41,6 +45,7 @@ export default [
   },
   {
     title: 'Hauswirtschafts- und Betreuungskraft (m/w/d)',
+    slug: 'hauswirtschaft-betreuung',
     category: 'Hauswirtschaft &amp; Betreuung',
     icon: 'home',
     text: 'Sie unterstützen im Haushalt&nbsp;– Einkaufen, Kochen, Wäsche&nbsp;– und schenken Zeit für Gespräche, Spaziergänge und Begleitung im Alltag.',

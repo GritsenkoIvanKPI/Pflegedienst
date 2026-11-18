@@ -28,7 +28,7 @@ const jobList = JOBS.length
               <li>${icon('award')} ${j.requirement}</li>
             </ul>
             <div class="vacancy__actions">
-              <a class="btn btn--accent" href="${mailto(`Bewerbung: ${j.title.replace(/&nbsp;/g, ' ').replace(/&amp;/g, '&')}`)}">Jetzt bewerben ${icon('arrow')}</a>
+              <a class="btn btn--accent" href="/karriere/bewerbung/?stelle=${j.slug}">Jetzt bewerben ${icon('arrow')}</a>
               <a class="vacancy__call" href="${TEL}">${icon('phone')} Fragen? Anrufen</a>
             </div>
           </li>`).join('\n          ')}
@@ -65,7 +65,7 @@ export default {
     lead: 'Sie möchten Pflege mit Herz und Verstand leben&nbsp;– in einem Team, in dem Sie keine Nummer sind? Beim Pflegedienst Funk GmbH in Hörstel arbeiten Sie mit festen Touren, vertrauten Kundinnen und Kunden und Kolleginnen und Kollegen, die zusammenhalten.',
     image: 'karriere',
     imageAlt: 'Zwei Pflegekräfte des Pflegedienstes Funk GmbH auf dem Weg zum Dienstwagen',
-    actions: `<a class="btn btn--accent btn--lg" href="#stellen">Zu den Stellenangeboten ${icon('arrow')}</a><a class="btn btn--outline btn--lg" href="#initiativbewerbung">Initiativ bewerben</a>`,
+    actions: `<a class="btn btn--accent btn--lg" href="#stellen">Zu den Stellenangeboten ${icon('arrow')}</a><a class="btn btn--outline btn--lg" href="/karriere/bewerbung/?stelle=initiativ">Initiativ bewerben</a>`,
     checks: ['Flexible Arbeitszeiten, Voll- oder Teilzeit', 'Faire Vergütung inklusive Zuschlägen und Prämien'],
   })}
 
@@ -140,7 +140,7 @@ ${section({
     title: 'So einfach bewerben Sie sich <em>bei uns.</em>',
     lead: 'Keine passende Stelle dabei? Bewerben Sie sich trotzdem&nbsp;– wir freuen uns über Ihre Initiativbewerbung. Für Fragen stehen Ihnen Frau Janke und Frau Speiser gern telefonisch zur Verfügung.',
     body: `${steps([
-      ['Unterlagen senden', `Per E-Mail an <a href="${mailto('Initiativbewerbung')}">${MAIL}</a>, über das Formular unten oder per Post.`],
+      ['Online bewerben', 'Über unser <a href="/karriere/bewerbung/">Bewerbungsformular</a>: Lebenslauf und Anschreiben hochladen, fertig. Alternativ per E-Mail oder Post.'],
       ['Kennenlernen', 'Wir melden uns zeitnah und laden Sie zu einem persönlichen Gespräch in unser Büro in Hörstel ein.'],
       ['Willkommen im Team', 'Nach einer gründlichen Einarbeitung übernehmen Sie Ihre eigenen Touren&nbsp;– mit einem Team im Rücken.'],
     ])}
@@ -149,6 +149,7 @@ ${section({
           <li class="fact"><span class="fact__icon" aria-hidden="true">${icon('phone')}</span><div><strong>Telefonisch</strong><span><a href="${TEL}">${PHONE}</a></span></div></li>
           <li class="fact"><span class="fact__icon" aria-hidden="true">${icon('pin')}</span><div><strong>Per Post</strong><span>Ambulanter Pflegedienst Funk GmbH, Bahnhofstraße&nbsp;33, 48477&nbsp;Hörstel</span></div></li>
         </ul>
+        <p class="apply__cta" data-reveal><a class="btn btn--accent btn--lg" href="/karriere/bewerbung/?stelle=initiativ">Jetzt online bewerben ${icon('arrow')}</a></p>
         <p class="apply__note" data-reveal>Hinweise zum Umgang mit Ihren Bewerbungsdaten finden Sie in unserer <a href="/datenschutz/">Datenschutzerklärung</a>.</p>`,
   })}
 
