@@ -5,7 +5,7 @@ const MAIL = 'info@pflegedienst-funk.de';
 const mailto = (subject) => `mailto:${MAIL}?subject=${encodeURIComponent(subject)}`;
 
 const FAQ = [
-  ['Brauche ich eine abgeschlossene Pflegeausbildung?', 'Für Stellen als Pflegefachkraft ja. Als Pflegehelferin oder Pflegehelfer und in der Hauswirtschaft ist eine Ausbildung wünschenswert, aber keine Voraussetzung. Wichtiger sind Einfühlungsvermögen, Zuverlässigkeit und Freude am Umgang mit Menschen&nbsp;– das Fachliche bringen wir Ihnen in der Einarbeitung bei.'],
+  ['Brauche ich eine abgeschlossene Pflegeausbildung?', 'Für unsere Stellen in der Pflege ja&nbsp;– je nach Stelle als Pflegefachfrau oder Pflegefachmann, in der Kranken- oder Altenpflege, in der Pflegefachassistenz oder in der Krankenpflegehilfe. Für die Hauswirtschaft und Betreuung brauchen Sie keine Pflegeausbildung. Wichtiger sind Einfühlungsvermögen, Zuverlässigkeit und Freude am Umgang mit Menschen.'],
   ['Kann ich in Teilzeit arbeiten?', 'Ja. Wir stimmen die Arbeitszeiten so weit wie möglich auf Ihre persönliche Situation ab&nbsp;– ob Vollzeit, Teilzeit oder mit festen Tagen.'],
   ['Wie läuft die Einarbeitung ab?', 'Sie lernen Ihre Touren und Kundinnen und Kunden Schritt für Schritt kennen, zunächst gemeinsam mit erfahrenen Kolleginnen und Kollegen. Die Pflegedienstleitung steht Ihnen für alle Fragen zur Seite.'],
   ['Was gehört in meine Bewerbung?', 'Ein kurzes Anschreiben, Ihr Lebenslauf und&nbsp;– falls vorhanden&nbsp;– Ihre Abschluss- und Arbeitszeugnisse. Sie können uns die Unterlagen per E-Mail oder per Post schicken. Haben Sie Fragen vorab, rufen Sie uns gern an.'],
@@ -41,7 +41,7 @@ const jobList = JOBS.length
 export default {
   path: '/karriere/',
   title: 'Jobs Pflege Hörstel – Karriere | Pflegedienst Funk GmbH',
-  description: 'Jobs in der ambulanten Pflege in Hörstel: Pflegefachkräfte und Pflegehelfer (m/w/d) gesucht. Flexible Arbeitszeiten, faire Vergütung, herzliches Team.',
+  description: 'Jobs in der ambulanten Pflege in Hörstel: Pflegefachfrau/-mann, Kranken- und Altenpfleger, Pflegeassistenz (m/w/d). Flexible Zeiten, faire Vergütung.',
   type: 'karriere',
   crumbs: [['Karriere']],
   heroImage: 'karriere',
@@ -125,7 +125,7 @@ ${section({
           <div data-reveal>
             ${ticks([
     'Freude am Umgang mit Menschen und Einfühlungsvermögen',
-    'Eine abgeschlossene Ausbildung in der Pflege&nbsp;– für Pflegehelferinnen und -helfer wünschenswert, aber kein Muss',
+    'Eine abgeschlossene Ausbildung in der Pflege&nbsp;– für die Hauswirtschaft und Betreuung nicht nötig',
     'Teamgeist und Zuverlässigkeit',
     'Die Motivation, Menschen mit Herz und Verstand zu unterstützen',
   ])}
