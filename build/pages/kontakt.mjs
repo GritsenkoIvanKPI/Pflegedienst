@@ -4,7 +4,7 @@ const MAIL = 'info@pflegedienst-funk.de';
 
 const LEADERS = [
   { name: 'Olga Speiser', role: 'Pflegedienstleitung', initials: 'OS', text: 'Fragen zur Pflege, zum Pflegegrad und zum Ablauf Ihrer Versorgung.' },
-  { name: 'Olga Janke', role: 'Stellvertretende Pflegedienstleitung (PDL)', initials: 'OJ', text: 'Fragen zur Pflege und zur Organisation Ihrer Versorgung&nbsp;– auch in Vertretung der Pflegedienstleitung.' },
+  { name: 'Olga Janke', role: 'PDL-Vertretung', initials: 'OJ', text: 'Fragen zur Pflege und zur Organisation Ihrer Versorgung&nbsp;– auch in Vertretung der Pflegedienstleitung.' },
   { name: 'Sergej Petrenko', role: 'Inhaber', initials: 'SP', text: 'Ihr Ansprechpartner für Anliegen rund um unser Unternehmen.' },
 ];
 
