@@ -3111,3 +3111,21 @@ li:nth-child(4n + 4) > a.card { border-top-color: var(--navy-300); }
   .relief-hero__note { position: relative; right: auto; bottom: auto; margin: -3rem calc(-1 * var(--sp-4)) 0 auto; width: min(20rem, 80%); }
 }
 @media (max-width: 479px) { .med-hero__card { margin: -2rem var(--sp-1) 0; } }
+
+/* Logo ca. 18 % größer – Name „Ambulanter Pflegedienst GmbH“ besser lesbar */
+.logo img { width: 198px; }
+@media (max-width: 389px) { .logo img { width: 164px; } }
+@media (max-width: 340px) { .logo img { width: 138px; } }
+@media (min-width: 1140px) {
+  :root { --header-h: 96px; }
+  .logo img { width: 222px; }
+}
+@media (min-width: 1280px) { .logo img { width: 230px; } }
+@media (max-width: 359px) { html.is-large .logo img { width: 126px; } }
+@media (max-width: 479px) { .logo img { width: 176px; } }
+@media (max-width: 389px) { .logo img { width: 152px; } }
+@media (max-width: 359px) { .logo img { width: 132px; } }
+@media (max-width: 340px) { .logo img { width: 120px; } }
+@media (max-width: 479px) { html.is-large .logo img { width: 156px; } }
+@media (max-width: 389px) { html.is-large .logo img { width: 134px; } }
+@media (max-width: 359px) { html.is-large .logo img { width: 112px; } }
