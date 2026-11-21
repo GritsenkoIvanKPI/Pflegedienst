@@ -47,7 +47,7 @@ const impressum = {
 
         <div class="prose" data-reveal>
           <h2>Berufsbezeichnung und berufsrechtliche Regelungen</h2>
-          <p>Berufsbezeichnung: Verantwortlich leitende Pflegefachkraft gemäß SGB&nbsp;XI<br>Verliehen in: Deutschland</p>
+          <p>Olga Speiser&nbsp;– Pflegedienstleitung (PDL) / Verantwortliche Pflegefachkraft gemäß SGB&nbsp;XI<br>Berufsbezeichnung verliehen in: Deutschland</p>
 
           <h2>Berufsverband</h2>
           <p>Mitglied im Deutschen Berufsverband für Pflegeberufe (DBfK).</p>

@@ -9,7 +9,7 @@
  */
 
 const EMPFAENGER = 'info@pflegedienst-funk.de';
-const ABSENDER   = 'bewerbung@pflegedienst-funk.de';
+const ABSENDER   = 'info@pflegedienst-funk.de';
 const MAX_DATEI  = 5 * 1024 * 1024;    // 5 MB je Datei
 const MAX_GESAMT = 20 * 1024 * 1024;   // 20 MB insgesamt
 const ERLAUBT    = [
@@ -104,7 +104,8 @@ $text = "Neue Online-Bewerbung über pflegedienst-funk.de\n\n"
   . "Quelle:    " . ($quelle ?: '–') . "\n\n"
   . "Nachricht:\n" . ($nachricht ?: '–') . "\n\n"
   . "Anhänge: " . implode(', ', array_column($anhaenge, 'name')) . "\n\n"
-  . "Datenschutz-Einwilligung: erteilt am " . date('d.m.Y H:i') . " Uhr\n";
+  . "Datenschutz-Einwilligung: erteilt am " . date('d.m.Y H:i') . " Uhr\n"
+  . "Bewerber-Pool (bis zu 2 Jahre): " . ((($_POST['talentpool'] ?? '') === 'ja') ? 'JA – Einwilligung erteilt am ' . date('d.m.Y H:i') . ' Uhr' : 'nein – Unterlagen 6 Monate nach Abschluss des Verfahrens löschen') . "\n";
 
 $grenze = 'funk_' . bin2hex(random_bytes(12));
 $betreff = '=?UTF-8?B?' . base64_encode("Bewerbung: $stelle – $vorname $nachname") . '?=';

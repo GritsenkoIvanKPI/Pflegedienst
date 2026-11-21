@@ -133,6 +133,12 @@ export default {
             </label>
             <p class="field__error field__error--check" id="a-check-err">Bitte stimmen Sie der Datenschutzerklärung zu.</p>
 
+            <label class="check check--optional">
+              <input type="checkbox" name="talentpool" value="ja">
+              <span class="check__box" aria-hidden="true">${icon('check')}</span>
+              <span>Ich bin damit einverstanden, dass meine Bewerbungsunterlagen bis zu 2&nbsp;Jahre für zukünftige Stellenangebote gespeichert werden. <span class="optional">(freiwillig, keine Voraussetzung für die Bewerbung)</span></span>
+            </label>
+
             <div class="apply__error" role="alert" hidden data-apply-error>
               <strong>Ihre Bewerbung konnte leider nicht übertragen werden.</strong>
               <p>Bitte versuchen Sie es später noch einmal oder senden Sie Ihre Unterlagen per E-Mail an <a href="mailto:info@pflegedienst-funk.de?subject=Bewerbung">info@pflegedienst-funk.de</a>. Telefonisch erreichen Sie uns unter <a href="${TEL}">${PHONE}</a>.</p>

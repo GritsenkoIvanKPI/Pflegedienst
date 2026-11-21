@@ -252,7 +252,7 @@
     };
     Object.values(fields).forEach((f) => f.el.addEventListener('blur', () => { if (f.el.value) check(f); }));
 
-    form.addEventListener('submit', (e) => {
+    form.addEventListener('submit', async (e) => {
       e.preventDefault();
       let firstBad = null;
       Object.values(fields).forEach((f) => { if (!check(f) && !firstBad) firstBad = f.el; });
@@ -262,9 +262,25 @@
       if (firstBad) { firstBad.focus(); return; }
       // Honeypot gefüllt → still verwerfen
       if (form.querySelector('#f-website').value) return;
-      // Konzeptphase: Versand erfolgt später serverseitig (PHP, /kontakt/senden.php)
-      form.querySelector('.form__success').hidden = false;
-      form.querySelector('button[type="submit"]').disabled = true;
+      // Versand an /kontakt/senden.php (PHP) – Erfolg nur bei bestätigter Zustellung anzeigen
+      const btn = form.querySelector('[data-form-submit]');
+      const err = form.querySelector('[data-form-error]');
+      const page = form.querySelector('[data-page]');
+      if (page) page.value = location.pathname;
+      err.hidden = true;
+      btn.disabled = true;
+      btn.querySelector('span').textContent = 'Wird gesendet …';
+      try {
+        const res = await fetch(form.action, { method: 'POST', body: new FormData(form), headers: { Accept: 'application/json' } });
+        const data = await res.json().catch(() => ({}));
+        if (!res.ok || !data.ok) throw new Error(data.error || 'send failed');
+        form.querySelector('.form__success').hidden = false;
+        btn.querySelector('span').textContent = 'Gesendet';
+      } catch (ex) {
+        err.hidden = false;
+        btn.disabled = false;
+        btn.querySelector('span').textContent = 'Anfrage senden';
+      }
     });
   }
 
