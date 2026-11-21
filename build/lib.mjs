@@ -318,6 +318,7 @@ const ORG = {
   legalName: 'Ambulanter Pflegedienst Funk GmbH',
   identifier: [{ '@type': 'PropertyValue', propertyID: 'Handelsregister', value: 'Amtsgericht Steinfurt HRB 16206' }, { '@type': 'PropertyValue', propertyID: 'IK', value: '462556040' }],
   email: 'info@pflegedienst-funk.de',
+  sameAs: ['https://www.instagram.com/pflegedienstfunk/', 'https://www.facebook.com/profile.php?id=61592247000636', 'https://www.tiktok.com/@ambulante.pfleged'],
   address: { '@type': 'PostalAddress', streetAddress: 'Bahnhofstraße 33', postalCode: '48477', addressLocality: 'Hörstel', addressRegion: 'Nordrhein-Westfalen', addressCountry: 'DE' },
   openingHoursSpecification: [{ '@type': 'OpeningHoursSpecification', dayOfWeek: ['Monday', 'Tuesday', 'Wednesday', 'Thursday', 'Friday'], opens: '09:00', closes: '14:00' }],
 };
