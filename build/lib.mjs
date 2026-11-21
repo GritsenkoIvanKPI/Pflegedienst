@@ -285,7 +285,7 @@ export const office = ({ eyebrow = 'Anfahrt', title = 'Unser Büro <em>in Hörst
           <p>${t}</p>
           <dl class="office__list">
             <div><dt>${icon('pin')} Adresse</dt><dd>Ambulanter Pflegedienst Funk GmbH<br>Bahnhofstraße&nbsp;33, 48477 Hörstel</dd></div>
-            <div><dt>${icon('clock')} Bürozeiten</dt><dd>Montag bis Freitag, 8–14&nbsp;Uhr</dd></div>
+            <div><dt>${icon('clock')} Bürozeiten</dt><dd><span class="nowrap">Mo.–Fr. 09:00–14:00&nbsp;Uhr</span><br>und nach Vereinbarung</dd></div>
             <div><dt>${icon('phone')} Telefon</dt><dd><a href="${TEL}">${PHONE}</a></dd></div>
           </dl>
           <a class="btn btn--navy" href="https://www.google.com/maps/dir/?api=1&amp;destination=Bahnhofstra%C3%9Fe%2033%2C%2048477%20H%C3%B6rstel" target="_blank" rel="noopener">Route planen ${icon('arrow')}</a>
@@ -316,7 +316,7 @@ const ORG = {
   identifier: [{ '@type': 'PropertyValue', propertyID: 'Handelsregister', value: 'Amtsgericht Steinfurt HRB 16206' }, { '@type': 'PropertyValue', propertyID: 'IK', value: '462556040' }],
   email: 'info@pflegedienst-funk.de',
   address: { '@type': 'PostalAddress', streetAddress: 'Bahnhofstraße 33', postalCode: '48477', addressLocality: 'Hörstel', addressRegion: 'Nordrhein-Westfalen', addressCountry: 'DE' },
-  openingHoursSpecification: [{ '@type': 'OpeningHoursSpecification', dayOfWeek: ['Monday', 'Tuesday', 'Wednesday', 'Thursday', 'Friday'], opens: '08:00', closes: '14:00' }],
+  openingHoursSpecification: [{ '@type': 'OpeningHoursSpecification', dayOfWeek: ['Monday', 'Tuesday', 'Wednesday', 'Thursday', 'Friday'], opens: '09:00', closes: '14:00' }],
 };
 export const ORG_REF = { '@id': `${SITE}/#organisation` };
 export const AREA_SERVED = CITIES.flatMap((c) => [{ '@type': 'City', name: c.name }, ...c.parts.map((p) => ({ '@type': 'Place', name: p }))]);
@@ -347,7 +347,7 @@ export const contactFor = (p) => {
           </ol>
           <div class="reach__direct">
             <a class="reach__phone" href="${TEL}">${icon('phone')} ${PHONE}</a>
-            <p>Mo–Fr 8–14&nbsp;Uhr · <a href="mailto:info@pflegedienst-funk.de">info@pflegedienst-funk.de</a></p>
+            <p><span class="nowrap">Mo.–Fr. 09:00–14:00&nbsp;Uhr</span> und nach Vereinbarung · <a href="mailto:info@pflegedienst-funk.de">info@pflegedienst-funk.de</a></p>
           </div>
         </div>
         ${form.replace('data-form data-reveal', 'data-form data-reveal')}

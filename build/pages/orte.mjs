@@ -26,7 +26,7 @@ const HOE = city('pflegedienst-hoerstel');
 const HOE_FAQ = [
   ['Versorgt der Pflegedienst Funk GmbH auch Dreierwalde, Bevergern und Riesenbeck?', 'Ja. Alle Ortsteile von Hörstel gehören zu unserem Einsatzgebiet. Sie erhalten dort dieselben Leistungen wie in der Kernstadt, und Ihre Ansprechpartner sitzen in unserem Büro an der Bahnhofstraße&nbsp;33.'],
   ['Wie schnell kann die Pflege in Hörstel beginnen?', 'Das hängt von Ihrem Bedarf und unserer Tourenplanung ab. Rufen Sie uns an&nbsp;– wir sagen Ihnen offen, ab wann wir Sie versorgen können. Gerade nach einem Krankenhausaufenthalt bemühen wir uns um einen zügigen Start.'],
-  ['Kann ich persönlich im Büro vorbeikommen?', 'Gern. Unser Büro in der Bahnhofstraße&nbsp;33 ist montags bis freitags von 8 bis 14&nbsp;Uhr besetzt. Damit sich jemand in Ruhe Zeit für Sie nehmen kann, rufen Sie am besten vorher kurz an.'],
+  ['Kann ich persönlich im Büro vorbeikommen?', 'Gern. Unser Büro in der Bahnhofstraße&nbsp;33 ist <span class="nowrap">Mo.–Fr. 09:00–14:00&nbsp;Uhr</span> und nach Vereinbarung besetzt. Damit sich jemand in Ruhe Zeit für Sie nehmen kann, rufen Sie am besten vorher kurz an.'],
   ['Wer bezahlt die ambulante Pflege?', 'Behandlungspflege auf ärztliche Verordnung zahlt die Krankenkasse, einen Pflegegrad brauchen Sie dafür nicht. Grundpflege und Hauswirtschaft werden ab Pflegegrad&nbsp;2 über die Pflegekasse abgerechnet. Wir rechnen direkt mit Ihrer Kasse ab und erklären Ihnen vorab, was auf Sie zukommt.'],
   ['Habe ich feste Ansprechpartner?', 'Ja. Durch die Bezugspflege kommen möglichst dieselben vertrauten Pflegekräfte zu Ihnen. Für Fragen zur Planung oder Abrechnung erreichen Sie unser Büro unter 05459&nbsp;5869825.'],
 ];
@@ -50,7 +50,7 @@ const hoerstel = {
     image: 'warum',
     imageAlt: 'Pflegekraft des Pflegedienstes Funk GmbH wird von einem älteren Herrn an seiner Haustür begrüßt',
     mediaClass: 'pos-top',
-    checks: ['Büro direkt in Hörstel, Mo–Fr 8–14&nbsp;Uhr', 'Vertragspartner aller Kranken- und Pflegekassen'],
+    checks: ['Büro direkt in Hörstel, <span class="nowrap">Mo.–Fr. 09:00–14:00&nbsp;Uhr</span> und nach Vereinbarung', 'Vertragspartner aller Kranken- und Pflegekassen'],
   })}
 
 ${section({
@@ -119,7 +119,7 @@ ${section({
             <h2>Kurze Wege, <em>feste Gesichter.</em></h2>
             <p>Viele Familien suchen bewusst einen Pflegedienst aus dem eigenen Ort. Das hat ganz praktische Vorteile für Sie:</p>
             ${ticks([
-    'Persönliche Gespräche im Büro an der Bahnhofstraße&nbsp;– montags bis freitags von 8 bis 14&nbsp;Uhr',
+    'Persönliche Gespräche im Büro an der Bahnhofstraße&nbsp;– <span class="nowrap">Mo.–Fr. 09:00–14:00&nbsp;Uhr</span> und nach Vereinbarung',
     'Möglichst feste Bezugspflegekräfte und vertraute Ansprechpartner',
     'Examinierte Pflegefachkräfte und eine Fachkraft für Wundmanagement im Team',
     'Direkte Abrechnung mit allen Kranken- und Pflegekassen',
@@ -383,7 +383,7 @@ const IBB_FAQ = [
   ['Ich arbeite Vollzeit. Wie kann der Pflegedienst helfen?', 'Wir übernehmen feste Einsätze, zum Beispiel morgens die Körperpflege und die Medikamente, abends die Hilfe beim Zubettgehen. Auf Wunsch melden wir uns, wenn uns etwas auffällt. So wissen Sie Ihre Angehörigen gut versorgt, während Sie arbeiten.'],
   ['Was ist Verhinderungspflege und wer bezahlt sie?', 'Verhinderungspflege ist die Vertretung, wenn eine private Pflegeperson ausfällt, etwa wegen Urlaub oder Krankheit. Ab Pflegegrad&nbsp;2 beteiligt sich die Pflegekasse an den Kosten. Die genauen Beträge teilt Ihnen Ihre Pflegekasse mit&nbsp;– wir rechnen es gern für Sie aus.'],
   ['Wie schnell kann ein Pflegedienst in Ibbenbüren anfangen?', 'Rufen Sie uns an, sobald absehbar ist, dass Hilfe nötig wird. Wir vereinbaren zeitnah ein Gespräch und nennen Ihnen dann einen realistischen Starttermin, der zu unserer Tourenplanung passt.'],
-  ['Haben wir als Familie einen festen Ansprechpartner?', 'Ja. Durch die Bezugspflege kennen Sie Ihr Pflegeteam persönlich. Für Fragen zu Terminen, Leistungen oder Abrechnung ist unser Büro montags bis freitags von 8 bis 14&nbsp;Uhr für Sie da.'],
+  ['Haben wir als Familie einen festen Ansprechpartner?', 'Ja. Durch die Bezugspflege kennen Sie Ihr Pflegeteam persönlich. Für Fragen zu Terminen, Leistungen oder Abrechnung ist unser Büro <span class="nowrap">Mo.–Fr. 09:00–14:00&nbsp;Uhr</span> und nach Vereinbarung für Sie da.'],
 ];
 
 const ibbenbueren = {
