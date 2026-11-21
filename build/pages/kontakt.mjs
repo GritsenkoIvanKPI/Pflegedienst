@@ -1,4 +1,4 @@
-import { pageHero, section, contactFor, office, icon, TEL, PHONE, ORG_REF, SITE } from '../lib.mjs';
+import { pageHero, section, contactFor, office, icon, TEL, PHONE, WHATSAPP, ORG_REF, SITE } from '../lib.mjs';
 
 const MAIL = 'info@pflegedienst-funk.de';
 
@@ -25,6 +25,7 @@ export default {
     actions: false,
     extra: `<ul class="contact-quick" role="list" data-reveal>
             <li><a class="contact-quick__item" href="${TEL}"><span class="card__icon">${icon('phone')}</span><span><small>Anrufen</small><strong>${PHONE}</strong><em><span class="nowrap">Mo.–Fr. 09:00–14:00&nbsp;Uhr</span> und nach Vereinbarung</em></span></a></li>
+            <li><a class="contact-quick__item" href="${WHATSAPP}" target="_blank" rel="noopener"><span class="card__icon card__icon--wa"><svg class="icon"><use href="#b-whatsapp"/></svg></span><span><small>WhatsApp</small><strong>Nachricht senden</strong><em>Per WhatsApp schreiben</em></span></a></li>
             <li><a class="contact-quick__item" href="mailto:${MAIL}"><span class="card__icon">${icon('mail')}</span><span><small>Schreiben</small><strong>${MAIL}</strong><em>Antwort schnellstmöglich</em></span></a></li>
             <li><a class="contact-quick__item" href="https://www.google.com/maps/dir/?api=1&amp;destination=Bahnhofstra%C3%9Fe%2033%2C%2048477%20H%C3%B6rstel" target="_blank" rel="noopener"><span class="card__icon">${icon('pin')}</span><span><small>Besuchen</small><strong>Bahnhofstraße&nbsp;33</strong><em>48477 Hörstel&nbsp;– Route planen</em></span></a></li>
           </ul>`,

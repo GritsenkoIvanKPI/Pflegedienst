@@ -8,6 +8,8 @@ export const ROOT = path.resolve(path.dirname(fileURLToPath(import.meta.url)), '
 export const SITE = 'https://pflegedienst-funk.de';
 export const PHONE = '05459&nbsp;5869825';
 export const TEL = 'tel:+4954595869825';
+/* WhatsApp-Nummer (internationales Format ohne +). Bei anderer Nummer nur hier und in index.html ändern. */
+export const WHATSAPP = 'https://wa.me/4954595869825?text=Hallo%20Pflegedienst%20Funk%2C%20ich%20habe%20eine%20Frage%3A';
 
 /* ---------- Teile aus der Startseite ---------- */
 const home = fs.readFileSync(path.join(ROOT, 'index.html'), 'utf8');
@@ -287,6 +289,7 @@ export const office = ({ eyebrow = 'Anfahrt', title = 'Unser Büro <em>in Hörst
             <div><dt>${icon('pin')} Adresse</dt><dd>Ambulanter Pflegedienst Funk GmbH<br>Bahnhofstraße&nbsp;33, 48477 Hörstel</dd></div>
             <div><dt>${icon('clock')} Bürozeiten</dt><dd><span class="nowrap">Mo.–Fr. 09:00–14:00&nbsp;Uhr</span><br>und nach Vereinbarung</dd></div>
             <div><dt>${icon('phone')} Telefon</dt><dd><a href="${TEL}">${PHONE}</a></dd></div>
+            <div><dt><svg class="icon"><use href="#b-whatsapp"/></svg> WhatsApp</dt><dd><a href="${WHATSAPP}" target="_blank" rel="noopener">Per WhatsApp schreiben</a></dd></div>
           </dl>
           <a class="btn btn--navy" href="https://www.google.com/maps/dir/?api=1&amp;destination=Bahnhofstra%C3%9Fe%2033%2C%2048477%20H%C3%B6rstel" target="_blank" rel="noopener">Route planen ${icon('arrow')}</a>
         </div>
@@ -347,6 +350,7 @@ export const contactFor = (p) => {
           </ol>
           <div class="reach__direct">
             <a class="reach__phone" href="${TEL}">${icon('phone')} ${PHONE}</a>
+            <a class="btn btn--whatsapp btn--sm reach__wa" href="${WHATSAPP}" target="_blank" rel="noopener"><svg class="icon"><use href="#b-whatsapp"/></svg> Per WhatsApp schreiben</a>
             <p><span class="nowrap">Mo.–Fr. 09:00–14:00&nbsp;Uhr</span> und nach Vereinbarung · <a href="mailto:info@pflegedienst-funk.de">info@pflegedienst-funk.de</a></p>
           </div>
         </div>
