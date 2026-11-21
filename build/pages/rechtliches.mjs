@@ -2,8 +2,8 @@ import fs from 'fs';
 import path from 'path';
 import { pageHero, ROOT } from '../lib.mjs';
 
-/* Rechtstexte – Angaben aus dem bisherigen Internetauftritt übernommen.
-   Vor dem Start vom Kunden prüfen lassen (insbesondere: Rechtsform GmbH, Geschäftsführung, Handelsregister, USt-IdNr., Hosting). */
+/* Rechtstexte – Firmendaten vom Kunden bestätigt (21.11.2026): GmbH, Geschäftsführer Sergej Petrenko,
+   AG Steinfurt HRB 16206, IK 462556040, keine USt-IdNr. (nicht erforderlich). */
 
 const DS = fs.readFileSync(path.join(ROOT, 'build/content/datenschutz.html'), 'utf8');
 
@@ -36,16 +36,12 @@ const impressum = {
             <p>Telefon: <a href="tel:+4954595869825">05459&nbsp;5869825</a><br>Telefax: 05459&nbsp;5869826<br>E-Mail: <a href="mailto:info@pflegedienst-funk.de">info@pflegedienst-funk.de</a></p>
           </div>
           <div data-reveal>
-            <h2>Institutionskennzeichen</h2>
-            <p>IK 460&nbsp;556&nbsp;488</p>
-          </div>
-          <div data-reveal>
             <h2>Registereintrag</h2>
-            <p>Eintragung im Handelsregister<br>Registergericht: <span class="legal-todo">wird ergänzt</span><br>Registernummer: HRB <span class="legal-todo">wird ergänzt</span></p>
+            <p>Eintragung im Handelsregister<br>Registergericht: Amtsgericht Steinfurt<br>Registernummer: HRB&nbsp;16206</p>
           </div>
           <div data-reveal>
-            <h2>Umsatzsteuer-ID</h2>
-            <p>Umsatzsteuer-Identifikationsnummer gemäß §&nbsp;27&nbsp;a Umsatzsteuergesetz:<br><span class="legal-todo">wird ergänzt</span></p>
+            <h2>Institutionskennzeichen</h2>
+            <p>IK-Nummer: 462556040</p>
           </div>
         </div>
 
